@@ -31,4 +31,3 @@ In order to accommodate students with different levels of knowledge, and differe
 <li>Wait... It's possible to do GIS without ESRI?</li>
 <li>Why learn Python or R?</li>
 </ul>     |  
-|xxx-xx-xx | thing|
