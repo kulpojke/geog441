@@ -27,7 +27,5 @@ In order to accommodate students with different levels of knowledge, and differe
 
 | Date | Lecture                                  |
 |------------|------------------------------------------|
-| xxxx-xx-xx | Introduction <ul>
-<li>Wait... It's possible to do GIS without ESRI?</li>
-<li>Why learn Python or R?</li>
-</ul>     |  
+| xxxx-xx-xx | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li></ul> |
+| xxx-xx-xx | Stuff|
