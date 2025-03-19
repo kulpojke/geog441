@@ -39,4 +39,4 @@ In order to accommodate students with different levels of knowledge, and differe
 | xxx-xx-xx | Stuff|
 
 
-[link](https://github.com/kulpojke/geog441/blob/main/docs/slides.md)
+[link   ](https://kulpojke.github.io/geog441/docs/slides.md)
