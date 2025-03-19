@@ -27,5 +27,13 @@ In order to accommodate students with different levels of knowledge, and differe
 
 | Date | Lecture                                  |
 |------------|------------------------------------------|
-| xxxx-xx-xx | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li></ul> |
+| xxxx-xx-xx | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li><li></li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>Jupyter</li><li>Quarto|
+| xxx-xx-xx | Group Project Introductions |
+| xxx-xx-xx | c|
+| xxx-xx-xx | Stuff|
+| xxx-xx-xx | Stuff|
+| xxx-xx-xx | Stuff|
+| xxx-xx-xx | Stuff|
+| xxx-xx-xx | Stuff|
+| xxx-xx-xx | Stuff|
 | xxx-xx-xx | Stuff|
