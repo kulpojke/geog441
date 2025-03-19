@@ -14,8 +14,6 @@ In order to accommodate students with different levels of knowledge, and differe
 + [Github tutorial](https://rogerdudler.github.io/git-guide/) (x pts)
 
 
-
-
 ### Grading
 
 | Component | % of grade  |
@@ -24,3 +22,9 @@ In order to accommodate students with different levels of knowledge, and differe
 | Independent project | y |
 | Group Project       | z |
 | Self Evaluation     | p |
+
+### Calendar
+
+| Date | Lecture                                  |
+|------------|------------------------------------------|
+| xxxx-xx-xx | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li></ul>     |
