@@ -27,9 +27,9 @@ In order to accommodate students with different levels of knowledge, and differe
 
 | Week | Date | Lecture |
 |----|------------|------------------------------------------|
-|  1 | 2025-04-02 | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li><li></li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>Jupyter</li><li>Quarto|
+|  1 | 2025-04-02 | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li><li></li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>QGIS</li><li>GRASS |
 |  2 | 2025-04-07 | Group Project Introductions |
-|  2 | 2025-04-09 | c|
+|  2 | 2025-04-09 | Python and R: Introduction and Comparison |
 |  3 | 2025-04-14 | Stuff|
 |  3 | 2025-04-16 | Stuff|
 |  4 | 2025-04-21 | Stuff|
