@@ -25,18 +25,28 @@ In order to accommodate students with different levels of knowledge, and differe
 
 ### Calendar
 
-| Date | Lecture                                  |
-|------------|------------------------------------------|
-| xxxx-xx-xx | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li><li></li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>Jupyter</li><li>Quarto|
-| xxx-xx-xx | Group Project Introductions |
-| xxx-xx-xx | c|
-| xxx-xx-xx | Stuff|
-| xxx-xx-xx | Stuff|
-| xxx-xx-xx | Stuff|
-| xxx-xx-xx | Stuff|
-| xxx-xx-xx | Stuff|
-| xxx-xx-xx | Stuff|
-| xxx-xx-xx | Stuff|
+| Week | Date | Lecture |
+|----|------------|------------------------------------------|
+|  1 | 2025-04-02 | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li><li></li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>Jupyter</li><li>Quarto|
+|  2 | 2025-04-07 | Group Project Introductions |
+|  2 | 2025-04-09 | c|
+|  3 | 2025-04-14 | Stuff|
+|  3 | 2025-04-16 | Stuff|
+|  4 | 2025-04-21 | Stuff|
+|  4 | 2025-04-23 | Stuff|
+|  5 | 2025-04-28 | Stuff|
+|  5 | 2025-04-30 | Stuff|
+|  6 | 2025-05-05 | Stuff|
+|  6 | 2025-05-07 | Stuff|
+|  7 | 2025-05-12 | Stuff|
+|  7 | 2025-05-14 | Stuff|
+|  8 | 2025-05-19 | Stuff|
+|  8 | 2025-05-21 | Stuff|
+|  9 | 2025-05-26 | Memorial Day |
+|  9 | 2025-05-28 | Stuff|
+| 10 | 2025-06-02 | Stuff|
+| 10 | 2025-06-04 | Stuff|
+
 
 
 [link   ](https://kulpojke.github.io/geog441/docs/slides.html)
