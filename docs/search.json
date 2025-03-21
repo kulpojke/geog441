@@ -11,14 +11,14 @@
     "href": "python_geospatial_basics.html#why-learn-python",
     "title": "GEOG 441 - Lecture 1",
     "section": "Why learn Python",
-    "text": "Why learn Python\n\nIt allows for more flexibility that a GUI based GIS program.\nOther GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.\ngenerally a widely used language."
+    "text": "Why learn Python\n\nIt allows for more flexibility than a GUI based GIS program.\nOther GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.\ngenerally a widely used language."
   },
   {
     "objectID": "python_geospatial_basics.html#vector-data",
     "href": "python_geospatial_basics.html#vector-data",
     "title": "GEOG 441 - Lecture 1",
     "section": "Vector Data",
-    "text": "Vector Data\nMost often we interact with vector data using GeoPandas + GeoPandas is an extension of Pandas. + Uses Fiona, which in-turn relies on GDAL and OGR, to read and write. + Vector is handled by the Shapely module, which relies on GEOS. + GEOS implements the OGC Simple Features geometry"
+    "text": "Vector Data\nMost often we interact with vector data using GeoPandas + GeoPandas is an extension of Pandas. + Uses Fiona, which in-turn relies on GDAL and OGR, to read and write. + Vector data is handled by the Shapely module, which relies on GEOS. + GEOS implements the OGC Simple Features geometry + Projections are managed by pyproj which is built upon PROJ"
   },
   {
     "objectID": "python_geospatial_basics.html#a-plot",

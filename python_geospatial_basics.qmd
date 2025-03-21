@@ -18,7 +18,7 @@ TODO: GDAL intro slaideshow before this
 
 ## Why learn Python
 
-+ It allows for more flexibility that a GUI based GIS program.
++ It allows for more flexibility than a GUI based GIS program.
 + Other GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.
 + generally a widely used language.
 
@@ -26,8 +26,9 @@ TODO: GDAL intro slaideshow before this
 Most often we interact with vector data using [GeoPandas](https://geopandas.org/en/stable/)
   + GeoPandas is an extension of [Pandas](https://pandas.pydata.org/).
   + Uses Fiona, which in-turn relies on [GDAL and OGR](https://gdal.org/en/stable/), to read and write.
-  + Vector is handled by the [Shapely](http://toblerity.org/shapely/manual.html) module, which relies on [GEOS](https://libgeos.org/).
+  + Vector data is handled by the [Shapely](http://toblerity.org/shapely/manual.html) module, which relies on [GEOS](https://libgeos.org/).
     + GEOS  implements the [OGC](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) [Simple Features geometry](https://en.wikipedia.org/wiki/Simple_Features)
+  + Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
 
 
