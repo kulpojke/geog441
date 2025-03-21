@@ -4,8 +4,6 @@ format:
   revealjs:
     incremental: true 
 jupyter: python3
-filters:
-  - pyodide
 
 ---
 
