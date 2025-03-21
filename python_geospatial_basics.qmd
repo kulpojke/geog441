@@ -1,10 +1,12 @@
 ---
-title: 'python geospatial basics'
+title: 'GEOG 441 S2025 - Lecture 1'
 format:
   html:
     code-fold: true
 jupyter: python3
 ---
+
+Python
 
 ```{python}
 #| label: fig-polar
@@ -22,4 +24,12 @@ ax.plot(theta, r)
 ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
 plt.show()
+```
+
+
+
+```{R}
+library(lidR)
+
+x <- 2
 ```
