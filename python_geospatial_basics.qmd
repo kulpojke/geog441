@@ -4,6 +4,7 @@ format:
   html:
     code-fold: true
 jupyter: python3
+
 ---
 
 Python
@@ -29,7 +30,7 @@ plt.show()
 
 
 ```{r}
-library(ggplot2)
+library('ggplot2')
 
 # generate data
 r <- seq(0, 2, by = 0.01)
