@@ -215,8 +215,16 @@
 </section>
 <section id="vector-data" class="slide level2">
 <h2>Vector Data</h2>
-<p>Most often we interact with vector data using <a href="https://geopandas.org/en/stable/">GeoPandas</a><br>
-+ GeoPandas is an extension of <a href="https://pandas.pydata.org/">Pandas</a>. + Uses Fiona, which in-turn relies on <a href="https://gdal.org/en/stable/">GDAL and OGR</a>, to read and write. + Vector data is handled by the <a href="http://toblerity.org/shapely/manual.html">Shapely</a> module, which relies on <a href="https://libgeos.org/">GEOS</a>. + GEOS implements the <a href="https://en.wikipedia.org/wiki/Open_Geospatial_Consortium">OGC</a> <a href="https://en.wikipedia.org/wiki/Simple_Features">Simple Features geometry</a> + Projections are managed by <a href="https://pyproj4.github.io/pyproj/stable/">pyproj</a> which is built upon <a href="https://proj.org/en/stable/">PROJ</a></p>
+<ul>
+<li class="fragment">Most often we interact with vector data using <a href="https://geopandas.org/en/stable/">GeoPandas</a>
+<ul>
+<li class="fragment">GeoPandas is an extension of <a href="https://pandas.pydata.org/">Pandas</a>.</li>
+<li class="fragment">Uses Fiona, which in-turn relies on <a href="https://gdal.org/en/stable/">GDAL and OGR</a>, to read and write.</li>
+<li class="fragment">Vector data is handled by the <a href="http://toblerity.org/shapely/manual.html">Shapely</a> module, which relies on <a href="https://libgeos.org/">GEOS</a>.</li>
+<li class="fragment">GEOS implements the <a href="https://en.wikipedia.org/wiki/Open_Geospatial_Consortium">OGC</a> <a href="https://en.wikipedia.org/wiki/Simple_Features">Simple Features geometry</a></li>
+</ul></li>
+<li class="fragment">Projections are managed by <a href="https://pyproj4.github.io/pyproj/stable/">pyproj</a> which is built upon <a href="https://proj.org/en/stable/">PROJ</a></li>
+</ul>
 </section>
 <section id="vector-data-1" class="slide level2">
 <h2>Vector Data</h2>
