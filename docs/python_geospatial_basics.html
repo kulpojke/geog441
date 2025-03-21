@@ -163,9 +163,26 @@ Figure&nbsp;1: A line plot on a polar axis
 </div>
 </div>
 </div>
-<pre class="{R}"><code>library(lidR)
+<pre class="{R}"><code>library(ggplot2)
 
-x &lt;- 2</code></pre>
+# Generate data
+r &lt;- seq(0, 2, by = 0.01)
+theta &lt;- 2 * pi * r
+df &lt;- data.frame(theta, r)
+
+# Make the polar plot
+ggplot(df, aes(x = theta, y = r)) +
+  geom_path() +
+  scale_y_continuous(breaks = c(0.5, 1, 1.5, 2)) +
+  coord_polar(start = 0) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(
+    panel.grid.major = element_line(),
+    panel.grid.minor = element_blank()
+  )
+
+</code></pre>
 
 
 

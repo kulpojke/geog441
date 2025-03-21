@@ -29,7 +29,24 @@ plt.show()
 
 
 ```{R}
-library(lidR)
+library(ggplot2)
 
-x <- 2
+# Generate data
+r <- seq(0, 2, by = 0.01)
+theta <- 2 * pi * r
+df <- data.frame(theta, r)
+
+# Make the polar plot
+ggplot(df, aes(x = theta, y = r)) +
+  geom_path() +
+  scale_y_continuous(breaks = c(0.5, 1, 1.5, 2)) +
+  coord_polar(start = 0) +
+  labs(x = NULL, y = NULL) +
+  theme_minimal() +
+  theme(
+    panel.grid.major = element_line(),
+    panel.grid.minor = element_blank()
+  )
+
+
 ```
