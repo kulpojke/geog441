@@ -10,5 +10,8 @@
   },
   "R_geospatial_basics.qmd": {
     "R_geospatial_basics.html": "df1c35a0"
+  },
+  "notebooks/intro_R_geospatial.rmd": {
+    "intro_R_geospatial.html": "bae127d2"
   }
 }
