@@ -2,4 +2,5 @@ project:
   type: website
   output-dir: docs
 
+self_contained: true
 theme: blood
