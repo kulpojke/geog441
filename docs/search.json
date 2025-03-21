@@ -18,7 +18,7 @@
     "href": "python_geospatial_basics.html#basic-python-data-types",
     "title": "GEOG 441 - Lecture 1",
     "section": "Basic Python data types",
-    "text": "Basic Python data types\n\n\n\n\n\n\n\nType\nExample(s)\n\n\n\n\nString\n'Dude!'\n\n\nFloat\n1.2\n\n\nInt\n3\n\n\nTuple\n('x', 'y'), (1, 2), ('x', 3.2)\n\n\nList\n['x', 'y'], [1, 2]', Possible but bad --&gt;[‘x’, 3.2]| | Dict   |{‘dogs’: 26, ‘cats’, 100}`\n\n\netc…\nthere are others"
+    "text": "Basic Python data types\n\n\n\nType\nExample(s)\n\n\n\n\nString\n'Dude!'\n\n\nFloat\n1.2\n\n\nInt\n3\n\n\nTuple\n('x', 'y'), (1, 2), ('x', 3.2)\n\n\nList\n['x', 'y'], [1, 2], Possible but bad –&gt; ['x', 3.2]\n\n\nDict\n{'dogs': 26, 'cats', 100}\n\n\netc…\nthere are others"
   },
   {
     "objectID": "python_geospatial_basics.html#vector-data",
