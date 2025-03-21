@@ -7,6 +7,13 @@ jupyter: python3
 
 ---
 
+## This slideshow
+
++ Inroducing Python
++ Basic Geospatial Manipulations
+
+## A plot
+
 Python
 
 ```{python}
