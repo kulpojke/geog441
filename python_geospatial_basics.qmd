@@ -32,13 +32,13 @@ TODO: GDAL intro slaideshow before this
 
 ## Vector Data
 x
-![](../img/pandas.png)
+<img src="../img/pandas.png" alt="taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24"
 
 
 ## A plot
 
 Python
-taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24
+
 ```{python}
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
