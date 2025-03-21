@@ -23,17 +23,19 @@ TODO: GDAL intro slaideshow before this
 + generally a widely used language.
 
 ## Basic Python data types
+
 | Type   | Example(s) |
 |--------|---------|
 | String | `'Dude!'`|
 | Float  | `1.2`  |
 | Int    | `3` |
 | Tuple  | `('x', 'y'), (1, 2), ('x', 3.2)` |
-| List   | `['x', 'y'], [1, 2], ['x', 3.2]` |
-| Dict   | `{'dogs': 26, 'cats', 100} |
+| List   | `['x', 'y'], [1, 2]', Possible but bad --> `['x', 3.2]` |
+| Dict   | `{'dogs': 26, 'cats', 100}` |
 | etc... | there are others |
 
 ## Vector Data
+
 + Most often we interact with vector data using [GeoPandas](https://geopandas.org/en/stable/)  
   + GeoPandas is an extension of [Pandas](https://pandas.pydata.org/).
   + Uses Fiona, which in-turn relies on [GDAL and OGR](https://gdal.org/en/stable/), to read and write.
@@ -45,10 +47,11 @@ TODO: GDAL intro slaideshow before this
 <img src="../img/pandas.png" alt="taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24">
 
 ## Shapely
-Shapely Geometric Objects consist of coordinate tuples:
-+ Point - (x, y) or three dimensional (x, y, z)
-+ LineString
-+ Polygon
+
++ Shapely Geometric Objects consist of coordinate tuples:
+  + Point - (x, y) or three dimensional (x, y, z)
+  + LineString
+  + Polygon
 
 ## A plot
 
