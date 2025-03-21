@@ -1,0 +1,12 @@
+{
+  "hash": "fc39de2e4c75aa06ea14bccc81bc3905",
+  "result": {
+    "engine": "jupyter",
+    "markdown": "---\ntitle: 'GEOG 441 S2025 - Lecture 1'\nformat:\n  revealjs:\n    incremental: true \njupyter: python3\nfilters:\n  - pyodide\n\n---\n\n\n## This slideshow\n\n+ Introducing Python\n+ Basic Geospatial Manipulations\n\n## Why learn Python\n\n+ It allows for more flexibility that a GUI based GIS program.\n+ Other GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.\n+ generally a widely used language.\n\n\n## A plot\n\nPython\n\n::: {#cell-fig-polar .cell execution_count=1}\n\n::: {.cell-output .cell-output-display}\n![A line plot on a polar axis](python_geospatial_basics_files/figure-revealjs/fig-polar-output-1.png){#fig-polar width=450 height=439}\n:::\n:::\n\n\n",
+    "supporting": [
+      "python_geospatial_basics_files"
+    ],
+    "filters": [],
+    "includes": {}
+  }
+}

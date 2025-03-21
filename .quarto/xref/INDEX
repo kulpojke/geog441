@@ -1,0 +1,14 @@
+{
+  "holdng_pen/slides.md": {
+    "slides.html": "7096bca3"
+  },
+  "intro_pyhton_geospatial.qmd": {
+    "intro_pyhton_geospatial.html": "42e7709f"
+  },
+  "python_geospatial_basics.qmd": {
+    "python_geospatial_basics.html": "6f0836ac"
+  },
+  "R_geospatial_basics.qmd": {
+    "R_geospatial_basics.html": "df1c35a0"
+  }
+}

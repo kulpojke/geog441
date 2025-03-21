@@ -1,0 +1,17 @@
+{
+  "hash": "30a0da99ecaf0029ab3fd70430cde26e",
+  "result": {
+    "engine": "knitr",
+    "markdown": "---\ntitle: 'GEOG 441 S2025 - Lecture 1 -pt 2'\nformat:\n  html:\n    code-fold: true\nengine: knitr\n\n---\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary('ggplot2')\n\n# generate data\nr <- seq(0, 2, by = 0.01)\ntheta <- 2*pi*r\ndf <- data.frame(theta, r)\n\n# ggplot returns an object\nggplot(df, aes(x = theta, y = r)) +\n  geom_path() +\n  scale_y_continuous(breaks = c(0.5, 1, 1.5, 2)) +\n  coord_polar() +\n  theme_minimal()\n```\n\n::: {.cell-output-display}\n![](R_geospatial_basics_files/figure-html/unnamed-chunk-1-1.png){width=672}\n:::\n:::",
+    "supporting": [
+      "R_geospatial_basics_files"
+    ],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}
