@@ -28,8 +28,7 @@ plt.show()
 
 
 
-```{R}
-library(rmarkdown)
+```{r}
 library(ggplot2)
 
 # generate data
