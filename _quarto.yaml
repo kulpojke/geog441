@@ -2,4 +2,4 @@ project:
   type: website
   output-dir: docs
 
-theme: cyborg
+theme: blood

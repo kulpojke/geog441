@@ -1,6 +1,6 @@
 ---
 title: 'GEOG 441 S2025 - Lecture 1'
-fformat:
+format:
   revealjs:
     incremental: true 
 jupyter: python3
