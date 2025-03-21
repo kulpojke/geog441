@@ -23,7 +23,7 @@ jupyter: python3
 
 Python
 
-```{python}
+````{python}
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
 
@@ -39,7 +39,7 @@ ax.plot(theta, r)
 ax.set_rticks([0.5, 1, 1.5, 2])
 ax.grid(True)
 plt.show()
-```
+````
 
 
 
