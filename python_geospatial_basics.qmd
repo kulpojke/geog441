@@ -1,8 +1,8 @@
 ---
 title: 'GEOG 441 S2025 - Lecture 1'
-format:
-  html:
-    code-fold: true
+fformat:
+  revealjs:
+    incremental: true 
 jupyter: python3
 
 ---
