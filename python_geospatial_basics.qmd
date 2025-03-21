@@ -31,7 +31,7 @@ TODO: GDAL intro slaideshow before this
 + Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
 ## Vector Data
-!["taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24"](../img/geopandas_ecosystem_opengeo2024.png)
+!["taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24"](img/geopandas_ecosystem_opengeo2024.png)
 
 
 ## A plot
