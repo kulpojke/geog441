@@ -29,20 +29,3 @@ plt.show()
 
 
 
-```{r}
-library('ggplot2')
-
-# generate data
-r <- seq(0, 2, by = 0.01)
-theta <- 2*pi*r
-df <- data.frame(theta, r)
-
-# ggplot returns an object
-ggplot(df, aes(x = theta, y = r)) +
-  geom_path() +
-  scale_y_continuous(breaks = c(0.5, 1, 1.5, 2)) +
-  coord_polar() +
-  theme_minimal()
-
-
-```

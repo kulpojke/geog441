@@ -4,6 +4,6 @@
     "href": "python_geospatial_basics.html",
     "title": "GEOG 441 S2025 - Lecture 1",
     "section": "",
-    "text": "Python\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis\n\n\n\n\n\nlibrary('ggplot2')\n\n# generate data\nr &lt;- seq(0, 2, by = 0.01)\ntheta &lt;- 2*pi*r\ndf &lt;- data.frame(theta, r)\n\n# ggplot returns an object\nggplot(df, aes(x = theta, y = r)) +\n  geom_path() +\n  scale_y_continuous(breaks = c(0.5, 1, 1.5, 2)) +\n  coord_polar() +\n  theme_minimal()"
+    "text": "Python\n\n\nCode\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   }
 ]

@@ -163,21 +163,6 @@ Figure&nbsp;1: A line plot on a polar axis
 </div>
 </div>
 </div>
-<pre class="{r}"><code>library('ggplot2')
-
-# generate data
-r &lt;- seq(0, 2, by = 0.01)
-theta &lt;- 2*pi*r
-df &lt;- data.frame(theta, r)
-
-# ggplot returns an object
-ggplot(df, aes(x = theta, y = r)) +
-  geom_path() +
-  scale_y_continuous(breaks = c(0.5, 1, 1.5, 2)) +
-  coord_polar() +
-  theme_minimal()
-
-</code></pre>
 
 
 
