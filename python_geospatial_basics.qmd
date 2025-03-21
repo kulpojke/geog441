@@ -23,9 +23,11 @@ TODO: GDAL intro slaideshow before this
 + generally a widely used language.
 
 ## Vector Data
-+ Most often we interact with vector data using GeoPandas
-  + Uses Fiona, which in-turn relies on GDAL, to read and write.
-  + Vector is handled by the [Shapely](http://toblerity.org/shapely/manual.html) module.
++ Most often we interact with vector data using [GeoPandas](https://geopandas.org/en/stable/)
+  + GeoPandas is an extension of [Pandas](https://pandas.pydata.org/).
+  + Uses Fiona, which in-turn relies on [GDAL and OGR](https://gdal.org/en/stable/), to read and write.
+  + Vector is handled by the [Shapely](http://toblerity.org/shapely/manual.html) module, which relies on [GEOS](https://libgeos.org/).
+    + GEOS  implements the [OGC](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) [Simple Features geometry](https://en.wikipedia.org/wiki/Simple_Features)
 
 
 
