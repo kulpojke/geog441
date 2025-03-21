@@ -5,6 +5,7 @@ format:
     incremental: true 
 jupyter: python3
 echo: true
+output-location: column
 
 ---
 
