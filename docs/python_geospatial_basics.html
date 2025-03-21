@@ -165,22 +165,17 @@ Figure&nbsp;1: A line plot on a polar axis
 </div>
 <pre class="{R}"><code>library(ggplot2)
 
-# Generate data
+# generate data
 r &lt;- seq(0, 2, by = 0.01)
-theta &lt;- 2 * pi * r
+theta &lt;- 2*pi*r
 df &lt;- data.frame(theta, r)
 
-# Make the polar plot
+# ggplot returns an object
 ggplot(df, aes(x = theta, y = r)) +
   geom_path() +
   scale_y_continuous(breaks = c(0.5, 1, 1.5, 2)) +
-  coord_polar(start = 0) +
-  labs(x = NULL, y = NULL) +
-  theme_minimal() +
-  theme(
-    panel.grid.major = element_line(),
-    panel.grid.minor = element_blank()
-  )
+  coord_polar() +
+  theme_minimal()
 
 </code></pre>
 
