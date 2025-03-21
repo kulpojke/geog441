@@ -11,6 +11,8 @@ output-location: column
 
 ## This slideshow
 
+TODO: GDAL intro slaideshow before this
+
 + Introducing Python
 + Basic Geospatial Manipulations
 
@@ -19,6 +21,12 @@ output-location: column
 + It allows for more flexibility that a GUI based GIS program.
 + Other GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.
 + generally a widely used language.
+
+## Vector Data
++ Most often we interact with vector data using GeoPandas
+  + Uses Fiona, which in-turn relies on GDAL, to read and write.
+  + Vector is handled by the [Shapely](http://toblerity.org/shapely/manual.html) module.
+
 
 
 ## A plot
