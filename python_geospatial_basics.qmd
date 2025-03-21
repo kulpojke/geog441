@@ -1,5 +1,5 @@
 ---
-title: 'GEOG 441\n S2025 - Lecture 1'
+title: 'GEOG 441 S2025 - Lecture 1 - A hyperfast intro to Python geospatial'
 format:
   revealjs:
     incremental: true 

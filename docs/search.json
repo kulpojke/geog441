@@ -2,21 +2,21 @@
   {
     "objectID": "python_geospatial_basics.html#this-slideshow",
     "href": "python_geospatial_basics.html#this-slideshow",
-    "title": "GEOG 441S2025 - Lecture 1",
+    "title": "GEOG 441 S2025 - Lecture 1 - A hyperfast intro to Python geospatial",
     "section": "This slideshow",
     "text": "This slideshow\n\nIntroducing Python\nBasic Geospatial Manipulations"
   },
   {
     "objectID": "python_geospatial_basics.html#why-learn-python",
     "href": "python_geospatial_basics.html#why-learn-python",
-    "title": "GEOG 441S2025 - Lecture 1",
+    "title": "GEOG 441 S2025 - Lecture 1 - A hyperfast intro to Python geospatial",
     "section": "Why learn Python",
     "text": "Why learn Python\n\nIt allows for more flexibility that a GUI based GIS program.\nOther GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.\ngenerally a widely used language."
   },
   {
     "objectID": "python_geospatial_basics.html#a-plot",
     "href": "python_geospatial_basics.html#a-plot",
-    "title": "GEOG 441S2025 - Lecture 1",
+    "title": "GEOG 441 S2025 - Lecture 1 - A hyperfast intro to Python geospatial",
     "section": "A plot",
     "text": "A plot\nPython\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   }
