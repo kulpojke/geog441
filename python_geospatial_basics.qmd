@@ -25,7 +25,7 @@ filters:
 
 Python
 
-```{pyodide-python}
+```{python}
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
 
