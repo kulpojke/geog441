@@ -25,13 +25,13 @@
     "href": "python_geospatial_basics.html#vector-data-1",
     "title": "GEOG 441 - Lecture 1",
     "section": "Vector Data",
-    "text": "Vector Data\n\n“taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24”"
+    "text": "Vector Data"
   },
   {
     "objectID": "python_geospatial_basics.html#a-plot",
     "href": "python_geospatial_basics.html#a-plot",
     "title": "GEOG 441 - Lecture 1",
     "section": "A plot",
-    "text": "A plot\nPython\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+    "text": "A plot\nPython taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   }
 ]
