@@ -30,6 +30,7 @@ Most often we interact with vector data using [GeoPandas](https://geopandas.org/
     + GEOS  implements the [OGC](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) [Simple Features geometry](https://en.wikipedia.org/wiki/Simple_Features)
   + Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
+![taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24](../img/geopandas_ecosystem_opengeo2024.png "GeoPandas is all like...")
 
 
 ## A plot

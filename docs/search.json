@@ -18,7 +18,7 @@
     "href": "python_geospatial_basics.html#vector-data",
     "title": "GEOG 441 - Lecture 1",
     "section": "Vector Data",
-    "text": "Vector Data\nMost often we interact with vector data using GeoPandas + GeoPandas is an extension of Pandas. + Uses Fiona, which in-turn relies on GDAL and OGR, to read and write. + Vector data is handled by the Shapely module, which relies on GEOS. + GEOS implements the OGC Simple Features geometry + Projections are managed by pyproj which is built upon PROJ"
+    "text": "Vector Data\nMost often we interact with vector data using GeoPandas + GeoPandas is an extension of Pandas. + Uses Fiona, which in-turn relies on GDAL and OGR, to read and write. + Vector data is handled by the Shapely module, which relies on GEOS. + GEOS implements the OGC Simple Features geometry + Projections are managed by pyproj which is built upon PROJ\n\ntaken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24"
   },
   {
     "objectID": "python_geospatial_basics.html#a-plot",
