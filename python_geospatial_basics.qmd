@@ -4,19 +4,28 @@ format:
   revealjs:
     incremental: true 
 jupyter: python3
+filters:
+  - pyodide
 
 ---
 
 ## This slideshow
 
-+ Inroducing Python
++ Introducing Python
 + Basic Geospatial Manipulations
+
+## Why learn Python
+
++ It allows for more flexibility that a GUI based GIS program.
++ Other GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.
++ generally a widely used language.
+
 
 ## A plot
 
 Python
 
-```{python}
+```{pyodide-python}
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
 
