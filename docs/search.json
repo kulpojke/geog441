@@ -1,5 +1,40 @@
 [
   {
+    "objectID": "python_geospatial_basics.html#this-slideshow",
+    "href": "python_geospatial_basics.html#this-slideshow",
+    "title": "GEOG 441 - Lecture 1",
+    "section": "This slideshow",
+    "text": "This slideshow\nTODO: GDAL intro slaideshow before this\n\nIntroducing Python\nBasic Geospatial Manipulations"
+  },
+  {
+    "objectID": "python_geospatial_basics.html#why-learn-python",
+    "href": "python_geospatial_basics.html#why-learn-python",
+    "title": "GEOG 441 - Lecture 1",
+    "section": "Why learn Python",
+    "text": "Why learn Python\n\nIt allows for more flexibility than a GUI based GIS program.\nOther GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.\ngenerally a widely used language."
+  },
+  {
+    "objectID": "python_geospatial_basics.html#basic-python-data-types",
+    "href": "python_geospatial_basics.html#basic-python-data-types",
+    "title": "GEOG 441 - Lecture 1",
+    "section": "Basic Python data types",
+    "text": "Basic Python data types\n\n\n\nType\nExample(s)\n\n\n\n\nString\n'Dude!'\n\n\nFloat\n1.2\n\n\nInt\n3\n\n\nTuple\n('x', 'y'), (1, 2), ('x', 3.2)\n\n\nList\n['x', 'y'], [1, 2], Possible but bad –&gt; ['x', 3.2]\n\n\nDict\n{'dogs': 26, 'cats', 100}\n\n\netc…\nthere are others"
+  },
+  {
+    "objectID": "python_geospatial_basics.html#basic-numbers",
+    "href": "python_geospatial_basics.html#basic-numbers",
+    "title": "GEOG 441 - Lecture 1",
+    "section": "Basic Numbers",
+    "text": "Basic Numbers\n\n\na = 2 + 2\nb = 2.0 + 2.0\nc = 2 + 2.0\n\n\nprint(f'a is an {type(a)}')\nprint(f'b is a {type(b)}')\nprint(f'c is a {type(c)}')\nprint(f'a / b is {a / b}')\nprint(f'5 / 4 is {5 / 4}')\nprint(f'but 5 // 4 is {5 // 4}')\n\n\na is an &lt;class 'int'&gt;\nb is a &lt;class 'float'&gt;\nc is a &lt;class 'float'&gt;\na / b is 1.0\n5 / 4 is 1.25\nbut 5 // 4 is 1"
+  },
+  {
+    "objectID": "python_geospatial_basics.html#sequences",
+    "href": "python_geospatial_basics.html#sequences",
+    "title": "GEOG 441 - Lecture 1",
+    "section": "Sequences",
+    "text": "Sequences\nTODO: Show some sewuence stuff"
+  },
+  {
     "objectID": "python_geospatial_basics.html#vector-data",
     "href": "python_geospatial_basics.html#vector-data",
     "title": "GEOG 441 - Lecture 1",

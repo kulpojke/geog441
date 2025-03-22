@@ -34,8 +34,8 @@ TODO: GDAL intro slaideshow before this
 | Dict   | `{'dogs': 26, 'cats', 100}` |
 | etc... | there are others |
 
----
-### Basic Numbers
+
+## Basic Numbers
 
 ```{python}
 a = 2 + 2
@@ -51,7 +51,7 @@ print(f'5 / 4 is {5 / 4}')
 print(f'but 5 // 4 is {5 // 4}')
 ```
 
-# Sequences
+## Sequences
 
 TODO: Show some sewuence stuff
 
