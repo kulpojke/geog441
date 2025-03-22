@@ -37,6 +37,8 @@ TODO: GDAL intro slaideshow before this
 
 ## Basic Numbers
 
+Floats and Ints don't do anything all that surprising
+
 ```{python}
 a = 2 + 2
 b = 2.0 + 2.0

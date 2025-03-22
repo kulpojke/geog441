@@ -25,7 +25,7 @@
     "href": "python_geospatial_basics.html#basic-numbers",
     "title": "GEOG 441 - Lecture 1",
     "section": "Basic Numbers",
-    "text": "Basic Numbers\n\n\na = 2 + 2\nb = 2.0 + 2.0\nc = 2 + 2.0\n\n\nprint(f'a is an {type(a)}')\nprint(f'b is a {type(b)}')\nprint(f'c is a {type(c)}')\nprint(f'a / b is {a / b}')\nprint(f'5 / 4 is {5 / 4}')\nprint(f'but 5 // 4 is {5 // 4}')\n\n\na is an &lt;class 'int'&gt;\nb is a &lt;class 'float'&gt;\nc is a &lt;class 'float'&gt;\na / b is 1.0\n5 / 4 is 1.25\nbut 5 // 4 is 1"
+    "text": "Basic Numbers\nFloats and Ints don’t do anything all that surprising\n\n\na = 2 + 2\nb = 2.0 + 2.0\nc = 2 + 2.0\n\n\nprint(f'a is an {type(a)}')\nprint(f'b is a {type(b)}')\nprint(f'c is a {type(c)}')\nprint(f'a / b is {a / b}')\nprint(f'5 / 4 is {5 / 4}')\nprint(f'but 5 // 4 is {5 // 4}')\n\n\na is an &lt;class 'int'&gt;\nb is a &lt;class 'float'&gt;\nc is a &lt;class 'float'&gt;\na / b is 1.0\n5 / 4 is 1.25\nbut 5 // 4 is 1"
   },
   {
     "objectID": "python_geospatial_basics.html#sequences",
