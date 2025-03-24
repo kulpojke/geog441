@@ -29,14 +29,14 @@ In order to accommodate students with different levels of knowledge, and differe
 |----|------------|------------------------------------------|
 |  1 | 2025-04-02 | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li><li></li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>QGIS</li><li>GRASS |
 |  2 | 2025-04-07 | Group Project Introductions  <ul><li>9:00 - Devin Best: Land Trust Water Conservation</li><li>9:15</li><li></li></ul>|
-|  2 | 2025-04-09 | Python and R: Introduction and Comparison |
-|  3 | 2025-04-14 | Stuff|
-|  3 | 2025-04-16 | Stuff|
-|  4 | 2025-04-21 | Stuff|
-|  4 | 2025-04-23 | Stuff|
-|  5 | 2025-04-28 | Stuff|
-|  5 | 2025-04-30 | Stuff|
-|  6 | 2025-05-05 | Stuff|
+|  2 | 2025-04-09 | Python and R: <ul><li>Introduction and Comparison</li><li>Jupyter Notebooks</li></ul> |
+|  3 | 2025-04-14 | Working with Vectors in Python |
+|  3 | 2025-04-16 | Working with Vectors in R <ul><li>Rstudio</li><li>R-markdown</li><li></li></ul> |
+|  4 | 2025-04-21 | Working with Rasters in Python <ul><li>rasterio</li><li>rioXarray</li></ul>|
+|  4 | 2025-04-23 | Working with Rasters in R |
+|  5 | 2025-04-28 | Working with Rasters in GRASS <ul><li>Watershed Delineation</li><li>Landforms</li></ul> |
+|  5 | 2025-04-30 | Group Project Check-In |
+|  6 | 2025-05-05 | Individual Project Check-In |
 |  6 | 2025-05-07 | Stuff|
 |  7 | 2025-05-12 | Stuff|
 |  7 | 2025-05-14 | Stuff|
