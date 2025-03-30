@@ -6,10 +6,11 @@ format:
 jupyter: python3
 echo: true
 output-location: column
+navigation-mode: vertical
 
 ---
 
-## This slideshow
+# This slideshow
 
 TODO: GDAL intro slideshow before this
 
