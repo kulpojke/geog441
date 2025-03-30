@@ -4,7 +4,7 @@
     "href": "index.html",
     "title": "GEOG 441 Index",
     "section": "",
-    "text": "GEOG 441 Index\nThis is the index page.\n\n[Go to the other page](python_geospatial_basics.qmd)\n\n[Go to the section](R_geospatial_basics.qmd)"
+    "text": "title: ‘GEOG 441’ format: revealjs: incremental: true jupyter: python3 echo: true output-location: column navigation-mode: vertical\n\nGEOG 441 Index\nThis is the index page.\n\n[Go to the other page](python_geospatial_basics.qmd)\n\n[Go to the section](R_geospatial_basics.qmd)"
   },
   {
     "objectID": "python_geospatial_basics.html#why-learn-python",
