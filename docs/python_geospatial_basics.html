@@ -216,6 +216,10 @@
 <section id="basic-python-data-types" class="slide level2">
 <h2>Basic Python data types</h2>
 <table class="caption-top">
+<colgroup>
+<col style="width: 47%">
+<col style="width: 52%">
+</colgroup>
 <thead>
 <tr class="header">
 <th>Type</th>
@@ -241,7 +245,7 @@
 </tr>
 <tr class="odd">
 <td>List</td>
-<td><code>['x', 'y'], [1, 2]</code>, Possible but bad –&gt; <code>['x', 3.2]</code></td>
+<td><code>['x', 'y']</code><br><code>[1, 2]</code><br>Possible but bad –&gt; <code>['x', 3.2]</code></td>
 </tr>
 <tr class="even">
 <td>Dict</td>
@@ -257,7 +261,7 @@
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="42fcc52f" class="cell columns column-output-location" data-execution_count="1">
+<div id="234f4e49" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb1-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -284,7 +288,7 @@ but 5 // 4 is 1</code></pre>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="646ad6a0" class="cell columns column-output-location" data-execution_count="2">
+<div id="7950fadf" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># a list</span></span>
 <span id="cb3-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
@@ -325,24 +329,32 @@ slices:
 neushorn?</code></pre>
 </div>
 </div></div>
-<p><a href="https://www.geeksforgeeks.org/python-list-slicing/#">Slicing</a> <a href="https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858">Sequences tutorial</a> <a href="https://www.youtube.com/watch?v=n3KMrwmq_94">Sequence tutorial as video</a></p>
+<p><a href="https://www.geeksforgeeks.org/python-list-slicing/#">Slicing</a><br>
+<a href="https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858">Sequences tutorial</a><br>
+<a href="https://www.youtube.com/watch?v=n3KMrwmq_94">Sequence tutorial as video</a></p>
 </section>
 <section id="dictionaries" class="slide level2">
 <h2>Dictionaries</h2>
-<div id="4dc3a08c" class="cell columns column-output-location" data-execution_count="3">
+<div id="2f9623e1" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
 <span id="cb5-2"><a></a></span>
-<span id="cb5-3"><a></a><span class="bu">print</span>(pets[<span class="st">'honden'</span>] <span class="op">+</span> pets[<span class="st">'katten'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb5-3"><a></a><span class="cf">for</span> key, val <span class="kw">in</span> pets.items():</span>
+<span id="cb5-4"><a></a>  <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>val<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb5-5"><a></a></span>
+<span id="cb5-6"><a></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>pets[<span class="st">"honden"</span>] <span class="op">+</span> pets[<span class="st">"katten"</span>]<span class="sc">}</span><span class="ss"> huisdieren'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
-<pre><code>126</code></pre>
+<pre><code>26 honden
+100 katten
+126 huisdieren</code></pre>
 </div>
 </div></div>
+<p><a href="https://www.w3schools.com/python/python_dictionaries.asp">More on dictionaries</a></p>
 </section>
 <section id="iterating" class="slide level2">
 <h2>Iterating</h2>
-<div id="44a70788" class="cell columns column-output-location" data-execution_count="4">
+<div id="ec953926" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb7-2"><a></a></span>
@@ -355,10 +367,12 @@ neushorn?</code></pre>
 <span id="cb7-9"><a></a>c <span class="op">=</span> [n<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> n <span class="kw">in</span> a]</span>
 <span id="cb7-10"><a></a></span>
 <span id="cb7-11"><a></a><span class="bu">print</span>(b)</span>
-<span id="cb7-12"><a></a><span class="bu">print</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb7-12"><a></a><span class="bu">print</span>(<span class="st">'is the same as'</span>)</span>
+<span id="cb7-13"><a></a><span class="bu">print</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81]
+is the same as
 [1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
 </div>
 </div></div>
@@ -366,7 +380,7 @@ neushorn?</code></pre>
 <section id="vector-data" class="slide level2">
 <h2>Vector Data</h2>
 <ul>
-<li class="fragment">Most often we interact with vector data using <a href="https://geopandas.org/en/stable/">GeoPandas</a>
+<li class="fragment">Most often we will interact with vector data using <a href="https://geopandas.org/en/stable/">GeoPandas</a>
 <ul>
 <li class="fragment">GeoPandas is an extension of <a href="https://pandas.pydata.org/">Pandas</a>.</li>
 <li class="fragment">Uses Fiona, which in-turn relies on <a href="https://gdal.org/en/stable/">GDAL and OGR</a>, to read and write.</li>
@@ -413,7 +427,7 @@ neushorn?</code></pre>
 <div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="python_geospatial_basics_files/figure-revealjs/fig-polar-output-1.png" width="442" height="432">
+<img data-src="python_geospatial_basics_files/figure-revealjs/fig-polar-output-1.png" width="277" height="269">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: A line plot on a polar axis

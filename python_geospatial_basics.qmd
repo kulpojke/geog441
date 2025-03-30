@@ -28,7 +28,7 @@ navigation-mode: vertical
 | Float  | `1.2`  |
 | Int    | `3` |
 | Tuple  | `('x', 'y')`<br>`(1, 2)`<br>`('x', 3.2)` |
-| List   | `['x', 'y'], [1, 2]`, Possible but bad --> `['x', 3.2]` |
+| List   | `['x', 'y']`<br>`[1, 2]`<br>Possible but bad --> `['x', 3.2]` |
 | Dict   | `{'dogs': 26, 'cats', 100}` |
 | etc... | there are others |
 
@@ -80,8 +80,8 @@ print(a_tup[2:5])
 print(a_str[-9:])
 ```
 
-[Slicing](https://www.geeksforgeeks.org/python-list-slicing/#)
-[Sequences tutorial](https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858)
+[Slicing](https://www.geeksforgeeks.org/python-list-slicing/#)  
+[Sequences tutorial](https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858)  
 [Sequence tutorial as video](https://www.youtube.com/watch?v=n3KMrwmq_94)
 
 ## Dictionaries
@@ -89,8 +89,13 @@ print(a_str[-9:])
 ```{python}
 pets = {'honden': 26, 'katten': 100}
 
-print(pets['honden'] + pets['katten'])
+for key, val in pets.items():
+  print(f'{val} {key}')
+
+print(f'{pets["honden"] + pets["katten"]} huisdieren')
 ```
+
+[More on dictionaries](https://www.w3schools.com/python/python_dictionaries.asp)
 
 ## Iterating
 
@@ -106,13 +111,14 @@ for n in a:
 c = [n**2 for n in a]
 
 print(b)
+print('is the same as')
 print(c)
 
 ```
 
 ## Vector Data
 
-+ Most often we interact with vector data using [GeoPandas](https://geopandas.org/en/stable/)  
++ Most often we will interact with vector data using [GeoPandas](https://geopandas.org/en/stable/)  
   + GeoPandas is an extension of [Pandas](https://pandas.pydata.org/).
   + Uses Fiona, which in-turn relies on [GDAL and OGR](https://gdal.org/en/stable/), to read and write.
   + Vector data is handled by the [Shapely](http://toblerity.org/shapely/manual.html) module, which relies on [GEOS](https://libgeos.org/).
