@@ -2,6 +2,7 @@ project:
   type: website
   output-dir: docs
   render:
+  - index.qmd
   - python_geospatial_basics.qmd
   - R_geospatial_basics.qmd
 

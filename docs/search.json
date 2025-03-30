@@ -1,5 +1,12 @@
 [
   {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "GEOG 441 Index",
+    "section": "",
+    "text": "GEOG 441 Index\nThis is the index page.\n\n[Go to the other page](python_geospatial_basics.qmd)\n\n[Go to the section](R_geospatial_basics.qmd)"
+  },
+  {
     "objectID": "python_geospatial_basics.html#why-learn-python",
     "href": "python_geospatial_basics.html#why-learn-python",
     "title": "GEOG 441",
