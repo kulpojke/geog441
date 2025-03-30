@@ -22,19 +22,26 @@ That said there are a few skills and tools that students need to grasp by the en
 | Participation       | 0.1 |
 
 ### Exercises
-There are two components that will   
-+ GIT exercise (required) 
+There are two Exercises that are required, one introducing GIT, and another introducing GDAL.  We will be using GIT to manage projects in this class, and GIT is a skill that many employers are interested in.  GIT is also a great way to manage and share your own projects if you are a researcher.
+
+I am forcing you to learn a little about GDAL for a couple of reasons.  The first is historical/contextual. Most other geospatial applications rely, at least partially, on GDAL.  It has been in use since 2000.  Secondly, it is extremely useful. It is great for writing scripts for processing files in batch.  If you ever want to process a bunch of files in a container on the cloud it is a good choice because it does not have complicated dependencies.
+
+The rest is up to you as far as exercises go.  You do however need to make substantial gains in you ability to use either R or Python (or both!) to solve geospatial problems.
+
+At the end of the quarter you will submit a brief self evaluation, with a summary of the exercises you have completed and the things you have learned.  You will give yourself a grade for the exercises portion on the class, and explain why you deserve that grade.
+
++ GIT exercise (required, complete by 2025-04-09)  
     + Create a github (or similar) account (if you don't have one)
-    + Read and experement with the steps in this [Github tutorial](https://rogerdudler.github.io/git-guide/)
+    + Read and experiment with the steps in this [Github tutorial](https://rogerdudler.github.io/git-guide/)
     + Clone this github repo
     + Create your own repo for your individual project
     + With your group, create a repo for your group project
-    + Before you start working on group project, mess around with branching and merging to get some practice.
+    + Before you start working on group project, mess around with commits, branching and merging to get some practice.
 
 + GDAL tutorials (required)
     + In the Spatial Thoughts [GDAL tutorial](https://courses.spatialthoughts.com/gdal-tools.html#basic-raster-processing) do sections 1.1&ndash;1.4 and 2.1&ndash;2.3
 + Python tutorials
-+ R tutoials
++ R tutorials
 + QGIS tutorials
 + GRASS tutorials
 + Other stuff you want to learn tutorials
