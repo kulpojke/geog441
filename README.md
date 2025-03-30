@@ -5,11 +5,9 @@ Welcome to GEOG 441, Advanced Geospatial Methods
 This course is designed to allow students with varying degrees of GIS and remote sensing experience to increase their knowledge.  The class is mainly focussed on Python, R and other open source geospatial tools.  Students are free to choose the exercises that are most relevant to their goals.
 
 That said there are a few skills and tools that students need to grasp by the end of the class.
-+ Basic use of GIT for project management
++ Use of GIT for project management and code sharing
++ Basic Understanding of GDAL
 + Ability to use either Python or R to perform geospatial tasks
-
-
-+  (x pts)
 
 
 ## Grading
@@ -19,7 +17,7 @@ That said there are a few skills and tools that students need to grasp by the en
 | Exercises           | 0.3 |
 | Independent project | 0.3 |
 | Group Project       | 0.3 |
-| Participation       | 0.1 |
+| Participation (coming to class, being engaged)       | 0.1 |
 
 ### Exercises
 There are two Exercises that are required, one introducing GIT, and another introducing GDAL.  We will be using GIT to manage projects in this class, and GIT is a skill that many employers are interested in.  GIT is also a great way to manage and share your own projects if you are a researcher.
@@ -74,5 +72,5 @@ At the end of the quarter you will submit a brief self evaluation, with a summar
 | 10 | 2025-06-04 | Group Presentations| |
 
 
-
-[link   ](https://kulpojke.github.io/geog441/docs/slides.html)
+# Lectures
+Lecture Slides found [here.](https://kulpojke.github.io/geog441/docs/slides.html)
