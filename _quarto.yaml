@@ -1,6 +1,9 @@
 project:
   type: website
   output-dir: docs
+  render:
+  - python_geospatial_basics.qmd
+  - R_geospatial_basics.qmd
 
 self_contained: true
 theme: blood

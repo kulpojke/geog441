@@ -1,5 +1,5 @@
 ---
-title: 'GEOG 441 - Lecture 1'
+title: 'GEOG 441'
 format:
   revealjs:
     incremental: true 
@@ -10,10 +10,7 @@ navigation-mode: vertical
 
 ---
 
-# This slideshow
-
-TODO: GDAL intro slideshow before this
-
+# Introducing Python
 + Introducing Python
 + Basic Geospatial Manipulations
 
