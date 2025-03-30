@@ -257,7 +257,7 @@
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="da80c61f" class="cell columns column-output-location" data-execution_count="1">
+<div id="1c3afc68" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb1-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -283,7 +283,38 @@ but 5 // 4 is 1</code></pre>
 </section>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
-<p>TODO: Show some sequence stuff</p>
+<div id="d30591c3" class="cell columns column-output-location" data-execution_count="2">
+<div class="column">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># a list</span></span>
+<span id="cb3-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb3-3"><a></a></span>
+<span id="cb3-4"><a></a><span class="co"># a tuple</span></span>
+<span id="cb3-5"><a></a>a_tup <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span>
+<span id="cb3-6"><a></a></span>
+<span id="cb3-7"><a></a><span class="co"># access by index</span></span>
+<span id="cb3-8"><a></a>a <span class="op">=</span> a_list[<span class="dv">0</span>]</span>
+<span id="cb3-9"><a></a>b <span class="op">=</span> a_list[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb3-10"><a></a>c <span class="op">=</span> a_list[<span class="dv">4</span>]</span>
+<span id="cb3-11"><a></a><span class="bu">print</span>(<span class="ss">f'by index:</span><span class="ch">\n</span><span class="ss"> 0 --&gt; </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss">-1 --&gt; </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss"> 4 --&gt; </span><span class="sc">{</span>c<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-12"><a></a></span>
+<span id="cb3-13"><a></a><span class="co"># you can slice a list or tuple(remember 0 indexed)</span></span>
+<span id="cb3-14"><a></a><span class="bu">print</span>(<span class="st">'slices'</span>)</span>
+<span id="cb3-15"><a></a><span class="bu">print</span>(a_list[<span class="dv">2</span>:<span class="dv">5</span>])</span>
+<span id="cb3-16"><a></a><span class="bu">print</span>(a_list[<span class="dv">8</span>:])</span>
+<span id="cb3-17"><a></a><span class="bu">print</span>(a_tup[<span class="dv">2</span>:<span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>by index:
+ 0 --&gt; 1,
+-1 --&gt; 9,
+ 4 --&gt; 5
+slices
+[3, 4, 5]
+[9]
+(3, 4, 5)</code></pre>
+</div>
+</div></div>
+<p><a href="https://www.geeksforgeeks.org/python-list-slicing/#">Slicing</a> <a href="https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858">Sequences tutorial</a> <a href="https://www.youtube.com/watch?v=n3KMrwmq_94">Sequence tutorial as video</a></p>
 </section>
 <section id="vector-data" class="slide level2">
 <h2>Vector Data</h2>
@@ -316,26 +347,26 @@ but 5 // 4 is 1</code></pre>
 <section id="a-plot" class="slide level2">
 <h2>A plot</h2>
 <p>Python</p>
-<div id="cell-fig-polar" class="cell columns column-output-location" data-execution_count="2">
+<div id="cell-fig-polar" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb3-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb3-3"><a></a></span>
-<span id="cb3-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb3-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb3-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb3-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb3-8"><a></a>)</span>
-<span id="cb3-9"><a></a>ax.plot(theta, r)</span>
-<span id="cb3-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb3-11"><a></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb3-12"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb5-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb5-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb5-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb5-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
+<span id="cb5-8"><a></a>)</span>
+<span id="cb5-9"><a></a>ax.plot(theta, r)</span>
+<span id="cb5-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb5-11"><a></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb5-12"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display">
 <div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center">
 <figure class="quarto-float quarto-float-fig">
 <div aria-describedby="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
-<img data-src="python_geospatial_basics_files/figure-revealjs/fig-polar-output-1.png" width="442" height="432">
+<img data-src="python_geospatial_basics_files/figure-revealjs/fig-polar-output-1.png" width="277" height="269">
 </div>
 <figcaption class="quarto-float-caption-bottom quarto-float-caption quarto-float-fig" id="fig-polar-caption-0ceaefa1-69ba-4598-a22c-09a6ac19f8ca">
 Figure&nbsp;1: A line plot on a polar axis

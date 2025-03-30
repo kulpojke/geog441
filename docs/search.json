@@ -25,7 +25,7 @@
     "href": "python_geospatial_basics.html#sequences",
     "title": "GEOG 441",
     "section": "Sequences",
-    "text": "Sequences\nTODO: Show some sequence stuff"
+    "text": "Sequences\n\n\n# a list\na_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# a tuple\na_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)\n\n# access by index\na = a_list[0]\nb = a_list[-1]\nc = a_list[4]\nprint(f'by index:\\n 0 --&gt; {a},\\n-1 --&gt; {b},\\n 4 --&gt; {c}')\n\n# you can slice a list or tuple(remember 0 indexed)\nprint('slices')\nprint(a_list[2:5])\nprint(a_list[8:])\nprint(a_tup[2:5])\n\n\nby index:\n 0 --&gt; 1,\n-1 --&gt; 9,\n 4 --&gt; 5\nslices\n[3, 4, 5]\n[9]\n(3, 4, 5)\n\n\nSlicing Sequences tutorial Sequence tutorial as video"
   },
   {
     "objectID": "python_geospatial_basics.html#vector-data",

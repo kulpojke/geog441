@@ -53,7 +53,29 @@ print(f'but 5 // 4 is {5 // 4}')
 
 ## Sequences
 
-TODO: Show some sequence stuff
+```{python}
+# a list
+a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# a tuple
+a_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)
+
+# access by index
+a = a_list[0]
+b = a_list[-1]
+c = a_list[4]
+print(f'by index:\n 0 --> {a},\n-1 --> {b},\n 4 --> {c}')
+
+# you can slice a list or tuple(remember 0 indexed)
+print('slices')
+print(a_list[2:5])
+print(a_list[8:])
+print(a_tup[2:5])
+```
+
+[Slicing](https://www.geeksforgeeks.org/python-list-slicing/#)
+[Sequences tutorial](https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858)
+[Sequence tutorial as video](https://www.youtube.com/watch?v=n3KMrwmq_94)
 
 ## Vector Data
 
