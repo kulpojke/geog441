@@ -53,7 +53,7 @@ print(f'but 5 // 4 is {5 // 4}')
 
 ## Sequences
 
-TODO: Show some sewuence stuff
+TODO: Show some sequence stuff
 
 ## Vector Data
 
