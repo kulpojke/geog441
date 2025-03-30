@@ -8,26 +8,43 @@ That said there are a few skills and tools that students need to grasp by the en
 + Basic use of GIT for project management
 + Ability to use either Python or R to perform geospatial tasks
 
+
++  (x pts)
+
+
+## Grading
+
+| Component | Fraction of grade  |
+|-----------|--------------------|
+| Exercises           | 0.3 |
+| Independent project | 0.3 |
+| Group Project       | 0.3 |
+| Participation       | 0.1 |
+
 ### Exercises
-In order to accommodate students with different levels of knowledge, and different goals, exercises are offered 
+There are two components that will   
++ GIT exercise (required) 
+    + Create a github (or similar) account (if you don't have one)
+    + Read and experement with the steps in this [Github tutorial](https://rogerdudler.github.io/git-guide/)
+    + Clone this github repo
+    + Create your own repo for your individual project
+    + With your group, create a repo for your group project
+    + Before you start working on group project, mess around with branching and merging to get some practice.
 
-+ [Github tutorial](https://rogerdudler.github.io/git-guide/) (x pts)
++ GDAL tutorials (required)
++ Python tutorials
++ R tutoials
++ QGIS tutorials
++ GRASS tutorials
++ Other stuff you want to learn tutorials
 
 
-### Grading
 
-| Component | % of grade  |
-|-----------|-------------|
-| Exercises |           x |
-| Independent project | y |
-| Group Project       | z |
-| Self Evaluation     | p |
-
-### Calendar
+## Calendar
 
 | Week | Date | Lecture |
 |----|------------|------------------------------------------|
-|  1 | 2025-04-02 | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li><li></li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>QGIS</li><li>GRASS |
+|  1 | 2025-04-02 | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>QGIS</li><li>GDAL</li><li>GRASS |
 |  2 | 2025-04-07 | Group Project Introductions  <ul><li>9:00 - Devin Best: Land Trust Water Conservation</li><li>9:15</li><li></li></ul> Individual Project Introductions  <ul><li>BYOP...</li><li>or I can help you come up with one</li></ul>| |
 |  2 | 2025-04-09 | Python and R: <ul><li>Introduction and Comparison</li><li>Jupyter Notebooks</li></ul> |
 |  3 | 2025-04-14 | Working with Vectors in Python |
@@ -40,7 +57,7 @@ In order to accommodate students with different levels of knowledge, and differe
 |  6 | 2025-05-07 | Lidar continued <ul><li> Crown Delineation in lidR </li><li> Archealogical stuff with Open Lidar Toolbox in QGIS</li><li>lidR</li></ul> |
 |  7 | 2025-05-12 | Group Project Check-In |
 |  7 | 2025-05-14 | Individual Project Check-In |
-|  8 | 2025-05-19 | Subject By Popular Demand |
+|  8 | 2025-05-19 | Leaflet, quarto, reveal |
 |  8 | 2025-05-21 | Subject By Popular Demand |
 |  9 | 2025-05-26 | Memorial Day |
 |  9 | 2025-05-27 | Subject By Popular Demand (A Tuesday following Monday schedule) |
