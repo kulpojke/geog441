@@ -1,5 +1,5 @@
 ---
-title: 'GEOG 441'
+title: 'Geospatial Python For Total Beginners'
 format:
   revealjs:
     incremental: true 
@@ -87,9 +87,9 @@ print(a_str[-9:])
 ## Dictionaries
 
 ```{python}
-pets = {'dogs': 26, 'cats': 100}
+pets = {'honden': 26, 'katten': 100}
 
-print(pets['dogs'] + pets['cats'])
+print(pets['honden'] + pets['katten'])
 ```
 
 ## Iterating

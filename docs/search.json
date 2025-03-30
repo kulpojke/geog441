@@ -2,70 +2,70 @@
   {
     "objectID": "python_geospatial_basics.html#why-learn-python",
     "href": "python_geospatial_basics.html#why-learn-python",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "Why learn Python",
     "text": "Why learn Python\n\nIt allows for more flexibility than a GUI based GIS program.\nOther GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.\ngenerally a widely used language."
   },
   {
     "objectID": "python_geospatial_basics.html#basic-python-data-types",
     "href": "python_geospatial_basics.html#basic-python-data-types",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "Basic Python data types",
     "text": "Basic Python data types\n\n\n\nType\nExample(s)\n\n\n\n\nString\n'Dude!'\n\n\nFloat\n1.2\n\n\nInt\n3\n\n\nTuple\n('x', 'y'), (1, 2), ('x', 3.2)\n\n\nList\n['x', 'y'], [1, 2], Possible but bad –&gt; ['x', 3.2]\n\n\nDict\n{'dogs': 26, 'cats', 100}\n\n\netc…\nthere are others"
   },
   {
     "objectID": "python_geospatial_basics.html#basic-numbers",
     "href": "python_geospatial_basics.html#basic-numbers",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "Basic Numbers",
     "text": "Basic Numbers\nFloats and Ints don’t do anything all that surprising\n\n\na = 2 + 2\nb = 2.0 + 2.0\nc = 2 + 2.0\n\n\nprint(f'a is an {type(a)}')\nprint(f'b is a {type(b)}')\nprint(f'c is a {type(c)}')\nprint(f'a / b is {a / b}')\nprint(f'5 / 4 is {5 / 4}')\nprint(f'but 5 // 4 is {5 // 4}')\n\n\na is an &lt;class 'int'&gt;\nb is a &lt;class 'float'&gt;\nc is a &lt;class 'float'&gt;\na / b is 1.0\n5 / 4 is 1.25\nbut 5 // 4 is 1"
   },
   {
     "objectID": "python_geospatial_basics.html#sequences",
     "href": "python_geospatial_basics.html#sequences",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "Sequences",
     "text": "Sequences\nLists, tuples, and strings ae all sequences\n\n\n# a list\na_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# a tuple\na_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)\n\n# a string\na_str = 'Wil je graag een neushorn?'\n\n# access by index\na = a_list[0]\nb = a_list[-1]\nc = a_list[4]\nprint(f'by index:\\n 0 --&gt; {a},\\n-1 --&gt; {b},\\n 4 --&gt; {c}')\n\n# works fro strings to\nprint('string item at 4 --&gt; ', a_str[4])\n\n# you can slice a list or tuple(remember 0 indexed)\nprint('\\nslices:')\nprint(a_list[2:5])\nprint(a_list[8:])\nprint(a_tup[2:5])\nprint(a_str[-9:])\n\n\nby index:\n 0 --&gt; 1,\n-1 --&gt; 9,\n 4 --&gt; 5\nstring item at 4 --&gt;  j\n\nslices:\n[3, 4, 5]\n[9]\n(3, 4, 5)\nneushorn?\n\n\nSlicing Sequences tutorial Sequence tutorial as video"
   },
   {
     "objectID": "python_geospatial_basics.html#dictionaries",
     "href": "python_geospatial_basics.html#dictionaries",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "Dictionaries",
-    "text": "Dictionaries\n\n\npets = {'dogs': 26, 'cats': 100}\n\nprint(pets['dogs'] + pets['cats'])\n\n\n126"
+    "text": "Dictionaries\n\n\npets = {'honden': 26, 'katten': 100}\n\nprint(pets['honden'] + pets['katten'])\n\n\n126"
   },
   {
     "objectID": "python_geospatial_basics.html#iterating",
     "href": "python_geospatial_basics.html#iterating",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "Iterating",
     "text": "Iterating\n\n\na = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# use a loop to append squared values to new lists\nb = []\nfor n in a:\n  b.append(n**2)\n\n# or, better, use a comprehension\nc = [n**2 for n in a]\n\nprint(b)\nprint(c)\n\n\n[1, 4, 9, 16, 25, 36, 49, 64, 81]\n[1, 4, 9, 16, 25, 36, 49, 64, 81]"
   },
   {
     "objectID": "python_geospatial_basics.html#vector-data",
     "href": "python_geospatial_basics.html#vector-data",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "Vector Data",
     "text": "Vector Data\n\nMost often we interact with vector data using GeoPandas\n\nGeoPandas is an extension of Pandas.\nUses Fiona, which in-turn relies on GDAL and OGR, to read and write.\nVector data is handled by the Shapely module, which relies on GEOS.\nGEOS implements the OGC Simple Features geometry\n\nProjections are managed by pyproj which is built upon PROJ"
   },
   {
     "objectID": "python_geospatial_basics.html#pandas",
     "href": "python_geospatial_basics.html#pandas",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "Pandas",
     "text": "Pandas"
   },
   {
     "objectID": "python_geospatial_basics.html#shapely",
     "href": "python_geospatial_basics.html#shapely",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "Shapely",
     "text": "Shapely\n\nShapely Geometric Objects consist of coordinate tuples:\n\nPoint - (x, y) or three dimensional (x, y, z)\nLineString\nPolygon"
   },
   {
     "objectID": "python_geospatial_basics.html#a-plot",
     "href": "python_geospatial_basics.html#a-plot",
-    "title": "GEOG 441",
+    "title": "Geospatial Python For Total Beginners",
     "section": "A plot",
     "text": "A plot\nPython\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   }
