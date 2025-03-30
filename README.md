@@ -73,4 +73,4 @@ At the end of the quarter you will submit a brief self evaluation, with a summar
 
 
 # Lectures
-Lecture Slides found [here.](https://kulpojke.github.io/geog441/docs/index.html)
+Lecture Slides found [here.](https://kulpojke.github.io/geog441/)
