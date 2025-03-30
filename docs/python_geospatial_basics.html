@@ -257,7 +257,7 @@
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="1c3afc68" class="cell columns column-output-location" data-execution_count="1">
+<div id="08e2f215" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb1-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -283,7 +283,8 @@ but 5 // 4 is 1</code></pre>
 </section>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
-<div id="d30591c3" class="cell columns column-output-location" data-execution_count="2">
+<p>Lists, tuples, and strings ae all sequences</p>
+<div id="c76f0315" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># a list</span></span>
 <span id="cb3-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
@@ -291,30 +292,76 @@ but 5 // 4 is 1</code></pre>
 <span id="cb3-4"><a></a><span class="co"># a tuple</span></span>
 <span id="cb3-5"><a></a>a_tup <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span>
 <span id="cb3-6"><a></a></span>
-<span id="cb3-7"><a></a><span class="co"># access by index</span></span>
-<span id="cb3-8"><a></a>a <span class="op">=</span> a_list[<span class="dv">0</span>]</span>
-<span id="cb3-9"><a></a>b <span class="op">=</span> a_list[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb3-10"><a></a>c <span class="op">=</span> a_list[<span class="dv">4</span>]</span>
-<span id="cb3-11"><a></a><span class="bu">print</span>(<span class="ss">f'by index:</span><span class="ch">\n</span><span class="ss"> 0 --&gt; </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss">-1 --&gt; </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss"> 4 --&gt; </span><span class="sc">{</span>c<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb3-12"><a></a></span>
-<span id="cb3-13"><a></a><span class="co"># you can slice a list or tuple(remember 0 indexed)</span></span>
-<span id="cb3-14"><a></a><span class="bu">print</span>(<span class="st">'slices'</span>)</span>
-<span id="cb3-15"><a></a><span class="bu">print</span>(a_list[<span class="dv">2</span>:<span class="dv">5</span>])</span>
-<span id="cb3-16"><a></a><span class="bu">print</span>(a_list[<span class="dv">8</span>:])</span>
-<span id="cb3-17"><a></a><span class="bu">print</span>(a_tup[<span class="dv">2</span>:<span class="dv">5</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb3-7"><a></a><span class="co"># a string</span></span>
+<span id="cb3-8"><a></a>a_str <span class="op">=</span> <span class="st">'Wil je graag een neushorn?'</span></span>
+<span id="cb3-9"><a></a></span>
+<span id="cb3-10"><a></a><span class="co"># access by index</span></span>
+<span id="cb3-11"><a></a>a <span class="op">=</span> a_list[<span class="dv">0</span>]</span>
+<span id="cb3-12"><a></a>b <span class="op">=</span> a_list[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb3-13"><a></a>c <span class="op">=</span> a_list[<span class="dv">4</span>]</span>
+<span id="cb3-14"><a></a><span class="bu">print</span>(<span class="ss">f'by index:</span><span class="ch">\n</span><span class="ss"> 0 --&gt; </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss">-1 --&gt; </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss"> 4 --&gt; </span><span class="sc">{</span>c<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-15"><a></a></span>
+<span id="cb3-16"><a></a><span class="co"># works fro strings to</span></span>
+<span id="cb3-17"><a></a><span class="bu">print</span>(<span class="st">'string item at 4 --&gt; '</span>, a_str[<span class="dv">4</span>])</span>
+<span id="cb3-18"><a></a></span>
+<span id="cb3-19"><a></a><span class="co"># you can slice a list or tuple(remember 0 indexed)</span></span>
+<span id="cb3-20"><a></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">slices:'</span>)</span>
+<span id="cb3-21"><a></a><span class="bu">print</span>(a_list[<span class="dv">2</span>:<span class="dv">5</span>])</span>
+<span id="cb3-22"><a></a><span class="bu">print</span>(a_list[<span class="dv">8</span>:])</span>
+<span id="cb3-23"><a></a><span class="bu">print</span>(a_tup[<span class="dv">2</span>:<span class="dv">5</span>])</span>
+<span id="cb3-24"><a></a><span class="bu">print</span>(a_str[<span class="op">-</span><span class="dv">9</span>:])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>by index:
  0 --&gt; 1,
 -1 --&gt; 9,
  4 --&gt; 5
-slices
+string item at 4 --&gt;  j
+
+slices:
 [3, 4, 5]
 [9]
-(3, 4, 5)</code></pre>
+(3, 4, 5)
+neushorn?</code></pre>
 </div>
 </div></div>
 <p><a href="https://www.geeksforgeeks.org/python-list-slicing/#">Slicing</a> <a href="https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858">Sequences tutorial</a> <a href="https://www.youtube.com/watch?v=n3KMrwmq_94">Sequence tutorial as video</a></p>
+</section>
+<section id="dictionaries" class="slide level2">
+<h2>Dictionaries</h2>
+<div id="11b32c14" class="cell columns column-output-location" data-execution_count="3">
+<div class="column">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>pets <span class="op">=</span> {<span class="st">'dogs'</span>: <span class="dv">26</span>, <span class="st">'cats'</span>: <span class="dv">100</span>}</span>
+<span id="cb5-2"><a></a></span>
+<span id="cb5-3"><a></a><span class="bu">print</span>(pets[<span class="st">'dogs'</span>] <span class="op">+</span> pets[<span class="st">'cats'</span>])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>126</code></pre>
+</div>
+</div></div>
+</section>
+<section id="iterating" class="slide level2">
+<h2>Iterating</h2>
+<div id="d513133f" class="cell columns column-output-location" data-execution_count="4">
+<div class="column">
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a><span class="co"># use a loop to append squared values to new lists</span></span>
+<span id="cb7-4"><a></a>b <span class="op">=</span> []</span>
+<span id="cb7-5"><a></a><span class="cf">for</span> n <span class="kw">in</span> a:</span>
+<span id="cb7-6"><a></a>  b.append(n<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb7-7"><a></a></span>
+<span id="cb7-8"><a></a><span class="co"># or, better, use a comprehension</span></span>
+<span id="cb7-9"><a></a>c <span class="op">=</span> [n<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> n <span class="kw">in</span> a]</span>
+<span id="cb7-10"><a></a></span>
+<span id="cb7-11"><a></a><span class="bu">print</span>(b)</span>
+<span id="cb7-12"><a></a><span class="bu">print</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81]
+[1, 4, 9, 16, 25, 36, 49, 64, 81]</code></pre>
+</div>
+</div></div>
 </section>
 <section id="vector-data" class="slide level2">
 <h2>Vector Data</h2>
@@ -347,20 +394,20 @@ slices
 <section id="a-plot" class="slide level2">
 <h2>A plot</h2>
 <p>Python</p>
-<div id="cell-fig-polar" class="cell columns column-output-location" data-execution_count="3">
+<div id="cell-fig-polar" class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
-<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb5-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb5-3"><a></a></span>
-<span id="cb5-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb5-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb5-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb5-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb5-8"><a></a>)</span>
-<span id="cb5-9"><a></a>ax.plot(theta, r)</span>
-<span id="cb5-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb5-11"><a></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb5-12"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-3"><a></a></span>
+<span id="cb9-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb9-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb9-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb9-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
+<span id="cb9-8"><a></a>)</span>
+<span id="cb9-9"><a></a>ax.plot(theta, r)</span>
+<span id="cb9-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb9-11"><a></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb9-12"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display">
 <div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center">

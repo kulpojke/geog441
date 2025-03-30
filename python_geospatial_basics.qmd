@@ -52,7 +52,7 @@ print(f'but 5 // 4 is {5 // 4}')
 ```
 
 ## Sequences
-
+Lists, tuples, and strings ae all sequences
 ```{python}
 # a list
 a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
@@ -60,22 +60,55 @@ a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
 # a tuple
 a_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)
 
+# a string
+a_str = 'Wil je graag een neushorn?'
+
 # access by index
 a = a_list[0]
 b = a_list[-1]
 c = a_list[4]
 print(f'by index:\n 0 --> {a},\n-1 --> {b},\n 4 --> {c}')
 
+# works fro strings to
+print('string item at 4 --> ', a_str[4])
+
 # you can slice a list or tuple(remember 0 indexed)
-print('slices')
+print('\nslices:')
 print(a_list[2:5])
 print(a_list[8:])
 print(a_tup[2:5])
+print(a_str[-9:])
 ```
 
 [Slicing](https://www.geeksforgeeks.org/python-list-slicing/#)
 [Sequences tutorial](https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858)
 [Sequence tutorial as video](https://www.youtube.com/watch?v=n3KMrwmq_94)
+
+## Dictionaries
+
+```{python}
+pets = {'dogs': 26, 'cats': 100}
+
+print(pets['dogs'] + pets['cats'])
+```
+
+## Iterating
+
+```{python}
+a = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# use a loop to append squared values to new lists
+b = []
+for n in a:
+  b.append(n**2)
+
+# or, better, use a comprehension
+c = [n**2 for n in a]
+
+print(b)
+print(c)
+
+```
 
 ## Vector Data
 

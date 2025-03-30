@@ -25,7 +25,21 @@
     "href": "python_geospatial_basics.html#sequences",
     "title": "GEOG 441",
     "section": "Sequences",
-    "text": "Sequences\n\n\n# a list\na_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# a tuple\na_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)\n\n# access by index\na = a_list[0]\nb = a_list[-1]\nc = a_list[4]\nprint(f'by index:\\n 0 --&gt; {a},\\n-1 --&gt; {b},\\n 4 --&gt; {c}')\n\n# you can slice a list or tuple(remember 0 indexed)\nprint('slices')\nprint(a_list[2:5])\nprint(a_list[8:])\nprint(a_tup[2:5])\n\n\nby index:\n 0 --&gt; 1,\n-1 --&gt; 9,\n 4 --&gt; 5\nslices\n[3, 4, 5]\n[9]\n(3, 4, 5)\n\n\nSlicing Sequences tutorial Sequence tutorial as video"
+    "text": "Sequences\nLists, tuples, and strings ae all sequences\n\n\n# a list\na_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# a tuple\na_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)\n\n# a string\na_str = 'Wil je graag een neushorn?'\n\n# access by index\na = a_list[0]\nb = a_list[-1]\nc = a_list[4]\nprint(f'by index:\\n 0 --&gt; {a},\\n-1 --&gt; {b},\\n 4 --&gt; {c}')\n\n# works fro strings to\nprint('string item at 4 --&gt; ', a_str[4])\n\n# you can slice a list or tuple(remember 0 indexed)\nprint('\\nslices:')\nprint(a_list[2:5])\nprint(a_list[8:])\nprint(a_tup[2:5])\nprint(a_str[-9:])\n\n\nby index:\n 0 --&gt; 1,\n-1 --&gt; 9,\n 4 --&gt; 5\nstring item at 4 --&gt;  j\n\nslices:\n[3, 4, 5]\n[9]\n(3, 4, 5)\nneushorn?\n\n\nSlicing Sequences tutorial Sequence tutorial as video"
+  },
+  {
+    "objectID": "python_geospatial_basics.html#dictionaries",
+    "href": "python_geospatial_basics.html#dictionaries",
+    "title": "GEOG 441",
+    "section": "Dictionaries",
+    "text": "Dictionaries\n\n\npets = {'dogs': 26, 'cats': 100}\n\nprint(pets['dogs'] + pets['cats'])\n\n\n126"
+  },
+  {
+    "objectID": "python_geospatial_basics.html#iterating",
+    "href": "python_geospatial_basics.html#iterating",
+    "title": "GEOG 441",
+    "section": "Iterating",
+    "text": "Iterating\n\n\na = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# use a loop to append squared values to new lists\nb = []\nfor n in a:\n  b.append(n**2)\n\n# or, better, use a comprehension\nc = [n**2 for n in a]\n\nprint(b)\nprint(c)\n\n\n[1, 4, 9, 16, 25, 36, 49, 64, 81]\n[1, 4, 9, 16, 25, 36, 49, 64, 81]"
   },
   {
     "objectID": "python_geospatial_basics.html#vector-data",
