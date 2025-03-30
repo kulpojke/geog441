@@ -27,7 +27,7 @@ navigation-mode: vertical
 | String | `'Dude!'`|
 | Float  | `1.2`  |
 | Int    | `3` |
-| Tuple  | `('x', 'y'), (1, 2), ('x', 3.2)` |
+| Tuple  | `('x', 'y')`<br>`(1, 2)`<br>`('x', 3.2)` |
 | List   | `['x', 'y'], [1, 2]`, Possible but bad --> `['x', 3.2]` |
 | Dict   | `{'dogs': 26, 'cats', 100}` |
 | etc... | there are others |
