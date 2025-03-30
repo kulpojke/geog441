@@ -29,7 +29,7 @@ The rest is up to you as far as exercises go.  You do however need to make subst
 At the end of the quarter you will submit a brief self evaluation, with a summary of the exercises you have completed and the things you have learned.  You will give yourself a grade for the exercises portion on the class, and explain why you deserve that grade.
 
 + GIT exercise (required, complete by 2025-04-09)  
-    + Create a github (or similar) account (if you don't have one)
+    + Create a github (or [similar](https://www.wearedevelopers.com/en/magazine/298/top-github-alternatives)) account (if you don't have one)
     + Read and experiment with the steps in this [Github tutorial](https://rogerdudler.github.io/git-guide/)
     + Clone this github repo
     + Create your own repo for your individual project
