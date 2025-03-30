@@ -20,7 +20,7 @@ That said there are a few skills and tools that students need to grasp by the en
 | Participation (coming to class, being engaged)       | 0.1 |
 
 ### Exercises
-There are two Exercises that are required, one introducing GIT, and another introducing GDAL.  We will be using GIT to manage projects in this class, and GIT is a skill that many employers are interested in.  GIT is also a great way to manage and share your own projects if you are a researcher.
+There are two exercises that are required, one introducing GIT, and another introducing GDAL. Students may choose other exercises based on their interests or project needs. We will be using GIT to manage projects in this class, and GIT is a skill that many employers are interested in.  GIT is also a great way to manage and share your own projects if you are a researcher.
 
 I am forcing you to learn a little about GDAL for a couple of reasons.  The first is historical/contextual. Most other geospatial applications rely, at least partially, on GDAL.  It has been in use since 2000.  Secondly, it is extremely useful. It is great for writing scripts for processing files in batch.  If you ever want to process a bunch of files in a container on the cloud it is a good choice because it does not have complicated dependencies.
 
