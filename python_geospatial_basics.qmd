@@ -11,7 +11,7 @@ output-location: column
 
 ## This slideshow
 
-TODO: GDAL intro slaideshow before this
+TODO: GDAL intro slideshow before this
 
 + Introducing Python
 + Basic Geospatial Manipulations
