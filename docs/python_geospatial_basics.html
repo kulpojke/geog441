@@ -1,6 +1,6 @@
 <!DOCTYPE html>
 <html lang="en"><head>
-<script src="site_libs/clipboard/clipboard.min.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js" integrity="sha512-bLT0Qm9VnAYZDflyKcBaQ2gg0hSYNQrJ8RilYldYQ1FxQYoCLtUjuuRuZo+fjqhx/qtq/1itJ0C2ejDxltZVFg==" crossorigin="anonymous"></script><script src="site_libs/clipboard/clipboard.min.js"></script>
 <script src="site_libs/quarto-html/tabby.min.js"></script>
 <script src="site_libs/quarto-html/popper.min.js"></script>
 <script src="site_libs/quarto-html/tippy.umd.min.js"></script>
@@ -185,6 +185,9 @@
       margin-right: 0; 
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/require.js/2.3.6/require.min.js" integrity="sha512-c3Nl8+7g4LMSTdrm621y7kf9v3SDPnhxLNhcjFJbKECVnmZHTdo+IRO05sNLTH/D3vA6u1X32ehoLC7WFVdheg==" crossorigin="anonymous"></script>
+  
+  <script type="application/javascript">define('jquery', [],function() {return window.jQuery;})</script>
 </head>
 <body class="quarto-dark">
   <div class="reveal">
@@ -261,7 +264,7 @@
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="aa238d73" class="cell columns column-output-location" data-execution_count="1">
+<div id="4363994b" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb1-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -288,7 +291,7 @@ but 5 // 4 is 1</code></pre>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="94236098" class="cell columns column-output-location" data-execution_count="2">
+<div id="054d8b74" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># a list</span></span>
 <span id="cb3-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
@@ -335,7 +338,7 @@ neushorn?</code></pre>
 </section>
 <section id="dictionaries" class="slide level2">
 <h2>Dictionaries</h2>
-<div id="3bb2f730" class="cell columns column-output-location" data-execution_count="3">
+<div id="6ddf160f" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
 <span id="cb5-2"><a></a></span>
@@ -354,7 +357,7 @@ neushorn?</code></pre>
 </section>
 <section id="iterating" class="slide level2">
 <h2>Iterating</h2>
-<div id="076ce23d" class="cell columns column-output-location" data-execution_count="4">
+<div id="2f65a501" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb7-2"><a></a></span>
@@ -409,7 +412,7 @@ is the same as
 </section>
 <section id="polygon" class="slide level2">
 <h2>Polygon</h2>
-<div id="6373caf8" class="cell columns column-output-location" data-execution_count="5">
+<div id="04943a84" class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
 <span id="cb9-2"><a></a></span>
@@ -424,7 +427,7 @@ is the same as
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="19">
+<div class="cell-output cell-output-display" data-execution_count="26">
 <div>
 <figure>
 <p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-6-output-2.svg"></p>
@@ -435,7 +438,7 @@ is the same as
 </section>
 <section id="pandas-dataframe" class="slide level2 scrollable">
 <h2>Pandas DataFrame</h2>
-<div id="85c24436" class="cell columns column-output-location" data-execution_count="6">
+<div id="100c1918" class="cell columns column-output-location" data-execution_count="6">
 <div class="column">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
 <span id="cb11-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
@@ -468,27 +471,90 @@ is the same as
 <span id="cb11-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
 <span id="cb11-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
 <span id="cb11-31"><a></a></span>
-<span id="cb11-32"><a></a><span class="co"># create the scatter plot</span></span>
-<span id="cb11-33"><a></a>plt.scatter(df.date_time, df[<span class="st">'T (C)'</span>])</span>
-<span id="cb11-34"><a></a></span>
-<span id="cb11-35"><a></a><span class="co"># set the x-axis tick labels and rotate them</span></span>
-<span id="cb11-36"><a></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
-<span id="cb11-37"><a></a></span>
-<span id="cb11-38"><a></a><span class="co"># label axes</span></span>
-<span id="cb11-39"><a></a>plt.xlabel(<span class="st">'Day and Time'</span>)</span>
-<span id="cb11-40"><a></a>plt.ylabel(<span class="st">'Temperature (C)'</span>)</span>
-<span id="cb11-41"><a></a>plt.title(<span class="st">'Hourly Temperature (C) in West Crabhammer'</span>)</span>
-<span id="cb11-42"><a></a></span>
-<span id="cb11-43"><a></a><span class="co"># adjust layout to prevent labels from overlapping</span></span>
-<span id="cb11-44"><a></a>plt.tight_layout()</span>
-<span id="cb11-45"><a></a></span>
-<span id="cb11-46"><a></a><span class="co"># Show the plot</span></span>
-<span id="cb11-47"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-32"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-display" data-execution_count="27">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">date_time</th>
+<th data-quarto-table-cell-role="th">T (C)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2025-03-01 08:00:00</td>
+<td>19.205913</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2025-03-01 08:30:00</td>
+<td>26.814447</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2025-03-01 09:00:00</td>
+<td>29.381797</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2025-03-01 09:30:00</td>
+<td>26.805590</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2025-03-01 10:00:00</td>
+<td>21.353584</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></div>
+</section>
+<section id="pandas-dataframe-cont." class="slide level2 scrollable">
+<h2>Pandas DataFrame Cont.</h2>
+<div id="24f1ac7c" class="cell columns column-output-location" data-execution_count="7">
+<div class="column">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="co"># create the scatter plot</span></span>
+<span id="cb12-2"><a></a>plt.scatter(df.date_time, df[<span class="st">'T (C)'</span>])</span>
+<span id="cb12-3"><a></a></span>
+<span id="cb12-4"><a></a><span class="co"># set the x-axis tick labels and rotate them</span></span>
+<span id="cb12-5"><a></a>plt.xticks(rotation<span class="op">=</span><span class="dv">45</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb12-6"><a></a></span>
+<span id="cb12-7"><a></a><span class="co"># label axes</span></span>
+<span id="cb12-8"><a></a>plt.xlabel(<span class="st">'Day and Time'</span>)</span>
+<span id="cb12-9"><a></a>plt.ylabel(<span class="st">'Temperature (C)'</span>)</span>
+<span id="cb12-10"><a></a>plt.title(<span class="st">'Hourly Temperature (C) in West Crabhammer'</span>)</span>
+<span id="cb12-11"><a></a></span>
+<span id="cb12-12"><a></a><span class="co"># adjust layout to prevent labels from overlapping</span></span>
+<span id="cb12-13"><a></a>plt.tight_layout()</span>
+<span id="cb12-14"><a></a></span>
+<span id="cb12-15"><a></a><span class="co"># Show the plot</span></span>
+<span id="cb12-16"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-7-output-1.png" width="949" height="469"></p>
+<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-8-output-1.png" width="949" height="469"></p>
 </figure>
 </div>
 </div>
@@ -496,21 +562,21 @@ is the same as
 </section>
 <section id="a-random-plot" class="slide level2">
 <h2>A random plot</h2>
-<div id="cell-fig-polar" class="cell columns column-output-location" data-execution_count="7">
+<div id="cell-fig-polar" class="cell columns column-output-location" data-execution_count="8">
 <div class="column">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb12-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-3"><a></a></span>
-<span id="cb12-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb12-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb12-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb12-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb12-8"><a></a>)</span>
-<span id="cb12-9"><a></a>ax.plot(theta, r)</span>
-<span id="cb12-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb12-11"><a></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb12-12"><a></a>plt.title(<span class="st">'What the heck is this polar plot trying to tell us?'</span>)</span>
-<span id="cb12-13"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb13-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb13-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb13-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb13-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
+<span id="cb13-8"><a></a>)</span>
+<span id="cb13-9"><a></a>ax.plot(theta, r)</span>
+<span id="cb13-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb13-11"><a></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb13-12"><a></a>plt.title(<span class="st">'What the heck is this polar plot trying to tell us?'</span>)</span>
+<span id="cb13-13"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display">
 <div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center">

@@ -184,6 +184,13 @@ df = pd.DataFrame()
 df['date_time'] = time_stamps
 df['T (C)'] = temp_c
 
+df.head()
+```
+
+## Pandas DataFrame Cont. {.scrollable}
+
+```{python}
+
 # create the scatter plot
 plt.scatter(df.date_time, df['T (C)'])
 
