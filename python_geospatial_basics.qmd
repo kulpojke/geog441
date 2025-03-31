@@ -278,7 +278,7 @@ p
 
 ## Reading Files
 
-Here we will read a geogson using the `read_file` method.
+Here we will read a geojson using the `read_file` method.
 ```{python}
 from pathlib import Path
 import geopandas as gpd
