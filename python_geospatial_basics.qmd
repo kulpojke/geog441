@@ -128,7 +128,7 @@ print(c)
 
 ## Pandas
 van dmaage
-<iframe width="560" height="315" src="https://github.com/kulpojke/geog441/blob/slideshow/images/pandas.png"></iframe>
+<iframe width="560" height="315" src="images/pandas.png"></iframe>
 
 ## Shapely {.smaller}
 
