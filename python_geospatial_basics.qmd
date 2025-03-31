@@ -151,7 +151,7 @@ print(c[0] == c[-1])
 p
 ```
 
-## Pandas DataFrame
+## Pandas DataFrame {.smaller}
 ```{python}
 from datetime import datetime, timedelta
 from random import uniform
@@ -204,8 +204,6 @@ plt.show()
 df.head()
 ```
 ## A  random plot
-
-Python
 
 ```{python}
 #| label: fig-polar
