@@ -151,7 +151,7 @@ print(c[0] == c[-1])
 p
 ```
 
-## Pandas DataFrame {.smaller}
+## Pandas DataFrame {.scrollable}
 ```{python}
 from datetime import datetime, timedelta
 from random import uniform
@@ -200,11 +200,9 @@ plt.tight_layout()
 
 # Show the plot
 plt.show()
-
-df.head()
 ```
-## A  random plot
 
+## A  random plot
 ```{python}
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
