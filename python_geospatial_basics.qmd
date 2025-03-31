@@ -126,7 +126,7 @@ print(c)
   + GEOS  implements the [OGC](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) [Simple Features geometry](https://en.wikipedia.org/wiki/Simple_Features)
 + Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
-## Pandas {background-image="pandas.png"}
+## Pandas {background-image="docs/pandas.png"}
 
 taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24
 
@@ -222,9 +222,10 @@ df = pd.DataFrame()
 df['date_time'] = time_stamps
 df['T (C)'] = temp_c
 
+fig, ax = plt.subplots()
 
 # create the scatter plot
-plt.scatter(df.date_time, df['T (C)'])
+plt.scatter(df.date_time, df['T (C)'], marker='x', color = 'k')
 
 
 # set the x-axis tick labels and rotate them
