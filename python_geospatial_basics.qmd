@@ -188,7 +188,7 @@ df['T (C)'] = temp_c
 df.head()
 ```
 
-## Pandas DataFrame Cont. {.scrollable, .smaller}
+## Pandas DataFrame Cont. {.scrollable}
 
 ```{python}
 
@@ -196,7 +196,7 @@ df.head()
 plt.scatter(df.date_time, df['T (C)'])
 
 # set the x-axis tick labels and rotate them
-plt.xticks(rotation=45, ha='right')
+#plt.xticks(rotation=45, ha='right')
 
 # label axes
 #plt.xlabel('Day and Time')
@@ -207,7 +207,7 @@ plt.xticks(rotation=45, ha='right')
 #plt.tight_layout()
 
 # Show the plot
-plt.show()
+#plt.show()
 ```
 
 ## A  random plot
