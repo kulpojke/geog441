@@ -2,84 +2,91 @@
   {
     "objectID": "python_geospatial_basics.html#why-learn-python",
     "href": "python_geospatial_basics.html#why-learn-python",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Why learn Python",
     "text": "Why learn Python\n\nIt allows for more flexibility than a GUI based GIS program.\nOther GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.\ngenerally a widely used language."
   },
   {
     "objectID": "python_geospatial_basics.html#basic-python-data-types",
     "href": "python_geospatial_basics.html#basic-python-data-types",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Basic Python data types",
     "text": "Basic Python data types\n\n\n\n\n\n\n\nType\nExample(s)\n\n\n\n\nString\n'Dude!'\n\n\nFloat\n1.2\n\n\nInt\n3\n\n\nTuple\n('x', 'y')(1, 2)('x', 3.2)\n\n\nList\n['x', 'y'][1, 2]Possible but bad –&gt; ['x', 3.2]\n\n\nDict\n{'dogs': 26, 'cats', 100}\n\n\netc…\nthere are others"
   },
   {
     "objectID": "python_geospatial_basics.html#basic-numbers",
     "href": "python_geospatial_basics.html#basic-numbers",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Basic Numbers",
-    "text": "Basic Numbers\nFloats and Ints don’t do anything all that surprising\n\n\na = 2 + 2\nb = 2.0 + 2.0\nc = 2 + 2.0\n\n\nprint(f'a is an {type(a)}')\nprint(f'b is a {type(b)}')\nprint(f'c is a {type(c)}')\nprint(f'a / b is {a / b}')\nprint(f'5 / 4 is {5 / 4}')\nprint(f'but 5 // 4 is {5 // 4}')\n\n\na is an &lt;class 'int'&gt;\nb is a &lt;class 'float'&gt;\nc is a &lt;class 'float'&gt;\na / b is 1.0\n5 / 4 is 1.25\nbut 5 // 4 is 1\n\n\nLists, tuples, and strings ae all sequences\n\n\n# a list\na_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# a tuple\na_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)\n\n# a string\na_str = 'Wil je graag een neushorn?'\n\n# access by index\na = a_list[0]\nb = a_list[-1]\nc = a_list[4]\nprint(f'by index:\\n 0 --&gt; {a},\\n-1 --&gt; {b},\\n 4 --&gt; {c}')\n\n# works fro strings to\nprint('string item at 4 --&gt; ', a_str[4])\n\n# you can slice a list or tuple(remember 0 indexed)\nprint('\\nslices:')\nprint(a_list[2:5])\nprint(a_list[8:])\nprint(a_tup[2:5])\nprint(a_str[-9:])\n\n\nby index:\n 0 --&gt; 1,\n-1 --&gt; 9,\n 4 --&gt; 5\nstring item at 4 --&gt;  j\n\nslices:\n[3, 4, 5]\n[9]\n(3, 4, 5)\nneushorn?\n\n\nSlicing\nSequences tutorial\nSequence tutorial as video"
+    "text": "Basic Numbers\nFloats and Ints don’t do anything all that surprising\n\n\na = 2 + 2\nb = 2.0 + 2.0\nc = 2 + 2.0\n\n\nprint(f'a is an {type(a)}')\nprint(f'b is a {type(b)}')\nprint(f'c is a {type(c)}')\nprint(f'a / b is {a / b}')\nprint(f'5 / 4 is {5 / 4}')\nprint(f'but 5 // 4 is {5 // 4}')\n\n\na is an &lt;class 'int'&gt;\nb is a &lt;class 'float'&gt;\nc is a &lt;class 'float'&gt;\na / b is 1.0\n5 / 4 is 1.25\nbut 5 // 4 is 1"
+  },
+  {
+    "objectID": "python_geospatial_basics.html#sequences",
+    "href": "python_geospatial_basics.html#sequences",
+    "title": "Fundamental Python Stuff",
+    "section": "Sequences",
+    "text": "Sequences\nLists, tuples, and strings ae all sequences\n\n\n# a list\na_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# a tuple\na_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)\n\n# a string\na_str = 'Wil je graag een neushorn?'\n\n# access by index\na = a_list[0]\nb = a_list[-1]\nc = a_list[4]\nprint(f'by index:\\n 0 --&gt; {a},\\n-1 --&gt; {b},\\n 4 --&gt; {c}')\n\n# works fro strings to\nprint('string item at 4 --&gt; ', a_str[4])\n\n# you can slice a list or tuple(remember 0 indexed)\nprint('\\nslices:')\nprint(a_list[2:5])\nprint(a_list[8:])\nprint(a_tup[2:5])\nprint(a_str[-9:])\n\n\nby index:\n 0 --&gt; 1,\n-1 --&gt; 9,\n 4 --&gt; 5\nstring item at 4 --&gt;  j\n\nslices:\n[3, 4, 5]\n[9]\n(3, 4, 5)\nneushorn?\n\n\nSlicing\nSequences tutorial\nSequence tutorial as video"
   },
   {
     "objectID": "python_geospatial_basics.html#dictionaries",
     "href": "python_geospatial_basics.html#dictionaries",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Dictionaries",
     "text": "Dictionaries\n\n\npets = {'honden': 26, 'katten': 100}\n\nfor key, val in pets.items():\n  print(f'{val} {key}')\n\nprint(f'{pets[\"honden\"] + pets[\"katten\"]} huisdieren')\n\n\n26 honden\n100 katten\n126 huisdieren\n\n\nMore on dictionaries"
   },
   {
     "objectID": "python_geospatial_basics.html#iterating",
     "href": "python_geospatial_basics.html#iterating",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Iterating",
     "text": "Iterating\n\n\na = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# use a loop to append squared values to new lists\nb = []\nfor n in a:\n  b.append(n**2)\n\n# or, better, use a comprehension\nc = [n**2 for n in a]\n\nprint(b)\nprint('is the same as')\nprint(c)\n\n\n[1, 4, 9, 16, 25, 36, 49, 64, 81]\nis the same as\n[1, 4, 9, 16, 25, 36, 49, 64, 81]"
   },
   {
     "objectID": "python_geospatial_basics.html#vector-data",
     "href": "python_geospatial_basics.html#vector-data",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Vector Data",
     "text": "Vector Data\n\nMost often we will interact with vector data using GeoPandas\n\nGeoPandas is an extension of Pandas.\nIt uses Fiona, which in-turn relies on GDAL and OGR, to read and write.\nVector data is handled by the Shapely module, which relies on GEOS.\nGEOS implements the OGC Simple Features geometry\n\nProjections are managed by pyproj which is built upon PROJ"
   },
   {
     "objectID": "python_geospatial_basics.html#pandas",
     "href": "python_geospatial_basics.html#pandas",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Pandas",
     "text": "Pandas\nvan dmaage"
   },
   {
     "objectID": "python_geospatial_basics.html#shapely",
     "href": "python_geospatial_basics.html#shapely",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Shapely",
     "text": "Shapely\n\nShapely Geometric Objects consist of coordinate tuples:\n\nPoint - (x, y) or three dimensional (x, y, z), e.g. Point(5.2, 52.1)\nLineString - List if coordinates of vertices, e.g. LineString([(0, 0), (1, 2)])\nPolygon - Basically a closed linestring, e.g. Polygon(((0., 0.), (0., 1.), (1., 1.), (1., 0.), (0., 0.)))\nNotice that the first and last coord of the Polygon are the same.\nMore on Shapely geometries"
   },
   {
     "objectID": "python_geospatial_basics.html#polygon",
     "href": "python_geospatial_basics.html#polygon",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Polygon",
     "text": "Polygon\n\n\nfrom shapely import Polygon\n\ncoords = ((0., 0.), (0., 2.), (1., 1.), (1., 0.), (0., 0.))\np = Polygon(coords)\n\nc = p.exterior.coords\n\nprint(c[0] == c[-1])\np\n\n\nTrue"
   },
   {
     "objectID": "python_geospatial_basics.html#pandas-dataframe",
     "href": "python_geospatial_basics.html#pandas-dataframe",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Pandas DataFrame",
-    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n25.938111\n\n\n1\n2025-03-01 08:30:00\n34.940225\n\n\n2\n2025-03-01 09:00:00\n32.246791\n\n\n3\n2025-03-01 09:30:00\n22.074088\n\n\n4\n2025-03-01 10:00:00\n32.916341"
+    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n27.661081\n\n\n1\n2025-03-01 08:30:00\n19.305956\n\n\n2\n2025-03-01 09:00:00\n22.433571\n\n\n3\n2025-03-01 09:30:00\n17.192623\n\n\n4\n2025-03-01 10:00:00\n21.423532"
   },
   {
     "objectID": "python_geospatial_basics.html#pandas-dataframe-cont.",
     "href": "python_geospatial_basics.html#pandas-dataframe-cont.",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "Pandas DataFrame Cont.",
     "text": "Pandas DataFrame Cont.\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\nfig, ax = plt.subplots()\n\n# create the scatter plot\nplt.scatter(df.date_time, df['T (C)'], marker='x', color = 'k')\n\n\n# set the x-axis tick labels and rotate them\nplt.xticks(rotation=80, ha='right')\n\n# label axes\nplt.xlabel('Day and Time')\nplt.ylabel('Temperature (C)')\nplt.title('Hourly Temperature (C) in West Crabhammer')\n\n# adjust layout to prevent labels from overlapping\nplt.tight_layout()\n\n# Show the plot\nplt.show()"
   },
   {
     "objectID": "python_geospatial_basics.html#a-random-plot",
     "href": "python_geospatial_basics.html#a-random-plot",
-    "title": "Sequences",
+    "title": "Fundamental Python Stuff",
     "section": "A random plot",
     "text": "A random plot\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.title('What the heck is this polar plot trying to tell us?')\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
   }

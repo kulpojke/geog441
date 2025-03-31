@@ -1,5 +1,5 @@
 ---
-title: ''
+title: 'Fundamental Python Stuff'
 format:
   revealjs:
     incremental: true 
