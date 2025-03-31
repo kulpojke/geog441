@@ -53,7 +53,7 @@
     "href": "python_geospatial_basics.html#pandas",
     "title": "Geospatial Python For Total Beginners",
     "section": "Pandas",
-    "text": "Pandas"
+    "text": "Pandas\ntaken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24 {background-image=“pandas.png”}"
   },
   {
     "objectID": "python_geospatial_basics.html#shapely",
