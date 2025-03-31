@@ -7,7 +7,7 @@ jupyter: python3
 echo: true
 output-location: column
 navigation-mode: vertical
-df-print: paged
+df-print: kable
 
 ---
 
