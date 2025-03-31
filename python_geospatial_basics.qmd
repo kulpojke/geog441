@@ -243,7 +243,7 @@ If you are choosing Python as you language in this course, do the following:
 ## Geopandas
 g e o p a n d a s
 
-## Vector Data
+## Vector Data {.smaller}
 
 + Most often we will interact with vector data using [GeoPandas](https://geopandas.org/en/stable/)  
   + GeoPandas is an extension of [Pandas](https://pandas.pydata.org/).
@@ -290,5 +290,5 @@ geojson = data_dir / 'upper_santa_rita_creek.geojson'
 # open the geojson
 gdf = gpd.read_file(geojson)
 
-gdf
+print(gdf.to_markdown())
 ```
