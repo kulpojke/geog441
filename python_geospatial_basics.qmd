@@ -191,23 +191,53 @@ df.head()
 ## Pandas DataFrame Cont. {.scrollable}
 
 ```{python}
+from datetime import datetime, timedelta
+from random import uniform
+import matplotlib.pyplot as plt
+import numpy as np
+import pandas as pd
+
+# some arbitrary time range 
+start_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM
+end_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM
+interval = timedelta(minutes=30)
+time_stamps = []
+current_time = start_time
+while current_time <= end_time:
+    time_stamps.append(current_time)
+    current_time += interval
+
+# some made up temperature data
+temp_c = [
+  20 + uniform(-10, 10) + 10 *
+  np.sin(2 * np.pi * t.hour / 24)
+  for t
+  in time_stamps
+]
+
+# empty dataframe
+df = pd.DataFrame()
+
+# add data
+df['date_time'] = time_stamps
+df['T (C)'] = temp_c
 
 # create the scatter plot
 plt.scatter(df.date_time, df['T (C)'])
 
 # set the x-axis tick labels and rotate them
-#plt.xticks(rotation=45, ha='right')
+plt.xticks(rotation=45, ha='right')
 
 # label axes
-#plt.xlabel('Day and Time')
-#plt.ylabel('Temperature (C)')
-#plt.title('Hourly Temperature (C) in West Crabhammer')
+plt.xlabel('Day and Time')
+plt.ylabel('Temperature (C)')
+plt.title('Hourly Temperature (C) in West Crabhammer')
 
 # adjust layout to prevent labels from overlapping
-#plt.tight_layout()
+plt.tight_layout()
 
 # Show the plot
-#plt.show()
+plt.show()
 ```
 
 ## A  random plot
