@@ -1,5 +1,5 @@
 ---
-title: 'Fundamental Python Stuff'
+title: 'Python Lectures'
 format:
   revealjs:
     incremental: true 
@@ -12,8 +12,6 @@ df-print: paged
 ---
 
 # Introducing Python
-+ Introducing Python
-+ Basic Geospatial Manipulations
 
 ## Why learn Python
 
