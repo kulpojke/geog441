@@ -1,5 +1,4 @@
 ---
-title: 'Geospatial Python For Total Beginners'
 format:
   revealjs:
     incremental: true 
