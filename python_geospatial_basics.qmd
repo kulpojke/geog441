@@ -127,7 +127,7 @@ print(c)
 + Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
 ## Pandas
-<iframe width="560" height="315" src="images/pandas.png"></iframe>
+<img width="560" height="315" src="images/pandas.png"></img>
 
 ## Shapely {.smaller}
 
@@ -263,4 +263,4 @@ plt.show()
 ```
 
 
-# Next Slideshow
+# Exploring Geopandas
