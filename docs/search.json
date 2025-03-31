@@ -74,7 +74,7 @@
     "href": "python_geospatial_basics.html#pandas-dataframe",
     "title": "Fundamental Python Stuff",
     "section": "Pandas DataFrame",
-    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n30.749311\n\n\n1\n2025-03-01 08:30:00\n22.494478\n\n\n2\n2025-03-01 09:00:00\n18.728822\n\n\n3\n2025-03-01 09:30:00\n19.974576\n\n\n4\n2025-03-01 10:00:00\n21.911915"
+    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n34.971573\n\n\n1\n2025-03-01 08:30:00\n20.719148\n\n\n2\n2025-03-01 09:00:00\n21.333778\n\n\n3\n2025-03-01 09:30:00\n21.124286\n\n\n4\n2025-03-01 10:00:00\n22.879642"
   },
   {
     "objectID": "python_geospatial_basics.html#pandas-dataframe-cont.",
@@ -89,5 +89,19 @@
     "title": "Fundamental Python Stuff",
     "section": "A random plot",
     "text": "A random plot\n\n\nimport numpy as np\nimport matplotlib.pyplot as plt\n\nr = np.arange(0, 2, 0.01)\ntheta = 2 * np.pi * r\nfig, ax = plt.subplots(\n  subplot_kw = {'projection': 'polar'} \n)\nax.plot(theta, r)\nax.set_rticks([0.5, 1, 1.5, 2])\nax.grid(True)\nplt.title('What the heck is this polar plot trying to tell us?')\nplt.show()\n\n\n\n\n\n\n\n\nFigure 1: A line plot on a polar axis"
+  },
+  {
+    "objectID": "python_geospatial_basics.html#homework",
+    "href": "python_geospatial_basics.html#homework",
+    "title": "Fundamental Python Stuff",
+    "section": "Homework",
+    "text": "Homework\nIf you are choosing Python as you language in this course, do the following: + Create a jupyter notebook."
+  },
+  {
+    "objectID": "python_geospatial_basics.html#geopandas",
+    "href": "python_geospatial_basics.html#geopandas",
+    "title": "Fundamental Python Stuff",
+    "section": "Geopandas",
+    "text": "Geopandas\ng e o p a n d a s ## Reading Files\nHere we will read a geogson using the read_file method.\n\n\nfrom pathlib import Path\nimport geopandas as gpd\n\n# path to data\ndata_dir = Path('data')\ngeojson = data_dir / 'upper_santa_rita_creek.geojson'\n\n# open the geojson\ngdf = gpd.read_file(geojson)\n\ngdf\n\n\n\n\n\n\n\n\n\nid\ngeometry\n\n\n\n\n0\nglobalwatershedpoint\nPOINT (-120.80331 35.52537)\n\n\n1\nglobalwatershed\nPOLYGON ((-120.81096 35.50944, -120.81161 35.5..."
   }
 ]

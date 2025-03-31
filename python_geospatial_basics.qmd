@@ -242,7 +242,7 @@ plt.tight_layout()
 plt.show()
 ```
 
-## A  random plot
+## A random plot
 ```{python}
 #| label: fig-polar
 #| fig-cap: "A line plot on a polar axis"
@@ -262,5 +262,28 @@ plt.title('What the heck is this polar plot trying to tell us?')
 plt.show()
 ```
 
+## Homework
+If you are choosing Python as you language in this course, do the following:
++ Create a jupyter notebook.
+
 
 # Exploring Geopandas
+
+## Geopandas
+g e o p a n d a s
+## Reading Files
+
+Here we will read a geogson using the `read_file` method.
+```{python}
+from pathlib import Path
+import geopandas as gpd
+
+# path to data
+data_dir = Path('data')
+geojson = data_dir / 'upper_santa_rita_creek.geojson'
+
+# open the geojson
+gdf = gpd.read_file(geojson)
+
+gdf
+```
