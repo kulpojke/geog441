@@ -222,11 +222,13 @@ df = pd.DataFrame()
 df['date_time'] = time_stamps
 df['T (C)'] = temp_c
 
+
 # create the scatter plot
 plt.scatter(df.date_time, df['T (C)'])
 
+
 # set the x-axis tick labels and rotate them
-plt.xticks(rotation=45, ha='right')
+plt.xticks(rotation=80, ha='right')
 
 # label axes
 plt.xlabel('Day and Time')
