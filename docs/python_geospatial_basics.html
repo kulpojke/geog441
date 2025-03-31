@@ -264,7 +264,7 @@
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="b4384c8f" class="cell columns column-output-location" data-execution_count="1">
+<div id="bc84f4e9" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb1-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -291,7 +291,7 @@ but 5 // 4 is 1</code></pre>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="3d96634a" class="cell columns column-output-location" data-execution_count="2">
+<div id="4f27eb31" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a><span class="co"># a list</span></span>
 <span id="cb3-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
@@ -338,7 +338,7 @@ neushorn?</code></pre>
 </section>
 <section id="dictionaries" class="slide level2">
 <h2>Dictionaries</h2>
-<div id="3d3e21f5" class="cell columns column-output-location" data-execution_count="3">
+<div id="00a05667" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
 <span id="cb5-2"><a></a></span>
@@ -357,7 +357,7 @@ neushorn?</code></pre>
 </section>
 <section id="iterating" class="slide level2">
 <h2>Iterating</h2>
-<div id="5fe9fef8" class="cell columns column-output-location" data-execution_count="4">
+<div id="d94920e9" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb7-2"><a></a></span>
@@ -380,100 +380,48 @@ is the same as
 </div>
 </div></div>
 </section>
-<section id="vector-data" class="slide level2">
-<h2>Vector Data</h2>
-<ul>
-<li class="fragment">Most often we will interact with vector data using <a href="https://geopandas.org/en/stable/">GeoPandas</a>
-<ul>
-<li class="fragment">GeoPandas is an extension of <a href="https://pandas.pydata.org/">Pandas</a>.</li>
-<li class="fragment">It uses Fiona, which in-turn relies on <a href="https://gdal.org/en/stable/">GDAL and OGR</a>, to read and write.</li>
-<li class="fragment">Vector data is handled by the <a href="http://toblerity.org/shapely/manual.html">Shapely</a> module, which relies on <a href="https://libgeos.org/">GEOS</a>.</li>
-<li class="fragment">GEOS implements the <a href="https://en.wikipedia.org/wiki/Open_Geospatial_Consortium">OGC</a> <a href="https://en.wikipedia.org/wiki/Simple_Features">Simple Features geometry</a></li>
-</ul></li>
-<li class="fragment">Projections are managed by <a href="https://pyproj4.github.io/pyproj/stable/">pyproj</a> which is built upon <a href="https://proj.org/en/stable/">PROJ</a></li>
-</ul>
-</section>
 <section id="pandas" class="slide level2">
 <h2>Pandas</h2>
 <p><img width="560" height="315" src="images/pandas.png"></p>
 </section>
-<section id="shapely" class="slide level2 smaller">
-<h2>Shapely</h2>
-<ul>
-<li class="fragment">Shapely Geometric Objects consist of coordinate tuples:
-<ul>
-<li class="fragment">Point - (x, y) or three dimensional (x, y, z), e.g.&nbsp;<code>Point(5.2, 52.1)</code></li>
-<li class="fragment">LineString - List if coordinates of vertices, e.g.&nbsp;<code>LineString([(0, 0), (1, 2)])</code></li>
-<li class="fragment">Polygon - Basically a closed linestring, e.g.&nbsp;<code>Polygon(((0., 0.), (0., 1.), (1., 1.), (1., 0.), (0., 0.)))</code></li>
-<li class="fragment">Notice that the first and last coord of the Polygon are the same.</li>
-<li class="fragment">More on <a href="https://shapely.readthedocs.io/en/stable/geometry.html">Shapely geometries</a></li>
-</ul></li>
-</ul>
-</section>
-<section id="polygon" class="slide level2">
-<h2>Polygon</h2>
-<div id="b98d550e" class="cell columns column-output-location" data-execution_count="5">
-<div class="column">
-<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
-<span id="cb9-2"><a></a></span>
-<span id="cb9-3"><a></a>coords <span class="op">=</span> ((<span class="fl">0.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">2.</span>), (<span class="fl">1.</span>, <span class="fl">1.</span>), (<span class="fl">1.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">0.</span>))</span>
-<span id="cb9-4"><a></a>p <span class="op">=</span> Polygon(coords)</span>
-<span id="cb9-5"><a></a></span>
-<span id="cb9-6"><a></a>c <span class="op">=</span> p.exterior.coords</span>
-<span id="cb9-7"><a></a></span>
-<span id="cb9-8"><a></a><span class="bu">print</span>(c[<span class="dv">0</span>] <span class="op">==</span> c[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb9-9"><a></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output cell-output-stdout">
-<pre><code>True</code></pre>
-</div>
-<div class="cell-output cell-output-display" data-execution_count="5">
-<div>
-<figure>
-<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-6-output-2.svg"></p>
-</figure>
-</div>
-</div>
-</div></div>
-</section>
 <section id="pandas-dataframe" class="slide level2 scrollable">
 <h2>Pandas DataFrame</h2>
-<div id="11b44a43" class="cell columns column-output-location" data-execution_count="6">
+<div id="e0446f3d" class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
-<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
-<span id="cb11-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
-<span id="cb11-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb11-4"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb11-5"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb11-6"><a></a></span>
-<span id="cb11-7"><a></a><span class="co"># some arbitrary time range </span></span>
-<span id="cb11-8"><a></a>start_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 8:00 AM</span></span>
-<span id="cb11-9"><a></a>end_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">17</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 5:00 PM</span></span>
-<span id="cb11-10"><a></a>interval <span class="op">=</span> timedelta(minutes<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb11-11"><a></a>time_stamps <span class="op">=</span> []</span>
-<span id="cb11-12"><a></a>current_time <span class="op">=</span> start_time</span>
-<span id="cb11-13"><a></a><span class="cf">while</span> current_time <span class="op">&lt;=</span> end_time:</span>
-<span id="cb11-14"><a></a>    time_stamps.append(current_time)</span>
-<span id="cb11-15"><a></a>    current_time <span class="op">+=</span> interval</span>
-<span id="cb11-16"><a></a></span>
-<span id="cb11-17"><a></a><span class="co"># some made up temperature data</span></span>
-<span id="cb11-18"><a></a>temp_c <span class="op">=</span> [</span>
-<span id="cb11-19"><a></a>  <span class="dv">20</span> <span class="op">+</span> uniform(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>) <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span></span>
-<span id="cb11-20"><a></a>  np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t.hour <span class="op">/</span> <span class="dv">24</span>)</span>
-<span id="cb11-21"><a></a>  <span class="cf">for</span> t</span>
-<span id="cb11-22"><a></a>  <span class="kw">in</span> time_stamps</span>
-<span id="cb11-23"><a></a>]</span>
-<span id="cb11-24"><a></a></span>
-<span id="cb11-25"><a></a><span class="co"># empty dataframe</span></span>
-<span id="cb11-26"><a></a>df <span class="op">=</span> pd.DataFrame()</span>
-<span id="cb11-27"><a></a></span>
-<span id="cb11-28"><a></a><span class="co"># add data</span></span>
-<span id="cb11-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
-<span id="cb11-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
-<span id="cb11-31"><a></a></span>
-<span id="cb11-32"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb9-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
+<span id="cb9-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb9-4"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb9-5"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb9-6"><a></a></span>
+<span id="cb9-7"><a></a><span class="co"># some arbitrary time range </span></span>
+<span id="cb9-8"><a></a>start_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 8:00 AM</span></span>
+<span id="cb9-9"><a></a>end_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">17</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 5:00 PM</span></span>
+<span id="cb9-10"><a></a>interval <span class="op">=</span> timedelta(minutes<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb9-11"><a></a>time_stamps <span class="op">=</span> []</span>
+<span id="cb9-12"><a></a>current_time <span class="op">=</span> start_time</span>
+<span id="cb9-13"><a></a><span class="cf">while</span> current_time <span class="op">&lt;=</span> end_time:</span>
+<span id="cb9-14"><a></a>    time_stamps.append(current_time)</span>
+<span id="cb9-15"><a></a>    current_time <span class="op">+=</span> interval</span>
+<span id="cb9-16"><a></a></span>
+<span id="cb9-17"><a></a><span class="co"># some made up temperature data</span></span>
+<span id="cb9-18"><a></a>temp_c <span class="op">=</span> [</span>
+<span id="cb9-19"><a></a>  <span class="dv">20</span> <span class="op">+</span> uniform(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>) <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span></span>
+<span id="cb9-20"><a></a>  np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t.hour <span class="op">/</span> <span class="dv">24</span>)</span>
+<span id="cb9-21"><a></a>  <span class="cf">for</span> t</span>
+<span id="cb9-22"><a></a>  <span class="kw">in</span> time_stamps</span>
+<span id="cb9-23"><a></a>]</span>
+<span id="cb9-24"><a></a></span>
+<span id="cb9-25"><a></a><span class="co"># empty dataframe</span></span>
+<span id="cb9-26"><a></a>df <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb9-27"><a></a></span>
+<span id="cb9-28"><a></a><span class="co"># add data</span></span>
+<span id="cb9-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
+<span id="cb9-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
+<span id="cb9-31"><a></a></span>
+<span id="cb9-32"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
-<div class="cell-output cell-output-display" data-execution_count="6">
+<div class="cell-output cell-output-display" data-execution_count="5">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -501,27 +449,27 @@ is the same as
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
 <td>2025-03-01 08:00:00</td>
-<td>34.971573</td>
+<td>25.008488</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
 <td>2025-03-01 08:30:00</td>
-<td>20.719148</td>
+<td>32.577223</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
 <td>2025-03-01 09:00:00</td>
-<td>21.333778</td>
+<td>36.289933</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
 <td>2025-03-01 09:30:00</td>
-<td>21.124286</td>
+<td>37.008590</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
 <td>2025-03-01 10:00:00</td>
-<td>22.879642</td>
+<td>18.867339</td>
 </tr>
 </tbody>
 </table>
@@ -532,63 +480,63 @@ is the same as
 </section>
 <section id="pandas-dataframe-cont." class="slide level2 scrollable">
 <h2>Pandas DataFrame Cont.</h2>
-<div id="3c32bbc4" class="cell columns column-output-location" data-execution_count="7">
+<div id="484ad4aa" class="cell columns column-output-location" data-execution_count="6">
 <div class="column">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
-<span id="cb12-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
-<span id="cb12-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-4"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb12-5"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb12-6"><a></a></span>
-<span id="cb12-7"><a></a><span class="co"># some arbitrary time range </span></span>
-<span id="cb12-8"><a></a>start_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 8:00 AM</span></span>
-<span id="cb12-9"><a></a>end_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">17</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 5:00 PM</span></span>
-<span id="cb12-10"><a></a>interval <span class="op">=</span> timedelta(minutes<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb12-11"><a></a>time_stamps <span class="op">=</span> []</span>
-<span id="cb12-12"><a></a>current_time <span class="op">=</span> start_time</span>
-<span id="cb12-13"><a></a><span class="cf">while</span> current_time <span class="op">&lt;=</span> end_time:</span>
-<span id="cb12-14"><a></a>    time_stamps.append(current_time)</span>
-<span id="cb12-15"><a></a>    current_time <span class="op">+=</span> interval</span>
-<span id="cb12-16"><a></a></span>
-<span id="cb12-17"><a></a><span class="co"># some made up temperature data</span></span>
-<span id="cb12-18"><a></a>temp_c <span class="op">=</span> [</span>
-<span id="cb12-19"><a></a>  <span class="dv">20</span> <span class="op">+</span> uniform(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>) <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span></span>
-<span id="cb12-20"><a></a>  np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t.hour <span class="op">/</span> <span class="dv">24</span>)</span>
-<span id="cb12-21"><a></a>  <span class="cf">for</span> t</span>
-<span id="cb12-22"><a></a>  <span class="kw">in</span> time_stamps</span>
-<span id="cb12-23"><a></a>]</span>
-<span id="cb12-24"><a></a></span>
-<span id="cb12-25"><a></a><span class="co"># empty dataframe</span></span>
-<span id="cb12-26"><a></a>df <span class="op">=</span> pd.DataFrame()</span>
-<span id="cb12-27"><a></a></span>
-<span id="cb12-28"><a></a><span class="co"># add data</span></span>
-<span id="cb12-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
-<span id="cb12-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
-<span id="cb12-31"><a></a></span>
-<span id="cb12-32"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb12-33"><a></a></span>
-<span id="cb12-34"><a></a><span class="co"># create the scatter plot</span></span>
-<span id="cb12-35"><a></a>plt.scatter(df.date_time, df[<span class="st">'T (C)'</span>], marker<span class="op">=</span><span class="st">'x'</span>, color <span class="op">=</span> <span class="st">'k'</span>)</span>
-<span id="cb12-36"><a></a></span>
-<span id="cb12-37"><a></a></span>
-<span id="cb12-38"><a></a><span class="co"># set the x-axis tick labels and rotate them</span></span>
-<span id="cb12-39"><a></a>plt.xticks(rotation<span class="op">=</span><span class="dv">80</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
-<span id="cb12-40"><a></a></span>
-<span id="cb12-41"><a></a><span class="co"># label axes</span></span>
-<span id="cb12-42"><a></a>plt.xlabel(<span class="st">'Day and Time'</span>)</span>
-<span id="cb12-43"><a></a>plt.ylabel(<span class="st">'Temperature (C)'</span>)</span>
-<span id="cb12-44"><a></a>plt.title(<span class="st">'Hourly Temperature (C) in West Crabhammer'</span>)</span>
-<span id="cb12-45"><a></a></span>
-<span id="cb12-46"><a></a><span class="co"># adjust layout to prevent labels from overlapping</span></span>
-<span id="cb12-47"><a></a>plt.tight_layout()</span>
-<span id="cb12-48"><a></a></span>
-<span id="cb12-49"><a></a><span class="co"># Show the plot</span></span>
-<span id="cb12-50"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb10-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
+<span id="cb10-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb10-4"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb10-5"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb10-6"><a></a></span>
+<span id="cb10-7"><a></a><span class="co"># some arbitrary time range </span></span>
+<span id="cb10-8"><a></a>start_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 8:00 AM</span></span>
+<span id="cb10-9"><a></a>end_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">17</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 5:00 PM</span></span>
+<span id="cb10-10"><a></a>interval <span class="op">=</span> timedelta(minutes<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb10-11"><a></a>time_stamps <span class="op">=</span> []</span>
+<span id="cb10-12"><a></a>current_time <span class="op">=</span> start_time</span>
+<span id="cb10-13"><a></a><span class="cf">while</span> current_time <span class="op">&lt;=</span> end_time:</span>
+<span id="cb10-14"><a></a>    time_stamps.append(current_time)</span>
+<span id="cb10-15"><a></a>    current_time <span class="op">+=</span> interval</span>
+<span id="cb10-16"><a></a></span>
+<span id="cb10-17"><a></a><span class="co"># some made up temperature data</span></span>
+<span id="cb10-18"><a></a>temp_c <span class="op">=</span> [</span>
+<span id="cb10-19"><a></a>  <span class="dv">20</span> <span class="op">+</span> uniform(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>) <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span></span>
+<span id="cb10-20"><a></a>  np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t.hour <span class="op">/</span> <span class="dv">24</span>)</span>
+<span id="cb10-21"><a></a>  <span class="cf">for</span> t</span>
+<span id="cb10-22"><a></a>  <span class="kw">in</span> time_stamps</span>
+<span id="cb10-23"><a></a>]</span>
+<span id="cb10-24"><a></a></span>
+<span id="cb10-25"><a></a><span class="co"># empty dataframe</span></span>
+<span id="cb10-26"><a></a>df <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb10-27"><a></a></span>
+<span id="cb10-28"><a></a><span class="co"># add data</span></span>
+<span id="cb10-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
+<span id="cb10-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
+<span id="cb10-31"><a></a></span>
+<span id="cb10-32"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb10-33"><a></a></span>
+<span id="cb10-34"><a></a><span class="co"># create the scatter plot</span></span>
+<span id="cb10-35"><a></a>plt.scatter(df.date_time, df[<span class="st">'T (C)'</span>], marker<span class="op">=</span><span class="st">'x'</span>, color <span class="op">=</span> <span class="st">'k'</span>)</span>
+<span id="cb10-36"><a></a></span>
+<span id="cb10-37"><a></a></span>
+<span id="cb10-38"><a></a><span class="co"># set the x-axis tick labels and rotate them</span></span>
+<span id="cb10-39"><a></a>plt.xticks(rotation<span class="op">=</span><span class="dv">80</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb10-40"><a></a></span>
+<span id="cb10-41"><a></a><span class="co"># label axes</span></span>
+<span id="cb10-42"><a></a>plt.xlabel(<span class="st">'Day and Time'</span>)</span>
+<span id="cb10-43"><a></a>plt.ylabel(<span class="st">'Temperature (C)'</span>)</span>
+<span id="cb10-44"><a></a>plt.title(<span class="st">'Hourly Temperature (C) in West Crabhammer'</span>)</span>
+<span id="cb10-45"><a></a></span>
+<span id="cb10-46"><a></a><span class="co"># adjust layout to prevent labels from overlapping</span></span>
+<span id="cb10-47"><a></a>plt.tight_layout()</span>
+<span id="cb10-48"><a></a></span>
+<span id="cb10-49"><a></a><span class="co"># Show the plot</span></span>
+<span id="cb10-50"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-8-output-1.png" width="949" height="469"></p>
+<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-7-output-1.png" width="949" height="469"></p>
 </figure>
 </div>
 </div>
@@ -596,21 +544,21 @@ is the same as
 </section>
 <section id="a-random-plot" class="slide level2">
 <h2>A random plot</h2>
-<div id="cell-fig-polar" class="cell columns column-output-location" data-execution_count="8">
+<div id="cell-fig-polar" class="cell columns column-output-location" data-execution_count="7">
 <div class="column">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb13-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb13-3"><a></a></span>
-<span id="cb13-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb13-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb13-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb13-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb13-8"><a></a>)</span>
-<span id="cb13-9"><a></a>ax.plot(theta, r)</span>
-<span id="cb13-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb13-11"><a></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb13-12"><a></a>plt.title(<span class="st">'What the heck is this polar plot trying to tell us?'</span>)</span>
-<span id="cb13-13"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb11-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb11-3"><a></a></span>
+<span id="cb11-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb11-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb11-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb11-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
+<span id="cb11-8"><a></a>)</span>
+<span id="cb11-9"><a></a>ax.plot(theta, r)</span>
+<span id="cb11-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb11-11"><a></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb11-12"><a></a>plt.title(<span class="st">'What the heck is this polar plot trying to tell us?'</span>)</span>
+<span id="cb11-13"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display">
 <div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center">
@@ -628,18 +576,73 @@ Figure&nbsp;1: A line plot on a polar axis
 </section>
 <section id="homework" class="slide level2">
 <h2>Homework</h2>
-<p>If you are choosing Python as you language in this course, do the following: + Create a jupyter notebook.</p>
+<p>If you are choosing Python as you language in this course, do the following: + Create a jupyter notebook. +</p>
 </section></section>
 <section>
-<section id="exploring-geopandas" class="title-slide slide level1 center">
-<h1>Exploring Geopandas</h1>
+<section id="exploring-geopandas" class="title-slide slide level1 center" data-background-image="images/pandas.png">
+<h1>Exploring Geopandas {</h1>
 
 </section>
 <section id="geopandas" class="slide level2">
 <h2>Geopandas</h2>
-<p>g e o p a n d a s ## Reading Files</p>
+<p>g e o p a n d a s</p>
+</section>
+<section id="vector-data" class="slide level2">
+<h2>Vector Data</h2>
+<ul>
+<li class="fragment">Most often we will interact with vector data using <a href="https://geopandas.org/en/stable/">GeoPandas</a>
+<ul>
+<li class="fragment">GeoPandas is an extension of <a href="https://pandas.pydata.org/">Pandas</a>.</li>
+<li class="fragment">It uses Fiona, which in-turn relies on <a href="https://gdal.org/en/stable/">GDAL and OGR</a>, to read and write.</li>
+<li class="fragment">Vector data is handled by the <a href="http://toblerity.org/shapely/manual.html">Shapely</a> module, which relies on <a href="https://libgeos.org/">GEOS</a>.</li>
+<li class="fragment">GEOS implements the <a href="https://en.wikipedia.org/wiki/Open_Geospatial_Consortium">OGC</a> <a href="https://en.wikipedia.org/wiki/Simple_Features">Simple Features geometry</a></li>
+</ul></li>
+<li class="fragment">Projections are managed by <a href="https://pyproj4.github.io/pyproj/stable/">pyproj</a> which is built upon <a href="https://proj.org/en/stable/">PROJ</a></li>
+</ul>
+</section>
+<section id="shapely" class="slide level2 smaller">
+<h2>Shapely</h2>
+<ul>
+<li class="fragment">Shapely Geometric Objects consist of coordinate tuples:
+<ul>
+<li class="fragment">Point - (x, y) or three dimensional (x, y, z), e.g.&nbsp;<code>Point(5.2, 52.1)</code></li>
+<li class="fragment">LineString - List if coordinates of vertices, e.g.&nbsp;<code>LineString([(0, 0), (1, 2)])</code></li>
+<li class="fragment">Polygon - Basically a closed linestring, e.g.&nbsp;<code>Polygon(((0., 0.), (0., 1.), (1., 1.), (1., 0.), (0., 0.)))</code></li>
+<li class="fragment">Notice that the first and last coord of the Polygon are the same.</li>
+<li class="fragment">More on <a href="https://shapely.readthedocs.io/en/stable/geometry.html">Shapely geometries</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="polygon" class="slide level2">
+<h2>Polygon</h2>
+<div id="f3f9f4f4" class="cell columns column-output-location" data-execution_count="8">
+<div class="column">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
+<span id="cb12-2"><a></a></span>
+<span id="cb12-3"><a></a>coords <span class="op">=</span> ((<span class="fl">0.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">2.</span>), (<span class="fl">1.</span>, <span class="fl">1.</span>), (<span class="fl">1.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">0.</span>))</span>
+<span id="cb12-4"><a></a>p <span class="op">=</span> Polygon(coords)</span>
+<span id="cb12-5"><a></a></span>
+<span id="cb12-6"><a></a>c <span class="op">=</span> p.exterior.coords</span>
+<span id="cb12-7"><a></a></span>
+<span id="cb12-8"><a></a><span class="bu">print</span>(c[<span class="dv">0</span>] <span class="op">==</span> c[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb12-9"><a></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-stdout">
+<pre><code>True</code></pre>
+</div>
+<div class="cell-output cell-output-display" data-execution_count="8">
+<div>
+<figure>
+<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-9-output-2.svg"></p>
+</figure>
+</div>
+</div>
+</div></div>
+</section>
+<section id="reading-files" class="slide level2">
+<h2>Reading Files</h2>
 <p>Here we will read a geogson using the <code>read_file</code> method.</p>
-<div id="3e385610" class="cell columns column-output-location" data-execution_count="9">
+<div id="51b3c59f" class="cell columns column-output-location" data-execution_count="9">
 <div class="column">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb14-2"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>

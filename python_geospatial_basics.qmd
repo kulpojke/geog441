@@ -117,39 +117,10 @@ print(c)
 
 ```
 
-## Vector Data
-
-+ Most often we will interact with vector data using [GeoPandas](https://geopandas.org/en/stable/)  
-  + GeoPandas is an extension of [Pandas](https://pandas.pydata.org/).
-  + It uses Fiona, which in-turn relies on [GDAL and OGR](https://gdal.org/en/stable/), to read and write.
-  + Vector data is handled by the [Shapely](http://toblerity.org/shapely/manual.html) module, which relies on [GEOS](https://libgeos.org/).
-  + GEOS  implements the [OGC](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) [Simple Features geometry](https://en.wikipedia.org/wiki/Simple_Features)
-+ Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
 ## Pandas
 <img width="560" height="315" src="images/pandas.png"></img>
 
-## Shapely {.smaller}
-
-+ Shapely Geometric Objects consist of coordinate tuples:
-  + Point - (x, y) or three dimensional (x, y, z), e.g. `Point(5.2, 52.1)`
-  + LineString - List if coordinates of vertices, e.g.  `LineString([(0, 0), (1, 2)])`
-  + Polygon - Basically a closed linestring, e.g.  `Polygon(((0., 0.), (0., 1.), (1., 1.), (1., 0.), (0., 0.)))` 
-  + Notice that the first and last coord of the Polygon are the same.
-  + More on [Shapely geometries](https://shapely.readthedocs.io/en/stable/geometry.html)
-
-## Polygon
-```{python}
-from shapely import Polygon
-
-coords = ((0., 0.), (0., 2.), (1., 1.), (1., 0.), (0., 0.))
-p = Polygon(coords)
-
-c = p.exterior.coords
-
-print(c[0] == c[-1])
-p
-```
 
 ## Pandas DataFrame {.scrollable}
 ```{python}
@@ -265,12 +236,48 @@ plt.show()
 ## Homework
 If you are choosing Python as you language in this course, do the following:
 + Create a jupyter notebook.
++ 
 
 
-# Exploring Geopandas
+# Exploring Geopandas {{background-image="images/pandas.png"}
+
 
 ## Geopandas
 g e o p a n d a s
+
+## Vector Data
+
++ Most often we will interact with vector data using [GeoPandas](https://geopandas.org/en/stable/)  
+  + GeoPandas is an extension of [Pandas](https://pandas.pydata.org/).
+  + It uses Fiona, which in-turn relies on [GDAL and OGR](https://gdal.org/en/stable/), to read and write.
+  + Vector data is handled by the [Shapely](http://toblerity.org/shapely/manual.html) module, which relies on [GEOS](https://libgeos.org/).
+  + GEOS  implements the [OGC](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) [Simple Features geometry](https://en.wikipedia.org/wiki/Simple_Features)
++ Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
+
+
+## Shapely {.smaller}
+
++ Shapely Geometric Objects consist of coordinate tuples:
+  + Point - (x, y) or three dimensional (x, y, z), e.g. `Point(5.2, 52.1)`
+  + LineString - List if coordinates of vertices, e.g.  `LineString([(0, 0), (1, 2)])`
+  + Polygon - Basically a closed linestring, e.g.  `Polygon(((0., 0.), (0., 1.), (1., 1.), (1., 0.), (0., 0.)))` 
+  + Notice that the first and last coord of the Polygon are the same.
+  + More on [Shapely geometries](https://shapely.readthedocs.io/en/stable/geometry.html)
+
+## Polygon
+```{python}
+from shapely import Polygon
+
+coords = ((0., 0.), (0., 2.), (1., 1.), (1., 0.), (0., 0.))
+p = Polygon(coords)
+
+c = p.exterior.coords
+
+print(c[0] == c[-1])
+p
+```
+
+
 ## Reading Files
 
 Here we will read a geogson using the `read_file` method.
