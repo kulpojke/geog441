@@ -128,8 +128,7 @@ print(c)
 
 ## Pandas
 ![Elephant](images/pandas.png){width=300}
-tt
-taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24
+
 
 ## Shapely {.smaller}
 
