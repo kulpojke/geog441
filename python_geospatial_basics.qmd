@@ -126,7 +126,7 @@ print(c)
   + GEOS  implements the [OGC](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) [Simple Features geometry](https://en.wikipedia.org/wiki/Simple_Features)
 + Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
-## Pandas {background-image="./images/pandas.png"}
+## Pandas {background-image="../images/pandas.png"}
 
 tt
 taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24
