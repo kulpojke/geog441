@@ -74,14 +74,14 @@
     "href": "python_geospatial_basics.html#pandas-dataframe",
     "title": "Geospatial Python For Total Beginners",
     "section": "Pandas DataFrame",
-    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n37.385518\n\n\n1\n2025-03-01 08:30:00\n38.455555\n\n\n2\n2025-03-01 09:00:00\n35.141336\n\n\n3\n2025-03-01 09:30:00\n36.170979\n\n\n4\n2025-03-01 10:00:00\n23.221839"
+    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n22.526360\n\n\n1\n2025-03-01 08:30:00\n30.399875\n\n\n2\n2025-03-01 09:00:00\n31.603958\n\n\n3\n2025-03-01 09:30:00\n20.921652\n\n\n4\n2025-03-01 10:00:00\n24.208630"
   },
   {
-    "objectID": "python_geospatial_basics.html#pandas-dataframe-cont.",
-    "href": "python_geospatial_basics.html#pandas-dataframe-cont.",
+    "objectID": "python_geospatial_basics.html#pandas-dataframe-cont.-.scrollable-.smaller",
+    "href": "python_geospatial_basics.html#pandas-dataframe-cont.-.scrollable-.smaller",
     "title": "Geospatial Python For Total Beginners",
-    "section": "Pandas DataFrame Cont.",
-    "text": "Pandas DataFrame Cont.\n\n\n# create the scatter plot\nplt.scatter(df.date_time, df['T (C)'])\n\n# set the x-axis tick labels and rotate them\nplt.xticks(rotation=45, ha='right')\n\n# label axes\n#plt.xlabel('Day and Time')\n#plt.ylabel('Temperature (C)')\n#plt.title('Hourly Temperature (C) in West Crabhammer')\n\n# adjust layout to prevent labels from overlapping\n#plt.tight_layout()\n\n# Show the plot\nplt.show()"
+    "section": "Pandas DataFrame Cont. {.scrollable, .smaller}",
+    "text": "Pandas DataFrame Cont. {.scrollable, .smaller}\n\n\n# create the scatter plot\nplt.scatter(df.date_time, df['T (C)'])\n\n# set the x-axis tick labels and rotate them\nplt.xticks(rotation=45, ha='right')\n\n# label axes\n#plt.xlabel('Day and Time')\n#plt.ylabel('Temperature (C)')\n#plt.title('Hourly Temperature (C) in West Crabhammer')\n\n# adjust layout to prevent labels from overlapping\n#plt.tight_layout()\n\n# Show the plot\nplt.show()"
   },
   {
     "objectID": "python_geospatial_basics.html#a-random-plot",

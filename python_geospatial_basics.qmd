@@ -188,7 +188,7 @@ df['T (C)'] = temp_c
 df.head()
 ```
 
-## Pandas DataFrame Cont. {.scrollable}
+## Pandas DataFrame Cont. {.scrollable, .smaller}
 
 ```{python}
 
