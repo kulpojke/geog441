@@ -20,7 +20,7 @@ navigation-mode: vertical
 + Other GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.
 + generally a widely used language.
 
-## Basic Python data types
+## Basic Python data types {.scrollable}
 
 | Type   | Example(s) |
 |--------|---------|
@@ -128,7 +128,7 @@ print(c)
 ## Pandas
 <img src="pandas.png" alt="taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24">
 
-## Shapely
+## Shapely {.smaller}
 
 + Shapely Geometric Objects consist of coordinate tuples:
   + Point - (x, y) or three dimensional (x, y, z), e.g. `Point(5.2, 52.1)`
