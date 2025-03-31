@@ -239,7 +239,7 @@ If you are choosing Python as you language in this course, do the following:
 + 
 
 
-# Exploring Geopandas {{background-image="images/pandas.png"}
+# Exploring Geopandas {background-image="images/pandas.png"}
 
 
 ## Geopandas
