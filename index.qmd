@@ -1,0 +1,16 @@
+---
+format:
+  revealjs:
+    incremental: true 
+jupyter: python3
+echo: true
+output-location: column
+navigation-mode: vertical
+---
+# GEOG 441 Index
+
+Links to lecture slides
+
+[Lecture 1](python_geospatial_basics.html)
+
+[Lecture 2](R_geospatial_basics.html)

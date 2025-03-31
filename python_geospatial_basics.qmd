@@ -126,14 +126,31 @@ print(c)
 + Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
 ## Pandas
-<img src="docs/pandas.png" alt="taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24">
+<img src="pandas.png" alt="taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24">
 
 ## Shapely
 
 + Shapely Geometric Objects consist of coordinate tuples:
-  + Point - (x, y) or three dimensional (x, y, z)
-  + LineString
-  + Polygon
+  + Point - (x, y) or three dimensional (x, y, z), e.g. `Point(5.2, 52.1)`
+  + LineString - List if coordinates of vertices, e.g.  `LineString([(0, 0), (1, 2)])`
+  + Polygon - Basically a closed linestring, e.g.  `Polygon(((0., 0.), (0., 1.), (1., 1.), (1., 0.), (0., 0.)))` 
+  + Notice that the first and last coord of the Polygon are the same.
+  + More on [Shapely geometries](https://shapely.readthedocs.io/en/stable/geometry.html)
+
+## Polygon
+```{python}
+from shapely import Polygon
+
+coords = ((0., 0.), (0., 2.), (1., 1.), (1., 0.), (0., 0.))
+p = Polygon(coords)
+
+c = p.exterior.coords
+
+print(c[0] == c[-1])
+p
+```
+
+## Pandas DataFrame
 
 ## A plot
 

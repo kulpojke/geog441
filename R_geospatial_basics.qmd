@@ -1,0 +1,11 @@
+---
+title: 'GEOG 441'
+format:
+  revealjs:
+    incremental: true 
+jupyter: python3
+echo: true
+output-location: column
+navigation-mode: vertical
+---
+# Hi
