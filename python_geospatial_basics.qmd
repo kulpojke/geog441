@@ -127,8 +127,8 @@ print(c)
 + Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
 ## Pandas
-![Elephant](images/pandas.png){width=300}
 
+<iframe width="560" height="315" src="images/pandas.png"></iframe>
 
 ## Shapely {.smaller}
 
