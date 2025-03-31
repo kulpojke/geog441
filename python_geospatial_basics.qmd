@@ -125,9 +125,9 @@ print(c)
   + GEOS  implements the [OGC](https://en.wikipedia.org/wiki/Open_Geospatial_Consortium) [Simple Features geometry](https://en.wikipedia.org/wiki/Simple_Features)
 + Projections are managed by [pyproj](https://pyproj4.github.io/pyproj/stable/) which is built upon [PROJ](https://proj.org/en/stable/)
 
-## Pandas
+## Pandas {background-image="pandas.png"}
+
 taken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24
-{background-image="pandas.png"}
 
 ## Shapely {.smaller}
 
@@ -152,7 +152,16 @@ p
 ```
 
 ## Pandas DataFrame
+```{python}
+import pandas as pd
 
+# some data
+t = range
+
+pets_df = pd.DataFrame(columns=['beast', 'count'])
+
+pets_df
+```
 ## A plot
 
 Python

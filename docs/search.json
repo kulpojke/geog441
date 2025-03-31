@@ -53,7 +53,7 @@
     "href": "python_geospatial_basics.html#pandas",
     "title": "Geospatial Python For Total Beginners",
     "section": "Pandas",
-    "text": "Pandas\ntaken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24 {background-image=“pandas.png”}"
+    "text": "Pandas\ntaken from: FOSS4G 2022 | State of GeoPandas and friends, 9/16/24"
   },
   {
     "objectID": "python_geospatial_basics.html#shapely",
@@ -74,7 +74,7 @@
     "href": "python_geospatial_basics.html#pandas-dataframe",
     "title": "Geospatial Python For Total Beginners",
     "section": "Pandas DataFrame",
-    "text": "Pandas DataFrame"
+    "text": "Pandas DataFrame\n\n\nimport pandas as pd\n\n# some data\nt = range\n\npets_df = pd.DataFrame(columns=['beast', 'count'])\n\npets_df\n\n\n\n\n\n\n\n\n\nbeast\ncount"
   },
   {
     "objectID": "python_geospatial_basics.html#a-plot",
