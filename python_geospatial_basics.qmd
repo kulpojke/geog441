@@ -7,6 +7,7 @@ jupyter: python3
 echo: true
 output-location: column
 navigation-mode: vertical
+df-print: paged
 
 ---
 
@@ -198,12 +199,12 @@ plt.scatter(df.date_time, df['T (C)'])
 plt.xticks(rotation=45, ha='right')
 
 # label axes
-plt.xlabel('Day and Time')
-plt.ylabel('Temperature (C)')
-plt.title('Hourly Temperature (C) in West Crabhammer')
+#plt.xlabel('Day and Time')
+#plt.ylabel('Temperature (C)')
+#plt.title('Hourly Temperature (C) in West Crabhammer')
 
 # adjust layout to prevent labels from overlapping
-plt.tight_layout()
+#plt.tight_layout()
 
 # Show the plot
 plt.show()
