@@ -231,7 +231,7 @@ plt.title('What the heck is this polar plot trying to tell us?')
 plt.show()
 ```
 
-## Homework {.smaller}
+## Homework {.smaller .scrollable}
 A big part of coding is knowing how to use google (or some stupid AI thing, try searching first, the answers are there on the internet do not require the construction of a nuclear power plant to answer)
 
 <iframe src="https://xkcd.com/1838"></iframe>
