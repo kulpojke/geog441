@@ -1,11 +1,11 @@
 ---
-title: 'GEOG 441'
+title: 'R Lectures'
 format:
   revealjs:
     incremental: true 
-jupyter: python3
+
 echo: true
 output-location: column
 navigation-mode: vertical
 ---
-# Hi
+# Introducing R
