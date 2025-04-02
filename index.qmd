@@ -11,6 +11,8 @@ navigation-mode: vertical
 
 Links to lecture slides
 
+[Intro](intro).html)
+
 [Python Lecures](python_geospatial_basics.html)
 
 [R Lectures](R_geospatial_basics.html)
