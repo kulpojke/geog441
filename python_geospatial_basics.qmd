@@ -20,10 +20,12 @@ df-print: kable
 ## Environment {.scrollable}
 
 Before we get started we need to set up a Python environment in which to work.  We will be using Anaconda for this.
+
 ::: {.non-incremental}
 - Download the environment.yml
 - In the start menu search for Anaconda. Open an Anaconda Powershell.  
 :::
+
 ```
 cd ~
 mkdir geog441
@@ -273,12 +275,15 @@ A big part of coding is knowing how to use google (or some stupid AI thing, try 
 <img src="https://xkcd.com/1838"></img>
 
 If you are choosing Python as you language in this course, create a jupyter notebook and do the following:
+
 :::
 + Download the results from the class survey from [here](https://docs.google.com/spreadsheets/d/17qg3d2N1WmE3cIoz5SGpP2AGesVNmaZTwu4ljIRii4U/edit?usp=sharing) as a csv file.
 + Read the csv into a Pandas DataFrame.
 + The headers are a mess!  Change the column names to be reasonable.  Remember, if you want to be able to access the data as an attribute, the column names need to not have spaces in them. Hint: _columns_ is a mutable attribute of the dataframe so `df.columns = some_list_of_the_correct_length` will assign new column names.
 :::
+
 If you are only going the R route, do the above, but in R. (Hints Below.)
+
 :::
 + data <- read.csv("my_data.csv")
 :::

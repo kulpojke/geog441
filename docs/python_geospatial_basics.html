@@ -211,16 +211,20 @@
 </section>
 <section id="environment" class="slide level2 scrollable">
 <h2>Environment</h2>
-<p>Before we get started we need to set up a Python environment in which to work. We will be using Anaconda for this. ::: {.non-incremental} - Download the environment.yml - In the start menu search for Anaconda. Open an Anaconda Powershell.<br>
-:::</p>
+<p>Before we get started we need to set up a Python environment in which to work. We will be using Anaconda for this.</p>
+<div class="non-incremental">
+<ul>
+<li class="fragment">Download the environment.yml</li>
+<li class="fragment">In the start menu search for Anaconda. Open an Anaconda Powershell.<br>
+</li>
+</ul>
+</div>
 <pre><code>cd ~
 mkdir geog441
 cd geog441
 cp ~/Downloads/environment.yml .
 conda env create -f environment.yml</code></pre>
-</section>
-<section class="slide level2">
-
+<hr>
 <p><strong>FYI:</strong> What is this <em>environment.yml</em> thing?</p>
 <pre><code>name: geo
 channels:
@@ -231,9 +235,7 @@ dependencies:
   - rioxarray
   - tabulatetqdm
   - tqdm</code></pre>
-</section>
-<section class="slide level2">
-
+<hr>
 <p>Using <code>conda env create</code> with the environment yaml creates a new conda environment named <em>geo</em> with the dependencies installed. Next we will activate the <em>geo</em> environment.</p>
 <pre><code>conda activate geo</code></pre>
 </section>
@@ -285,7 +287,7 @@ dependencies:
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="3b81e7bf" class="cell columns column-output-location" data-execution_count="1">
+<div id="59c16391" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb4-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -312,7 +314,7 @@ but 5 // 4 is 1</code></pre>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="f2d344a4" class="cell columns column-output-location" data-execution_count="2">
+<div id="6ba17e01" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co"># a list</span></span>
 <span id="cb6-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
@@ -359,7 +361,7 @@ neushorn?</code></pre>
 </section>
 <section id="dictionaries" class="slide level2">
 <h2>Dictionaries</h2>
-<div id="43f190ec" class="cell columns column-output-location" data-execution_count="3">
+<div id="7ab84cc8" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
 <span id="cb8-2"><a></a></span>
@@ -378,7 +380,7 @@ neushorn?</code></pre>
 </section>
 <section id="iterating" class="slide level2">
 <h2>Iterating</h2>
-<div id="a775f89d" class="cell columns column-output-location" data-execution_count="4">
+<div id="122ff0eb" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb10-2"><a></a></span>
@@ -407,7 +409,7 @@ is the same as
 </section>
 <section id="pandas-dataframe" class="slide level2 scrollable">
 <h2>Pandas DataFrame</h2>
-<div id="8315e3ed" class="cell columns column-output-location" data-execution_count="5">
+<div id="5466f177" class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
 <span id="cb12-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
@@ -470,27 +472,27 @@ is the same as
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
 <td>2025-03-01 08:00:00</td>
-<td>24.137780</td>
+<td>28.868670</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
 <td>2025-03-01 08:30:00</td>
-<td>33.676054</td>
+<td>34.669388</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
 <td>2025-03-01 09:00:00</td>
-<td>19.595999</td>
+<td>22.457602</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
 <td>2025-03-01 09:30:00</td>
-<td>29.196222</td>
+<td>22.831526</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
 <td>2025-03-01 10:00:00</td>
-<td>29.023063</td>
+<td>16.187518</td>
 </tr>
 </tbody>
 </table>
@@ -501,7 +503,7 @@ is the same as
 </section>
 <section id="pandas-dataframe-cont." class="slide level2 scrollable">
 <h2>Pandas DataFrame Cont.</h2>
-<div id="32371408" class="cell columns column-output-location" data-execution_count="6">
+<div id="1f54e221" class="cell columns column-output-location" data-execution_count="6">
 <div class="column">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
 <span id="cb13-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
@@ -599,7 +601,10 @@ Figure&nbsp;1: A line plot on a polar axis
 <h2>Homework</h2>
 <p>A big part of coding is knowing how to use google (or some stupid AI thing, try searching first, the answers are there on the internet do not require the construction of a nuclear power plant to answer)</p>
 
-<img src="https://xkcd.com/1838" class="r-stretch"><p>If you are choosing Python as you language in this course, create a jupyter notebook and do the following: ::: + Download the results from the class survey from <a href="https://docs.google.com/spreadsheets/d/17qg3d2N1WmE3cIoz5SGpP2AGesVNmaZTwu4ljIRii4U/edit?usp=sharing">here</a> as a csv file. + Read the csv into a Pandas DataFrame. + The headers are a mess! Change the column names to be reasonable. Remember, if you want to be able to access the data as an attribute, the column names need to not have spaces in them. Hint: <em>columns</em> is a mutable attribute of the dataframe so <code>df.columns = some_list_of_the_correct_length</code> will assign new column names. ::: If you are only going the R route, do the above, but in R. (Hints Below.) ::: + data &lt;- read.csv(“my_data.csv”) :::</p>
+<img src="https://xkcd.com/1838" class="r-stretch"><p>If you are choosing Python as you language in this course, create a jupyter notebook and do the following:</p>
+<p>::: + Download the results from the class survey from <a href="https://docs.google.com/spreadsheets/d/17qg3d2N1WmE3cIoz5SGpP2AGesVNmaZTwu4ljIRii4U/edit?usp=sharing">here</a> as a csv file. + Read the csv into a Pandas DataFrame. + The headers are a mess! Change the column names to be reasonable. Remember, if you want to be able to access the data as an attribute, the column names need to not have spaces in them. Hint: <em>columns</em> is a mutable attribute of the dataframe so <code>df.columns = some_list_of_the_correct_length</code> will assign new column names. :::</p>
+<p>If you are only going the R route, do the above, but in R. (Hints Below.)</p>
+<p>::: + data &lt;- read.csv(“my_data.csv”) :::</p>
 </section></section>
 <section>
 <section id="exploring-vector-data-with-geopandas" class="title-slide slide level1 center" data-background-image="images/pandas.png">
@@ -638,7 +643,7 @@ Figure&nbsp;1: A line plot on a polar axis
 </section>
 <section id="polygon" class="slide level2">
 <h2>Polygon</h2>
-<div id="cf54a9eb" class="cell columns column-output-location" data-execution_count="8">
+<div id="cdef0956" class="cell columns column-output-location" data-execution_count="8">
 <div class="column">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
 <span id="cb15-2"><a></a></span>
@@ -665,7 +670,7 @@ Figure&nbsp;1: A line plot on a polar axis
 <section id="reading-files" class="slide level2">
 <h2>Reading Files</h2>
 <p>Here we will read a geojson using the <code>read_file</code> method.</p>
-<div id="215139c9" class="cell columns column-output-location" data-execution_count="9">
+<div id="121c4ca9" class="cell columns column-output-location" data-execution_count="9">
 <div class="column">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb17-2"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
