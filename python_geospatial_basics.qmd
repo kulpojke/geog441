@@ -57,7 +57,7 @@ conda activate geo
 
 Notice that the conda environment shown after the prompt has changed from `(base)` to `(geo)`.
 
-
+If later you find that you need another package you can add it to the environment (while in the environment) with `conda install <whatever_package>`.
 
 
 ## Basic Python data types {.scrollable}
