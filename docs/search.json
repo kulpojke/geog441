@@ -7,11 +7,11 @@
     "text": "Today we will cover a few of the tools we will be using this quarter, which should hopefully be installed.\n+ git\n+ conda\n+ VScode\n+ Rstudio\n+ QGIS\n+ GDAL"
   },
   {
-    "objectID": "python_geospatial_basics.html#environment-.scrollable-smaller",
-    "href": "python_geospatial_basics.html#environment-.scrollable-smaller",
+    "objectID": "python_geospatial_basics.html#environment",
+    "href": "python_geospatial_basics.html#environment",
     "title": "Python Lectures",
-    "section": "Environment {.scrollable smaller}",
-    "text": "Environment {.scrollable smaller}\nBefore we get started we need to set up a Python environment in which to work. We will be using Anaconda for this.\n\n\nDownload the environment.yml\nIn the start menu search for Anaconda. Open an Anaconda Powershell.\n\n\n\ncd ~\nmkdir geog441\ncd geog441\ncp ~/Downloads/environment.yml .\nconda env create -f environment.yml\n\nFYI: What is this environment.yml thing?\nname: geo\nchannels:\n  - defaults\ndependencies: \n  - geopandas\n  - jupyterlab\n  - rioxarray\n  - tabulatetqdm\n  - tqdm\n\nUsing conda env create with the environment yaml creates a new conda environment named geo with the dependencies installed. Next we will activate the geo environment.\nconda activate geo\nNotice that the conda environment shown after the prompt has changed from (base) to (geo).\nIf later you find that you need another package you can add it to the environment (while in the environment) with conda install &lt;whatever_package&gt;."
+    "section": "Environment",
+    "text": "Environment\nBefore we get started we need to set up a Python environment in which to work. We will be using Anaconda for this.\n\n\nDownload the environment.yml\nIn the start menu search for Anaconda. Open an Anaconda Powershell.\n\n\n\ncd ~\nmkdir geog441\ncd geog441\ncp ~/Downloads/environment.yml .\nconda env create -f environment.yml\n\nFYI: What is this environment.yml thing?\nname: geo\nchannels:\n  - defaults\ndependencies: \n  - geopandas\n  - jupyterlab\n  - rioxarray\n  - tabulatetqdm\n  - tqdm\n\nUsing conda env create with the environment yaml creates a new conda environment named geo with the dependencies installed. Next we will activate the geo environment.\nconda activate geo\nNotice that the conda environment shown after the prompt has changed from (base) to (geo).\nIf later you find that you need another package you can add it to the environment (while in the environment) with conda install &lt;whatever_package&gt;."
   },
   {
     "objectID": "python_geospatial_basics.html#basic-python-data-types",
@@ -60,7 +60,7 @@
     "href": "python_geospatial_basics.html#pandas-dataframe",
     "title": "Python Lectures",
     "section": "Pandas DataFrame",
-    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n28.024090\n\n\n1\n2025-03-01 08:30:00\n38.403572\n\n\n2\n2025-03-01 09:00:00\n30.504945\n\n\n3\n2025-03-01 09:30:00\n21.240569\n\n\n4\n2025-03-01 10:00:00\n18.277128"
+    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n32.527418\n\n\n1\n2025-03-01 08:30:00\n23.158128\n\n\n2\n2025-03-01 09:00:00\n25.887104\n\n\n3\n2025-03-01 09:30:00\n27.238517\n\n\n4\n2025-03-01 10:00:00\n29.875728"
   },
   {
     "objectID": "python_geospatial_basics.html#pandas-dataframe-cont.",
