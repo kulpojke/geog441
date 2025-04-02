@@ -10,10 +10,10 @@ navigation-mode: vertical
 
 #  Intro
 
-Why learn open source GIS?
-+ Reproducibility!
-+ No License
-+ Flexibility
+Why learn open source GIS?  
++ Reproducibility!  
++ No License  
++ Flexibility  
 
 ##
 

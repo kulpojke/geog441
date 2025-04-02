@@ -1,9 +1,9 @@
 name: geo
 channels:
   - defaults
-dependencies:
-  - rioxarray
-  - jupyterlab
+dependencies: 
   - geopandas
+  - jupyterlab
+  - rioxarray
+  - tabulatetqdm
   - tqdm
-prefix: /home/michael/miniconda3/envs/geo
