@@ -60,6 +60,16 @@ Notice that the conda environment shown after the prompt has changed from `(base
 If later you find that you need another package you can add it to the environment (while in the environment) with `conda install <whatever_package>`.
 
 
+
+## Starting a Jupyter Lab
+
+stuff
+
+## Using VScode
+
+stuff
+
+
 ## Basic Python data types {.scrollable}
 
 | Type   | Example(s) |
