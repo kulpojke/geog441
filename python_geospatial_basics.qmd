@@ -13,8 +13,6 @@ df-print: kable
 
 # Introducing Python
 
-## Why learn Python
-
 + It allows for more flexibility than a GUI based GIS program.
 + Other GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.
 + generally a widely used language.
