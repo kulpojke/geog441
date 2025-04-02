@@ -211,12 +211,26 @@
 </section>
 <section id="environment" class="slide level2 scrollable">
 <h2>Environment</h2>
-<p>Before we get started we need to set up a Python environment in which to work. We will be using Anaconda for this. ::: {.non-incremental} + Download the environment.yml + In the start menu search for Anaconda. Open an Anaconda Powershell. :::</p>
+<p>Before we get started we need to set up a Python environment in which to work. We will be using Anaconda for this. ::: {.non-incremental} + Download the environment.yml + In the start menu search for Anaconda. Open an Anaconda Powershell.<br>
+:::</p>
 <pre><code>cd ~
 mkdir geog441
 cd geog441
 cp ~/Downloads/environment.yml .
 conda env create -f environment.yml</code></pre>
+</section>
+<section class="slide level2">
+
+<p><strong>FYI:</strong> What is this <em>environment.yml</em> thing?</p>
+<pre><code>name: geo
+channels:
+  - defaults
+dependencies: 
+  - geopandas
+  - jupyterlab
+  - rioxarray
+  - tabulatetqdm
+  - tqdm</code></pre>
 </section>
 <section id="basic-python-data-types" class="slide level2 scrollable">
 <h2>Basic Python data types</h2>
@@ -266,19 +280,19 @@ conda env create -f environment.yml</code></pre>
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="d7fee1b9" class="cell columns column-output-location" data-execution_count="1">
+<div id="87181fbc" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
-<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
-<span id="cb2-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
-<span id="cb2-3"><a></a>c <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="fl">2.0</span></span>
-<span id="cb2-4"><a></a></span>
-<span id="cb2-5"><a></a></span>
-<span id="cb2-6"><a></a><span class="bu">print</span>(<span class="ss">f'a is an </span><span class="sc">{</span><span class="bu">type</span>(a)<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb2-7"><a></a><span class="bu">print</span>(<span class="ss">f'b is a </span><span class="sc">{</span><span class="bu">type</span>(b)<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb2-8"><a></a><span class="bu">print</span>(<span class="ss">f'c is a </span><span class="sc">{</span><span class="bu">type</span>(c)<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb2-9"><a></a><span class="bu">print</span>(<span class="ss">f'a / b is </span><span class="sc">{</span>a <span class="op">/</span> b<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb2-10"><a></a><span class="bu">print</span>(<span class="ss">f'5 / 4 is </span><span class="sc">{</span><span class="dv">5</span> <span class="op">/</span> <span class="dv">4</span><span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb2-11"><a></a><span class="bu">print</span>(<span class="ss">f'but 5 // 4 is </span><span class="sc">{</span><span class="dv">5</span> <span class="op">//</span> <span class="dv">4</span><span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb3-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
+<span id="cb3-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
+<span id="cb3-3"><a></a>c <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="fl">2.0</span></span>
+<span id="cb3-4"><a></a></span>
+<span id="cb3-5"><a></a></span>
+<span id="cb3-6"><a></a><span class="bu">print</span>(<span class="ss">f'a is an </span><span class="sc">{</span><span class="bu">type</span>(a)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-7"><a></a><span class="bu">print</span>(<span class="ss">f'b is a </span><span class="sc">{</span><span class="bu">type</span>(b)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-8"><a></a><span class="bu">print</span>(<span class="ss">f'c is a </span><span class="sc">{</span><span class="bu">type</span>(c)<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-9"><a></a><span class="bu">print</span>(<span class="ss">f'a / b is </span><span class="sc">{</span>a <span class="op">/</span> b<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-10"><a></a><span class="bu">print</span>(<span class="ss">f'5 / 4 is </span><span class="sc">{</span><span class="dv">5</span> <span class="op">/</span> <span class="dv">4</span><span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb3-11"><a></a><span class="bu">print</span>(<span class="ss">f'but 5 // 4 is </span><span class="sc">{</span><span class="dv">5</span> <span class="op">//</span> <span class="dv">4</span><span class="sc">}</span><span class="ss">'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>a is an &lt;class 'int'&gt;
@@ -293,32 +307,32 @@ but 5 // 4 is 1</code></pre>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="61a9a3b7" class="cell columns column-output-location" data-execution_count="2">
+<div id="648e0edf" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
-<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a><span class="co"># a list</span></span>
-<span id="cb4-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
-<span id="cb4-3"><a></a></span>
-<span id="cb4-4"><a></a><span class="co"># a tuple</span></span>
-<span id="cb4-5"><a></a>a_tup <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span>
-<span id="cb4-6"><a></a></span>
-<span id="cb4-7"><a></a><span class="co"># a string</span></span>
-<span id="cb4-8"><a></a>a_str <span class="op">=</span> <span class="st">'Wil je graag een neushorn?'</span></span>
-<span id="cb4-9"><a></a></span>
-<span id="cb4-10"><a></a><span class="co"># access by index</span></span>
-<span id="cb4-11"><a></a>a <span class="op">=</span> a_list[<span class="dv">0</span>]</span>
-<span id="cb4-12"><a></a>b <span class="op">=</span> a_list[<span class="op">-</span><span class="dv">1</span>]</span>
-<span id="cb4-13"><a></a>c <span class="op">=</span> a_list[<span class="dv">4</span>]</span>
-<span id="cb4-14"><a></a><span class="bu">print</span>(<span class="ss">f'by index:</span><span class="ch">\n</span><span class="ss"> 0 --&gt; </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss">-1 --&gt; </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss"> 4 --&gt; </span><span class="sc">{</span>c<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb4-15"><a></a></span>
-<span id="cb4-16"><a></a><span class="co"># works fro strings to</span></span>
-<span id="cb4-17"><a></a><span class="bu">print</span>(<span class="st">'string item at 4 --&gt; '</span>, a_str[<span class="dv">4</span>])</span>
-<span id="cb4-18"><a></a></span>
-<span id="cb4-19"><a></a><span class="co"># you can slice a list or tuple(remember 0 indexed)</span></span>
-<span id="cb4-20"><a></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">slices:'</span>)</span>
-<span id="cb4-21"><a></a><span class="bu">print</span>(a_list[<span class="dv">2</span>:<span class="dv">5</span>])</span>
-<span id="cb4-22"><a></a><span class="bu">print</span>(a_list[<span class="dv">8</span>:])</span>
-<span id="cb4-23"><a></a><span class="bu">print</span>(a_tup[<span class="dv">2</span>:<span class="dv">5</span>])</span>
-<span id="cb4-24"><a></a><span class="bu">print</span>(a_str[<span class="op">-</span><span class="dv">9</span>:])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a><span class="co"># a list</span></span>
+<span id="cb5-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb5-3"><a></a></span>
+<span id="cb5-4"><a></a><span class="co"># a tuple</span></span>
+<span id="cb5-5"><a></a>a_tup <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span>
+<span id="cb5-6"><a></a></span>
+<span id="cb5-7"><a></a><span class="co"># a string</span></span>
+<span id="cb5-8"><a></a>a_str <span class="op">=</span> <span class="st">'Wil je graag een neushorn?'</span></span>
+<span id="cb5-9"><a></a></span>
+<span id="cb5-10"><a></a><span class="co"># access by index</span></span>
+<span id="cb5-11"><a></a>a <span class="op">=</span> a_list[<span class="dv">0</span>]</span>
+<span id="cb5-12"><a></a>b <span class="op">=</span> a_list[<span class="op">-</span><span class="dv">1</span>]</span>
+<span id="cb5-13"><a></a>c <span class="op">=</span> a_list[<span class="dv">4</span>]</span>
+<span id="cb5-14"><a></a><span class="bu">print</span>(<span class="ss">f'by index:</span><span class="ch">\n</span><span class="ss"> 0 --&gt; </span><span class="sc">{</span>a<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss">-1 --&gt; </span><span class="sc">{</span>b<span class="sc">}</span><span class="ss">,</span><span class="ch">\n</span><span class="ss"> 4 --&gt; </span><span class="sc">{</span>c<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb5-15"><a></a></span>
+<span id="cb5-16"><a></a><span class="co"># works fro strings to</span></span>
+<span id="cb5-17"><a></a><span class="bu">print</span>(<span class="st">'string item at 4 --&gt; '</span>, a_str[<span class="dv">4</span>])</span>
+<span id="cb5-18"><a></a></span>
+<span id="cb5-19"><a></a><span class="co"># you can slice a list or tuple(remember 0 indexed)</span></span>
+<span id="cb5-20"><a></a><span class="bu">print</span>(<span class="st">'</span><span class="ch">\n</span><span class="st">slices:'</span>)</span>
+<span id="cb5-21"><a></a><span class="bu">print</span>(a_list[<span class="dv">2</span>:<span class="dv">5</span>])</span>
+<span id="cb5-22"><a></a><span class="bu">print</span>(a_list[<span class="dv">8</span>:])</span>
+<span id="cb5-23"><a></a><span class="bu">print</span>(a_tup[<span class="dv">2</span>:<span class="dv">5</span>])</span>
+<span id="cb5-24"><a></a><span class="bu">print</span>(a_str[<span class="op">-</span><span class="dv">9</span>:])</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>by index:
@@ -340,14 +354,14 @@ neushorn?</code></pre>
 </section>
 <section id="dictionaries" class="slide level2">
 <h2>Dictionaries</h2>
-<div id="56cf34ad" class="cell columns column-output-location" data-execution_count="3">
+<div id="25119162" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
-<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
-<span id="cb6-2"><a></a></span>
-<span id="cb6-3"><a></a><span class="cf">for</span> key, val <span class="kw">in</span> pets.items():</span>
-<span id="cb6-4"><a></a>  <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>val<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">'</span>)</span>
-<span id="cb6-5"><a></a></span>
-<span id="cb6-6"><a></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>pets[<span class="st">"honden"</span>] <span class="op">+</span> pets[<span class="st">"katten"</span>]<span class="sc">}</span><span class="ss"> huisdieren'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
+<span id="cb7-2"><a></a></span>
+<span id="cb7-3"><a></a><span class="cf">for</span> key, val <span class="kw">in</span> pets.items():</span>
+<span id="cb7-4"><a></a>  <span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>val<span class="sc">}</span><span class="ss"> </span><span class="sc">{</span>key<span class="sc">}</span><span class="ss">'</span>)</span>
+<span id="cb7-5"><a></a></span>
+<span id="cb7-6"><a></a><span class="bu">print</span>(<span class="ss">f'</span><span class="sc">{</span>pets[<span class="st">"honden"</span>] <span class="op">+</span> pets[<span class="st">"katten"</span>]<span class="sc">}</span><span class="ss"> huisdieren'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>26 honden
@@ -359,21 +373,21 @@ neushorn?</code></pre>
 </section>
 <section id="iterating" class="slide level2">
 <h2>Iterating</h2>
-<div id="bb3f612a" class="cell columns column-output-location" data-execution_count="4">
+<div id="ea8d1157" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
-<div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
-<span id="cb8-2"><a></a></span>
-<span id="cb8-3"><a></a><span class="co"># use a loop to append squared values to new lists</span></span>
-<span id="cb8-4"><a></a>b <span class="op">=</span> []</span>
-<span id="cb8-5"><a></a><span class="cf">for</span> n <span class="kw">in</span> a:</span>
-<span id="cb8-6"><a></a>  b.append(n<span class="op">**</span><span class="dv">2</span>)</span>
-<span id="cb8-7"><a></a></span>
-<span id="cb8-8"><a></a><span class="co"># or, better, use a comprehension</span></span>
-<span id="cb8-9"><a></a>c <span class="op">=</span> [n<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> n <span class="kw">in</span> a]</span>
-<span id="cb8-10"><a></a></span>
-<span id="cb8-11"><a></a><span class="bu">print</span>(b)</span>
-<span id="cb8-12"><a></a><span class="bu">print</span>(<span class="st">'is the same as'</span>)</span>
-<span id="cb8-13"><a></a><span class="bu">print</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb9-2"><a></a></span>
+<span id="cb9-3"><a></a><span class="co"># use a loop to append squared values to new lists</span></span>
+<span id="cb9-4"><a></a>b <span class="op">=</span> []</span>
+<span id="cb9-5"><a></a><span class="cf">for</span> n <span class="kw">in</span> a:</span>
+<span id="cb9-6"><a></a>  b.append(n<span class="op">**</span><span class="dv">2</span>)</span>
+<span id="cb9-7"><a></a></span>
+<span id="cb9-8"><a></a><span class="co"># or, better, use a comprehension</span></span>
+<span id="cb9-9"><a></a>c <span class="op">=</span> [n<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> n <span class="kw">in</span> a]</span>
+<span id="cb9-10"><a></a></span>
+<span id="cb9-11"><a></a><span class="bu">print</span>(b)</span>
+<span id="cb9-12"><a></a><span class="bu">print</span>(<span class="st">'is the same as'</span>)</span>
+<span id="cb9-13"><a></a><span class="bu">print</span>(c)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>[1, 4, 9, 16, 25, 36, 49, 64, 81]
@@ -388,101 +402,7 @@ is the same as
 </section>
 <section id="pandas-dataframe" class="slide level2 scrollable">
 <h2>Pandas DataFrame</h2>
-<div id="f5778e83" class="cell columns column-output-location" data-execution_count="5">
-<div class="column">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
-<span id="cb10-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
-<span id="cb10-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb10-4"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb10-5"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb10-6"><a></a></span>
-<span id="cb10-7"><a></a><span class="co"># some arbitrary time range </span></span>
-<span id="cb10-8"><a></a>start_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 8:00 AM</span></span>
-<span id="cb10-9"><a></a>end_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">17</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 5:00 PM</span></span>
-<span id="cb10-10"><a></a>interval <span class="op">=</span> timedelta(minutes<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb10-11"><a></a>time_stamps <span class="op">=</span> []</span>
-<span id="cb10-12"><a></a>current_time <span class="op">=</span> start_time</span>
-<span id="cb10-13"><a></a><span class="cf">while</span> current_time <span class="op">&lt;=</span> end_time:</span>
-<span id="cb10-14"><a></a>    time_stamps.append(current_time)</span>
-<span id="cb10-15"><a></a>    current_time <span class="op">+=</span> interval</span>
-<span id="cb10-16"><a></a></span>
-<span id="cb10-17"><a></a><span class="co"># some made up temperature data</span></span>
-<span id="cb10-18"><a></a>temp_c <span class="op">=</span> [</span>
-<span id="cb10-19"><a></a>  <span class="dv">20</span> <span class="op">+</span> uniform(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>) <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span></span>
-<span id="cb10-20"><a></a>  np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t.hour <span class="op">/</span> <span class="dv">24</span>)</span>
-<span id="cb10-21"><a></a>  <span class="cf">for</span> t</span>
-<span id="cb10-22"><a></a>  <span class="kw">in</span> time_stamps</span>
-<span id="cb10-23"><a></a>]</span>
-<span id="cb10-24"><a></a></span>
-<span id="cb10-25"><a></a><span class="co"># empty dataframe</span></span>
-<span id="cb10-26"><a></a>df <span class="op">=</span> pd.DataFrame()</span>
-<span id="cb10-27"><a></a></span>
-<span id="cb10-28"><a></a><span class="co"># add data</span></span>
-<span id="cb10-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
-<span id="cb10-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
-<span id="cb10-31"><a></a></span>
-<span id="cb10-32"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
-<div class="cell-output cell-output-display" data-execution_count="5">
-<div>
-<style scoped="">
-    .dataframe tbody tr th:only-of-type {
-        vertical-align: middle;
-    }
-
-    .dataframe tbody tr th {
-        vertical-align: top;
-    }
-
-    .dataframe thead th {
-        text-align: right;
-    }
-</style>
-
-<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
-<thead>
-<tr class="header" style="text-align: right;">
-<th data-quarto-table-cell-role="th"></th>
-<th data-quarto-table-cell-role="th">date_time</th>
-<th data-quarto-table-cell-role="th">T (C)</th>
-</tr>
-</thead>
-<tbody>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">0</td>
-<td>2025-03-01 08:00:00</td>
-<td>37.700571</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">1</td>
-<td>2025-03-01 08:30:00</td>
-<td>36.622142</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">2</td>
-<td>2025-03-01 09:00:00</td>
-<td>20.434623</td>
-</tr>
-<tr class="even">
-<td data-quarto-table-cell-role="th">3</td>
-<td>2025-03-01 09:30:00</td>
-<td>24.247343</td>
-</tr>
-<tr class="odd">
-<td data-quarto-table-cell-role="th">4</td>
-<td>2025-03-01 10:00:00</td>
-<td>28.291356</td>
-</tr>
-</tbody>
-</table>
-
-</div>
-</div>
-</div></div>
-</section>
-<section id="pandas-dataframe-cont." class="slide level2 scrollable">
-<h2>Pandas DataFrame Cont.</h2>
-<div id="b910ba5a" class="cell columns column-output-location" data-execution_count="6">
+<div id="c759783f" class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
 <span id="cb11-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
@@ -515,25 +435,119 @@ is the same as
 <span id="cb11-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
 <span id="cb11-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
 <span id="cb11-31"><a></a></span>
-<span id="cb11-32"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb11-33"><a></a></span>
-<span id="cb11-34"><a></a><span class="co"># create the scatter plot</span></span>
-<span id="cb11-35"><a></a>plt.scatter(df.date_time, df[<span class="st">'T (C)'</span>], marker<span class="op">=</span><span class="st">'x'</span>, color <span class="op">=</span> <span class="st">'k'</span>)</span>
-<span id="cb11-36"><a></a></span>
-<span id="cb11-37"><a></a></span>
-<span id="cb11-38"><a></a><span class="co"># set the x-axis tick labels and rotate them</span></span>
-<span id="cb11-39"><a></a>plt.xticks(rotation<span class="op">=</span><span class="dv">80</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
-<span id="cb11-40"><a></a></span>
-<span id="cb11-41"><a></a><span class="co"># label axes</span></span>
-<span id="cb11-42"><a></a>plt.xlabel(<span class="st">'Day and Time'</span>)</span>
-<span id="cb11-43"><a></a>plt.ylabel(<span class="st">'Temperature (C)'</span>)</span>
-<span id="cb11-44"><a></a>plt.title(<span class="st">'Hourly Temperature (C) in West Crabhammer'</span>)</span>
-<span id="cb11-45"><a></a></span>
-<span id="cb11-46"><a></a><span class="co"># adjust layout to prevent labels from overlapping</span></span>
-<span id="cb11-47"><a></a>plt.tight_layout()</span>
-<span id="cb11-48"><a></a></span>
-<span id="cb11-49"><a></a><span class="co"># Show the plot</span></span>
-<span id="cb11-50"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb11-32"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-display" data-execution_count="5">
+<div>
+<style scoped="">
+    .dataframe tbody tr th:only-of-type {
+        vertical-align: middle;
+    }
+
+    .dataframe tbody tr th {
+        vertical-align: top;
+    }
+
+    .dataframe thead th {
+        text-align: right;
+    }
+</style>
+
+<table class="dataframe caption-top" data-quarto-postprocess="true" data-border="1">
+<thead>
+<tr class="header" style="text-align: right;">
+<th data-quarto-table-cell-role="th"></th>
+<th data-quarto-table-cell-role="th">date_time</th>
+<th data-quarto-table-cell-role="th">T (C)</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">0</td>
+<td>2025-03-01 08:00:00</td>
+<td>25.396083</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">1</td>
+<td>2025-03-01 08:30:00</td>
+<td>30.774499</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">2</td>
+<td>2025-03-01 09:00:00</td>
+<td>19.597274</td>
+</tr>
+<tr class="even">
+<td data-quarto-table-cell-role="th">3</td>
+<td>2025-03-01 09:30:00</td>
+<td>21.378351</td>
+</tr>
+<tr class="odd">
+<td data-quarto-table-cell-role="th">4</td>
+<td>2025-03-01 10:00:00</td>
+<td>27.456407</td>
+</tr>
+</tbody>
+</table>
+
+</div>
+</div>
+</div></div>
+</section>
+<section id="pandas-dataframe-cont." class="slide level2 scrollable">
+<h2>Pandas DataFrame Cont.</h2>
+<div id="7ff19879" class="cell columns column-output-location" data-execution_count="6">
+<div class="column">
+<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb12-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
+<span id="cb12-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb12-4"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb12-5"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb12-6"><a></a></span>
+<span id="cb12-7"><a></a><span class="co"># some arbitrary time range </span></span>
+<span id="cb12-8"><a></a>start_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 8:00 AM</span></span>
+<span id="cb12-9"><a></a>end_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">17</span>, <span class="dv">0</span>, <span class="dv">0</span>)  <span class="co"># 5:00 PM</span></span>
+<span id="cb12-10"><a></a>interval <span class="op">=</span> timedelta(minutes<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb12-11"><a></a>time_stamps <span class="op">=</span> []</span>
+<span id="cb12-12"><a></a>current_time <span class="op">=</span> start_time</span>
+<span id="cb12-13"><a></a><span class="cf">while</span> current_time <span class="op">&lt;=</span> end_time:</span>
+<span id="cb12-14"><a></a>    time_stamps.append(current_time)</span>
+<span id="cb12-15"><a></a>    current_time <span class="op">+=</span> interval</span>
+<span id="cb12-16"><a></a></span>
+<span id="cb12-17"><a></a><span class="co"># some made up temperature data</span></span>
+<span id="cb12-18"><a></a>temp_c <span class="op">=</span> [</span>
+<span id="cb12-19"><a></a>  <span class="dv">20</span> <span class="op">+</span> uniform(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>) <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span></span>
+<span id="cb12-20"><a></a>  np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t.hour <span class="op">/</span> <span class="dv">24</span>)</span>
+<span id="cb12-21"><a></a>  <span class="cf">for</span> t</span>
+<span id="cb12-22"><a></a>  <span class="kw">in</span> time_stamps</span>
+<span id="cb12-23"><a></a>]</span>
+<span id="cb12-24"><a></a></span>
+<span id="cb12-25"><a></a><span class="co"># empty dataframe</span></span>
+<span id="cb12-26"><a></a>df <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb12-27"><a></a></span>
+<span id="cb12-28"><a></a><span class="co"># add data</span></span>
+<span id="cb12-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
+<span id="cb12-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
+<span id="cb12-31"><a></a></span>
+<span id="cb12-32"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb12-33"><a></a></span>
+<span id="cb12-34"><a></a><span class="co"># create the scatter plot</span></span>
+<span id="cb12-35"><a></a>plt.scatter(df.date_time, df[<span class="st">'T (C)'</span>], marker<span class="op">=</span><span class="st">'x'</span>, color <span class="op">=</span> <span class="st">'k'</span>)</span>
+<span id="cb12-36"><a></a></span>
+<span id="cb12-37"><a></a></span>
+<span id="cb12-38"><a></a><span class="co"># set the x-axis tick labels and rotate them</span></span>
+<span id="cb12-39"><a></a>plt.xticks(rotation<span class="op">=</span><span class="dv">80</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb12-40"><a></a></span>
+<span id="cb12-41"><a></a><span class="co"># label axes</span></span>
+<span id="cb12-42"><a></a>plt.xlabel(<span class="st">'Day and Time'</span>)</span>
+<span id="cb12-43"><a></a>plt.ylabel(<span class="st">'Temperature (C)'</span>)</span>
+<span id="cb12-44"><a></a>plt.title(<span class="st">'Hourly Temperature (C) in West Crabhammer'</span>)</span>
+<span id="cb12-45"><a></a></span>
+<span id="cb12-46"><a></a><span class="co"># adjust layout to prevent labels from overlapping</span></span>
+<span id="cb12-47"><a></a>plt.tight_layout()</span>
+<span id="cb12-48"><a></a></span>
+<span id="cb12-49"><a></a><span class="co"># Show the plot</span></span>
+<span id="cb12-50"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display">
 <div>
@@ -548,19 +562,19 @@ is the same as
 <h2>A random plot</h2>
 <div id="cell-fig-polar" class="cell columns column-output-location" data-execution_count="7">
 <div class="column">
-<div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb12-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb12-3"><a></a></span>
-<span id="cb12-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
-<span id="cb12-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
-<span id="cb12-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
-<span id="cb12-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
-<span id="cb12-8"><a></a>)</span>
-<span id="cb12-9"><a></a>ax.plot(theta, r)</span>
-<span id="cb12-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
-<span id="cb12-11"><a></a>ax.grid(<span class="va">True</span>)</span>
-<span id="cb12-12"><a></a>plt.title(<span class="st">'What the heck is this polar plot trying to tell us?'</span>)</span>
-<span id="cb12-13"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb13-2"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb13-3"><a></a></span>
+<span id="cb13-4"><a></a>r <span class="op">=</span> np.arange(<span class="dv">0</span>, <span class="dv">2</span>, <span class="fl">0.01</span>)</span>
+<span id="cb13-5"><a></a>theta <span class="op">=</span> <span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> r</span>
+<span id="cb13-6"><a></a>fig, ax <span class="op">=</span> plt.subplots(</span>
+<span id="cb13-7"><a></a>  subplot_kw <span class="op">=</span> {<span class="st">'projection'</span>: <span class="st">'polar'</span>} </span>
+<span id="cb13-8"><a></a>)</span>
+<span id="cb13-9"><a></a>ax.plot(theta, r)</span>
+<span id="cb13-10"><a></a>ax.set_rticks([<span class="fl">0.5</span>, <span class="dv">1</span>, <span class="fl">1.5</span>, <span class="dv">2</span>])</span>
+<span id="cb13-11"><a></a>ax.grid(<span class="va">True</span>)</span>
+<span id="cb13-12"><a></a>plt.title(<span class="st">'What the heck is this polar plot trying to tell us?'</span>)</span>
+<span id="cb13-13"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display">
 <div id="fig-polar" class="quarto-float quarto-figure quarto-figure-center">
@@ -619,17 +633,17 @@ Figure&nbsp;1: A line plot on a polar axis
 </section>
 <section id="polygon" class="slide level2">
 <h2>Polygon</h2>
-<div id="b17bb86b" class="cell columns column-output-location" data-execution_count="8">
+<div id="9e42dae5" class="cell columns column-output-location" data-execution_count="8">
 <div class="column">
-<div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
-<span id="cb13-2"><a></a></span>
-<span id="cb13-3"><a></a>coords <span class="op">=</span> ((<span class="fl">0.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">2.</span>), (<span class="fl">1.</span>, <span class="fl">1.</span>), (<span class="fl">1.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">0.</span>))</span>
-<span id="cb13-4"><a></a>p <span class="op">=</span> Polygon(coords)</span>
-<span id="cb13-5"><a></a></span>
-<span id="cb13-6"><a></a>c <span class="op">=</span> p.exterior.coords</span>
-<span id="cb13-7"><a></a></span>
-<span id="cb13-8"><a></a><span class="bu">print</span>(c[<span class="dv">0</span>] <span class="op">==</span> c[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb13-9"><a></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
+<span id="cb14-2"><a></a></span>
+<span id="cb14-3"><a></a>coords <span class="op">=</span> ((<span class="fl">0.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">2.</span>), (<span class="fl">1.</span>, <span class="fl">1.</span>), (<span class="fl">1.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">0.</span>))</span>
+<span id="cb14-4"><a></a>p <span class="op">=</span> Polygon(coords)</span>
+<span id="cb14-5"><a></a></span>
+<span id="cb14-6"><a></a>c <span class="op">=</span> p.exterior.coords</span>
+<span id="cb14-7"><a></a></span>
+<span id="cb14-8"><a></a><span class="bu">print</span>(c[<span class="dv">0</span>] <span class="op">==</span> c[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb14-9"><a></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
@@ -646,19 +660,19 @@ Figure&nbsp;1: A line plot on a polar axis
 <section id="reading-files" class="slide level2">
 <h2>Reading Files</h2>
 <p>Here we will read a geojson using the <code>read_file</code> method.</p>
-<div id="7e62fbdf" class="cell columns column-output-location" data-execution_count="9">
+<div id="ef969382" class="cell columns column-output-location" data-execution_count="9">
 <div class="column">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb15-2"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
-<span id="cb15-3"><a></a></span>
-<span id="cb15-4"><a></a><span class="co"># path to data</span></span>
-<span id="cb15-5"><a></a>data_dir <span class="op">=</span> Path(<span class="st">'data'</span>)</span>
-<span id="cb15-6"><a></a>geojson <span class="op">=</span> data_dir <span class="op">/</span> <span class="st">'upper_santa_rita_creek.geojson'</span></span>
-<span id="cb15-7"><a></a></span>
-<span id="cb15-8"><a></a><span class="co"># open the geojson</span></span>
-<span id="cb15-9"><a></a>gdf <span class="op">=</span> gpd.read_file(geojson)</span>
-<span id="cb15-10"><a></a></span>
-<span id="cb15-11"><a></a><span class="bu">print</span>(gdf.to_markdown())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb16-2"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb16-3"><a></a></span>
+<span id="cb16-4"><a></a><span class="co"># path to data</span></span>
+<span id="cb16-5"><a></a>data_dir <span class="op">=</span> Path(<span class="st">'data'</span>)</span>
+<span id="cb16-6"><a></a>geojson <span class="op">=</span> data_dir <span class="op">/</span> <span class="st">'upper_santa_rita_creek.geojson'</span></span>
+<span id="cb16-7"><a></a></span>
+<span id="cb16-8"><a></a><span class="co"># open the geojson</span></span>
+<span id="cb16-9"><a></a>gdf <span class="op">=</span> gpd.read_file(geojson)</span>
+<span id="cb16-10"><a></a></span>
+<span id="cb16-11"><a></a><span class="bu">print</span>(gdf.to_markdown())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>|    | id                   | geometry                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                                    |

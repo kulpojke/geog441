@@ -22,7 +22,7 @@ df-print: kable
 Before we get started we need to set up a Python environment in which to work.  We will be using Anaconda for this.
 ::: {.non-incremental}
 + Download the environment.yml
-+ In the start menu search for Anaconda. Open an Anaconda Powershell.
++ In the start menu search for Anaconda. Open an Anaconda Powershell.  
 :::
 ```
 cd ~
@@ -31,8 +31,9 @@ cd geog441
 cp ~/Downloads/environment.yml .
 conda env create -f environment.yml
 ```
+***
 __FYI:__
-What is this _environment.yml_ thing?
+What is this _environment.yml_ thing?  
 ```
 name: geo
 channels:
@@ -44,6 +45,8 @@ dependencies:
   - tabulatetqdm
   - tqdm
 ```
+***
+
 
 ## Basic Python data types {.scrollable}
 
