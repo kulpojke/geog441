@@ -17,3 +17,10 @@ Why learn open source GIS?
 
 ##
 
+Today we will cover a few of the tools we will be using this quarter, which should &#129310 be installed.
++ git
++ conda
++ VScode
++ Rstudio
++ QGIS
++ GDAL
