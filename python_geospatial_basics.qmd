@@ -17,6 +17,34 @@ df-print: kable
 + Other GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.
 + generally a widely used language.
 
+## Environment {.scrollable}
+
+Before we get started we need to set up a Python environment in which to work.  We will be using Anaconda for this.
+::: {.non-incremental}
++ Download the environment.yml
++ In the start menu search for Anaconda. Open an Anaconda Powershell.
+:::
+```
+cd ~
+mkdir geog441
+cd geog441
+cp ~/Downloads/environment.yml .
+conda env create -f environment.yml
+```
+__FYI:__
+What is this _environment.yml_ thing?
+```
+name: geo
+channels:
+  - defaults
+dependencies: 
+  - geopandas
+  - jupyterlab
+  - rioxarray
+  - tabulatetqdm
+  - tqdm
+```
+
 ## Basic Python data types {.scrollable}
 
 | Type   | Example(s) |
