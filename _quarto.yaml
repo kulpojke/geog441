@@ -3,7 +3,7 @@ project:
   output-dir: docs
   render:
   - index.qmd
-  - Intro.qmd
+  - intro.qmd
   - python_geospatial_basics.qmd
   - R_geospatial_basics.qmd
 
