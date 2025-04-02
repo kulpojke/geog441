@@ -51,7 +51,7 @@ At the end of the quarter you will submit a brief self evaluation, with a summar
 | Week | Date | Lecture | Preparation |
 |----|--------|---------| ------------|
 |  1 | 2025-04-02 | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>QGIS</li><li>GDAL</li><li>GRASS | |
-|  2 | 2025-04-07 | Group Project Introductions  <ul><li>9:00 - Devin Best: Land Trust Water Conservation</li><li>9:15</li><li></li></ul> Individual Project Introductions  <ul><li>BYOP...</li><li>or I can help you come up with one</li></ul>| |  |
+|  2 | 2025-04-07 | Group Project Introductions  <ul><li>9:00 - Devin Best: Land Trust Water Conservation</li><li>9:15 -Tiffany Faulstich: Arbretum Mapping Project</li><li>Cal Poly UFEI - Mapping post-wildfire tree mortality in LA</li></ul> Individual Project Introductions  <ul><li>BYOP...</li><li>or I can help you come up with one</li></ul>| |  |
 |  2 | 2025-04-09 | Python and R: <ul><li>Introduction and Comparison</li><li>Jupyter Notebooks</li></ul> | Complete the GIT exercise before class |
 |  3 | 2025-04-14 | Working with Vectors in Python |  |
 |  3 | 2025-04-16 | Working with Vectors in R <ul><li>Rstudio</li><li>R-markdown</li><li></li></ul> | |
