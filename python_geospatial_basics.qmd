@@ -218,7 +218,6 @@ fig, ax = plt.subplots()
 # create the scatter plot
 plt.scatter(df.date_time, df['T (C)'], marker='x', color = 'k')
 
-
 # set the x-axis tick labels and rotate them
 plt.xticks(rotation=80, ha='right')
 
@@ -235,9 +234,18 @@ plt.show()
 ```
 
 ```{python}
+# get the mean temperature over the timeseries
 df['T (C)'].mean()
 ```
 
+When there are no spaces in a column name you can access the column as an attribute of the datafame.
+
+```{python}
+# get the number of time stamps in the date_time column
+df.date_time.count()
+```
+
+There is a lot more to know about Pandas DataFrames.  This is enough for us to move on to GeoPandas.  I encourage you to [learn more about Pandas](https://pandas.pydata.org/docs/user_guide/10min.html) as an exercise.
 
 ## Homework {.smaller .scrollable}
 
