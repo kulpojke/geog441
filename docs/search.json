@@ -18,7 +18,7 @@
     "href": "python_geospatial_basics.html#starting-a-jupyter-lab",
     "title": "Python Lectures",
     "section": "Starting a Jupyter Lab",
-    "text": "Starting a Jupyter Lab\njupyter lab\nThis will open a new jupyter lab in your browser. ## Using VScode\nstuff"
+    "text": "Starting a Jupyter Lab\njupyter lab\nThis will open a new jupyter lab in your browser. ## Using VScode\nRunning Jupyter in VScode offers some advantages (in my opinion). To do this you need to install the jupyter extension and the Python Extension."
   },
   {
     "objectID": "python_geospatial_basics.html#basic-python-data-types",
@@ -67,7 +67,7 @@
     "href": "python_geospatial_basics.html#pandas-dataframe",
     "title": "Python Lectures",
     "section": "Pandas DataFrame",
-    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n21.436029\n\n\n1\n2025-03-01 08:30:00\n20.521092\n\n\n2\n2025-03-01 09:00:00\n19.941988\n\n\n3\n2025-03-01 09:30:00\n22.344586\n\n\n4\n2025-03-01 10:00:00\n28.807851"
+    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n18.765643\n\n\n1\n2025-03-01 08:30:00\n20.575648\n\n\n2\n2025-03-01 09:00:00\n24.549478\n\n\n3\n2025-03-01 09:30:00\n32.080918\n\n\n4\n2025-03-01 10:00:00\n23.518311"
   },
   {
     "objectID": "python_geospatial_basics.html#pandas-dataframe-cont.",
@@ -95,7 +95,7 @@
     "href": "python_geospatial_basics.html#geopandas",
     "title": "Python Lectures",
     "section": "Geopandas",
-    "text": "Geopandas\ng e o p a n d a s"
+    "text": "Geopandas\n&lt;–img width=“560” height=“315” src=“images/pandas.png”&gt;&lt;–/img&gt; g e o p a n d a s"
   },
   {
     "objectID": "python_geospatial_basics.html#vector-data",

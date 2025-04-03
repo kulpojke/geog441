@@ -69,7 +69,7 @@ jupyter lab
 This will open a new jupyter lab in your browser.
 ## Using VScode
 
-stuff
+Running Jupyter in VScode offers some advantages (in my opinion).  To do  this you need to install the jupyter extension and the Python Extension. 
 
 
 ## Basic Python data types {.scrollable}
@@ -170,7 +170,7 @@ print(c)
 
 
 ## Pandas
-<img width="560" height="315" src="images/pandas.png"></img>
+
 
 
 ## Pandas DataFrame {.scrollable}
@@ -307,7 +307,8 @@ If you are only going the R route, do the above, but in R. (Hints Below.)
 # Exploring Vector Data with  Geopandas {background-image="images/pandas.png"}
 
 
-## Geopandas
+## Geopandas {background-image="images/pandas.png"}
+<--img width="560" height="315" src="images/pandas.png"><--/img>
 g e o p a n d a s
 
 ## Vector Data {.smaller}
