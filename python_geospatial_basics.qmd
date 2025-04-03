@@ -63,8 +63,10 @@ If later you find that you need another package you can add it to the environmen
 
 ## Starting a Jupyter Lab
 
-stuff
-
+``` {bash}
+jupyter lab
+```
+This will open a new jupyter lab in your browser.
 ## Using VScode
 
 stuff
