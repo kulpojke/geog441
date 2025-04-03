@@ -39,6 +39,7 @@ At the end of the quarter you will submit a brief self evaluation, with a summar
 + GDAL tutorials (required)
     + In the Spatial Thoughts [GDAL tutorial](https://courses.spatialthoughts.com/gdal-tools.html#basic-raster-processing) do sections 1.1&ndash;1.4 and 2.1&ndash;2.3
 + Python tutorials
+    + [Get to know Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
 + R tutorials
 + QGIS tutorials
 + GRASS tutorials
