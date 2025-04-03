@@ -17,14 +17,14 @@ df-print: kable
 + Other GIS applications (e.g. QGIS, ArcGIS, postGIS) often have a Python interface.
 + generally a widely used language.
 
-## Environment {.scrollable .smaller}
+## Environment {.scrollable .smaller .non-incremental}
 
 Before we get started we need to set up a Python environment in which to work.  We will be using Anaconda for this.
 
-::: {.non-incremental}
-- Download the environment.yml
-- In the start menu search for Anaconda. Open an Anaconda Powershell.  
-:::
+
++ Download the environment.yml
++ In the start menu search for Anaconda. Open an Anaconda Powershell.  
+
 
 ``` {bash}
 cd ~

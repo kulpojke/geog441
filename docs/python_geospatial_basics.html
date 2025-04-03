@@ -209,16 +209,13 @@
 <li class="fragment">generally a widely used language.</li>
 </ul>
 </section>
-<section id="environment" class="slide level2 scrollable smaller">
+<section id="environment" class="slide level2 scrollable smaller non-incremental">
 <h2>Environment</h2>
 <p>Before we get started we need to set up a Python environment in which to work. We will be using Anaconda for this.</p>
-<div class="non-incremental">
 <ul>
 <li class="fragment">Download the environment.yml</li>
-<li class="fragment">In the start menu search for Anaconda. Open an Anaconda Powershell.<br>
-</li>
+<li class="fragment">In the start menu search for Anaconda. Open an Anaconda Powershell.</li>
 </ul>
-</div>
 <div class="sourceCode" id="cb1"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb1-1"><a></a>cd ~</span>
 <span id="cb1-2"><a></a>mkdir geog441</span>
 <span id="cb1-3"><a></a>cd geog441</span>
@@ -298,7 +295,7 @@
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="8b320f09" class="cell columns column-output-location" data-execution_count="1">
+<div id="78745b5f" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb4-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -325,7 +322,7 @@ but 5 // 4 is 1</code></pre>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="3ac4129d" class="cell columns column-output-location" data-execution_count="2">
+<div id="3b65d9d4" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a></a><span class="co"># a list</span></span>
 <span id="cb6-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
@@ -372,7 +369,7 @@ neushorn?</code></pre>
 </section>
 <section id="dictionaries" class="slide level2">
 <h2>Dictionaries</h2>
-<div id="56c608a0" class="cell columns column-output-location" data-execution_count="3">
+<div id="81ecb3be" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
 <span id="cb8-2"><a></a></span>
@@ -391,7 +388,7 @@ neushorn?</code></pre>
 </section>
 <section id="iterating" class="slide level2">
 <h2>Iterating</h2>
-<div id="cca51113" class="cell columns column-output-location" data-execution_count="4">
+<div id="31b26d84" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb10-2"><a></a></span>
@@ -420,7 +417,7 @@ is the same as
 </section>
 <section id="pandas-dataframe" class="slide level2 scrollable">
 <h2>Pandas DataFrame</h2>
-<div id="4a910a80" class="cell columns column-output-location" data-execution_count="5">
+<div id="b036d92a" class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
 <span id="cb12-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
@@ -483,27 +480,27 @@ is the same as
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
 <td>2025-03-01 08:00:00</td>
-<td>35.020009</td>
+<td>33.662117</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
 <td>2025-03-01 08:30:00</td>
-<td>22.957516</td>
+<td>30.072083</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
 <td>2025-03-01 09:00:00</td>
-<td>24.498365</td>
+<td>25.631974</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
 <td>2025-03-01 09:30:00</td>
-<td>23.462418</td>
+<td>22.724691</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
 <td>2025-03-01 10:00:00</td>
-<td>33.130342</td>
+<td>30.326292</td>
 </tr>
 </tbody>
 </table>
@@ -514,7 +511,7 @@ is the same as
 </section>
 <section id="pandas-dataframe-cont." class="slide level2 scrollable">
 <h2>Pandas DataFrame Cont.</h2>
-<div id="06b6a1aa" class="cell columns column-output-location" data-execution_count="6">
+<div id="7efedbc6" class="cell columns column-output-location" data-execution_count="6">
 <div class="column">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
 <span id="cb13-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
@@ -654,7 +651,7 @@ Figure&nbsp;1: A line plot on a polar axis
 </section>
 <section id="polygon" class="slide level2">
 <h2>Polygon</h2>
-<div id="1b7becc6" class="cell columns column-output-location" data-execution_count="8">
+<div id="4af49ed2" class="cell columns column-output-location" data-execution_count="8">
 <div class="column">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
 <span id="cb15-2"><a></a></span>
@@ -681,7 +678,7 @@ Figure&nbsp;1: A line plot on a polar axis
 <section id="reading-files" class="slide level2">
 <h2>Reading Files</h2>
 <p>Here we will read a geojson using the <code>read_file</code> method.</p>
-<div id="931d4ede" class="cell columns column-output-location" data-execution_count="9">
+<div id="87f6cb79" class="cell columns column-output-location" data-execution_count="9">
 <div class="column">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb17-2"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
