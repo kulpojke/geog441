@@ -212,36 +212,6 @@ df.head()
 ## Pandas DataFrame Cont. {.scrollable}
 
 ```{python}
-from datetime import datetime, timedelta
-from random import uniform
-import matplotlib.pyplot as plt
-import numpy as np
-import pandas as pd
-
-# some arbitrary time range 
-start_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM
-end_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM
-interval = timedelta(minutes=30)
-time_stamps = []
-current_time = start_time
-while current_time <= end_time:
-    time_stamps.append(current_time)
-    current_time += interval
-
-# some made up temperature data
-temp_c = [
-  20 + uniform(-10, 10) + 10 *
-  np.sin(2 * np.pi * t.hour / 24)
-  for t
-  in time_stamps
-]
-
-# empty dataframe
-df = pd.DataFrame()
-
-# add data
-df['date_time'] = time_stamps
-df['T (C)'] = temp_c
 
 fig, ax = plt.subplots()
 
@@ -264,37 +234,21 @@ plt.tight_layout()
 plt.show()
 ```
 
-## A random plot
 ```{python}
-#| label: fig-polar
-#| fig-cap: "A line plot on a polar axis"
-
-import numpy as np
-import matplotlib.pyplot as plt
-
-r = np.arange(0, 2, 0.01)
-theta = 2 * np.pi * r
-fig, ax = plt.subplots(
-  subplot_kw = {'projection': 'polar'} 
-)
-ax.plot(theta, r)
-ax.set_rticks([0.5, 1, 1.5, 2])
-ax.grid(True)
-plt.title('What the heck is this polar plot trying to tell us?')
-plt.show()
+df['T (C)'].mean()
 ```
 
+
 ## Homework {.smaller .scrollable}
-A big part of coding is knowing how to use google (or some stupid AI thing, try searching first, the answers are there on the internet do not require the construction of a nuclear power plant to answer)
 
-<img src="https://xkcd.com/1838"></img>
-
-If you are choosing Python as you language in this course, create a jupyter notebook and do the following:
+If you are choosing Python as you language in this course (and what we have covered today is not a peace of cake for you already), create a jupyter notebook and do the following:
 
 :::
 + Download the results from the class survey from [here](https://docs.google.com/spreadsheets/d/17qg3d2N1WmE3cIoz5SGpP2AGesVNmaZTwu4ljIRii4U/edit?usp=sharing) as a csv file.
 + Read the csv into a Pandas DataFrame.
-+ The headers are a mess!  Change the column names to be reasonable.  Remember, if you want to be able to access the data as an attribute, the column names need to not have spaces in them. Hint: _columns_ is a mutable attribute of the dataframe so `df.columns = some_list_of_the_correct_length` will assign new column names.
++ The headers are a mess!  Change the column names to be reasonable.
+  + Remember, if you want to be able to access the data as an attribute, the column names need to not have spaces in them. For example you can get a column like this `df.aarvark_count
+  + Hint: _columns_ is a mutable attribute of the dataframe so `df.columns = some_list_of_the_correct_length` will assign new column names.
 :::
 
 If you are only going the R route, do the above, but in R. (Hints Below.)
