@@ -202,7 +202,7 @@ complain()
 ```
 
 
-## Pandas DataFrame {.scrollable}
+## Pandas DataFrame {.smaller .scrollable}
 DataFrames hold tabular data
 
 ```{python}
@@ -214,8 +214,8 @@ import numpy as np
 import pandas as pd
 
 # some arbitrary time range 
-start_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM
-end_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM
+start_time = datetime(2025, 3, 1, 8, 0, 0)
+end_time = datetime(2025, 3, 3, 17, 0, 0)
 interval = timedelta(minutes=30)
 time_stamps = []
 current_time = start_time
