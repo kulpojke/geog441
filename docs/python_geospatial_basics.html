@@ -293,7 +293,7 @@
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="270b4718" class="cell columns column-output-location" data-execution_count="1">
+<div id="373ee89e" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb5-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -320,7 +320,7 @@ but 5 // 4 is 1</code></pre>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="196575aa" class="cell columns column-output-location" data-execution_count="2">
+<div id="7cd7c232" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="co"># a list</span></span>
 <span id="cb7-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
@@ -367,7 +367,7 @@ neushorn?</code></pre>
 </section>
 <section id="dictionaries" class="slide level2">
 <h2>Dictionaries</h2>
-<div id="825ed25e" class="cell columns column-output-location" data-execution_count="3">
+<div id="88f220c4" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
 <span id="cb9-2"><a></a></span>
@@ -386,7 +386,7 @@ neushorn?</code></pre>
 </section>
 <section id="iterating" class="slide level2">
 <h2>Iterating</h2>
-<div id="46220e20" class="cell columns column-output-location" data-execution_count="4">
+<div id="b9a90642" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb11-2"><a></a></span>
@@ -417,13 +417,13 @@ is the same as
 <li class="fragment">can return something</li>
 <li class="fragment">have there own scope</li>
 </ul>
-<div id="5eba27c0" class="cell columns column-output-location" data-execution_count="5">
+<div id="c598e548" class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb13-2"><a></a></span>
 <span id="cb13-3"><a></a><span class="kw">def</span> root_mean_square(list_of_numbers):</span>
 <span id="cb13-4"><a></a>  rms <span class="op">=</span> np.sqrt(</span>
-<span id="cb13-5"><a></a>    np.array([n<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> n <span class="kw">in</span> list_of_numbers]) <span class="op">/</span></span>
+<span id="cb13-5"><a></a>    np.array([n<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> n <span class="kw">in</span> list_of_numbers]).<span class="bu">sum</span>() <span class="op">/</span></span>
 <span id="cb13-6"><a></a>    <span class="bu">len</span>(list_of_numbers)</span>
 <span id="cb13-7"><a></a>    )</span>
 <span id="cb13-8"><a></a></span>
@@ -435,32 +435,30 @@ is the same as
 <span id="cb13-14"><a></a><span class="bu">print</span>(rms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
-<pre><code>[0.53665631 1.47580487 0.62609903 0.62609903 1.8782971 ]</code></pre>
+<pre><code>2.6034592372457075</code></pre>
 </div>
 </div></div>
 <p>They do nat have to have arguments or return stuff.</p>
-<div id="55c057d6" class="cell columns column-output-location" data-execution_count="6">
+<div id="cfa395c3" class="cell columns column-output-location" data-execution_count="6">
 <div class="column">
 <div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="kw">def</span> complain():</span>
-<span id="cb15-2"><a></a>  <span class="bu">print</span>(<span class="st">'This is boring!</span><span class="ch">\n</span><span class="st">when will we get to the GIS stuff.</span><span class="ch">\n\U0001F620\U0001F620\U0001F620</span><span class="st">'</span>)</span>
+<span id="cb15-2"><a></a>  <span class="bu">print</span>(<span class="st">'This is boring!</span><span class="ch">\n</span><span class="st">when will we get to the GIS stuff.</span><span class="ch">\n\U0001F620\U0001F620\U0001F620\n\n</span><span class="st">Soon! Bear with me.'</span>)</span>
 <span id="cb15-3"><a></a></span>
 <span id="cb15-4"><a></a>complain()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>This is boring!
 when will we get to the GIS stuff.
-😠😠😠</code></pre>
+😠😠😠
+
+Soon! Bear with me.</code></pre>
 </div>
 </div></div>
-<p>they ca also modify things in place, but it is generally bad form.</p>
-</section>
-<section id="pandas" class="slide level2">
-<h2>Pandas</h2>
 </section>
 <section id="pandas-dataframe" class="slide level2 scrollable">
 <h2>Pandas DataFrame</h2>
-<div id="8fa7a9b9" class="cell columns column-output-location" data-execution_count="7">
-<div class="column">
+<p>DataFrames hold tabular data</p>
+<div id="d9919e6b" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
 <span id="cb17-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
 <span id="cb17-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -493,7 +491,8 @@ when will we get to the GIS stuff.
 <span id="cb17-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
 <span id="cb17-31"><a></a></span>
 <span id="cb17-32"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column">
+</div>
+<div class="cell fragment" data-execution_count="7">
 <div class="cell-output cell-output-display" data-execution_count="7">
 <div>
 <style scoped="">
@@ -522,38 +521,38 @@ when will we get to the GIS stuff.
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
 <td>2025-03-01 08:00:00</td>
-<td>26.679469</td>
+<td>26.556504</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
 <td>2025-03-01 08:30:00</td>
-<td>25.448251</td>
+<td>21.411787</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
 <td>2025-03-01 09:00:00</td>
-<td>33.880900</td>
+<td>30.617731</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
 <td>2025-03-01 09:30:00</td>
-<td>25.776084</td>
+<td>25.257478</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
 <td>2025-03-01 10:00:00</td>
-<td>26.315745</td>
+<td>27.351753</td>
 </tr>
 </tbody>
 </table>
 
 </div>
 </div>
-</div></div>
+</div>
 </section>
 <section id="pandas-dataframe-cont." class="slide level2 scrollable">
 <h2>Pandas DataFrame Cont.</h2>
-<div id="a4c1eb15" class="cell columns column-output-location" data-execution_count="8">
+<div id="a416a7cf" class="cell columns column-output-location" data-execution_count="8">
 <div class="column">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb18-2"><a></a></span>
@@ -582,17 +581,17 @@ when will we get to the GIS stuff.
 </div>
 </div>
 </div></div>
-<div id="8dd92aec" class="cell columns column-output-location" data-execution_count="9">
+<div id="66647ccc" class="cell columns column-output-location" data-execution_count="9">
 <div class="column">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="co"># get the mean temperature over the timeseries</span></span>
 <span id="cb19-2"><a></a>df[<span class="st">'T (C)'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display" data-execution_count="9">
-<pre><code>np.float64(19.750929263600934)</code></pre>
+<pre><code>np.float64(19.62291958815732)</code></pre>
 </div>
 </div></div>
 <p>When there are no spaces in a column name you can access the column as an attribute of the datafame.</p>
-<div id="f1cb16c0" class="cell columns column-output-location" data-execution_count="10">
+<div id="1767b423" class="cell columns column-output-location" data-execution_count="10">
 <div class="column">
 <div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="co"># get the number of time stamps in the date_time column</span></span>
 <span id="cb21-2"><a></a>df.date_time.count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -657,7 +656,7 @@ when will we get to the GIS stuff.
 </section>
 <section id="polygon" class="slide level2">
 <h2>Polygon</h2>
-<div id="bf09555d" class="cell columns column-output-location" data-execution_count="11">
+<div id="35da9afb" class="cell columns column-output-location" data-execution_count="11">
 <div class="column">
 <div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
 <span id="cb23-2"><a></a></span>
@@ -684,7 +683,7 @@ when will we get to the GIS stuff.
 <section id="reading-files" class="slide level2">
 <h2>Reading Files</h2>
 <p>Here we will read a geojson using the <code>read_file</code> method.</p>
-<div id="2243df45" class="cell columns column-output-location" data-execution_count="12">
+<div id="996ac05e" class="cell columns column-output-location" data-execution_count="12">
 <div class="column">
 <div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb25-2"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>

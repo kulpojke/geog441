@@ -60,28 +60,21 @@
     "href": "python_geospatial_basics.html#functions",
     "title": "Python Lectures",
     "section": "Functions",
-    "text": "Functions\n\nDefined with def\nCan take arguments\ncan return something\nhave there own scope\n\n\n\nimport numpy as np\n\ndef root_mean_square(list_of_numbers):\n  rms = np.sqrt(\n    np.array([n**2 for n in list_of_numbers]) /\n    len(list_of_numbers)\n    )\n\n  return rms\n\nl = [1.2, 3.3, 1.4, 1.4, 4.2]\nrms = root_mean_square(l)\n\nprint(rms)\n\n\n[0.53665631 1.47580487 0.62609903 0.62609903 1.8782971 ]\n\n\nThey do nat have to have arguments or return stuff.\n\n\ndef complain():\n  print('This is boring!\\nwhen will we get to the GIS stuff.\\n\\U0001F620\\U0001F620\\U0001F620')\n\ncomplain()\n\n\nThis is boring!\nwhen will we get to the GIS stuff.\n😠😠😠\n\n\nthey ca also modify things in place, but it is generally bad form."
-  },
-  {
-    "objectID": "python_geospatial_basics.html#pandas",
-    "href": "python_geospatial_basics.html#pandas",
-    "title": "Python Lectures",
-    "section": "Pandas",
-    "text": "Pandas"
+    "text": "Functions\n\nDefined with def\nCan take arguments\ncan return something\nhave there own scope\n\n\n\nimport numpy as np\n\ndef root_mean_square(list_of_numbers):\n  rms = np.sqrt(\n    np.array([n**2 for n in list_of_numbers]).sum() /\n    len(list_of_numbers)\n    )\n\n  return rms\n\nl = [1.2, 3.3, 1.4, 1.4, 4.2]\nrms = root_mean_square(l)\n\nprint(rms)\n\n\n2.6034592372457075\n\n\nThey do nat have to have arguments or return stuff.\n\n\ndef complain():\n  print('This is boring!\\nwhen will we get to the GIS stuff.\\n\\U0001F620\\U0001F620\\U0001F620\\n\\nSoon! Bear with me.')\n\ncomplain()\n\n\nThis is boring!\nwhen will we get to the GIS stuff.\n😠😠😠\n\nSoon! Bear with me."
   },
   {
     "objectID": "python_geospatial_basics.html#pandas-dataframe",
     "href": "python_geospatial_basics.html#pandas-dataframe",
     "title": "Python Lectures",
     "section": "Pandas DataFrame",
-    "text": "Pandas DataFrame\n\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n26.679469\n\n\n1\n2025-03-01 08:30:00\n25.448251\n\n\n2\n2025-03-01 09:00:00\n33.880900\n\n\n3\n2025-03-01 09:30:00\n25.776084\n\n\n4\n2025-03-01 10:00:00\n26.315745"
+    "text": "Pandas DataFrame\nDataFrames hold tabular data\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)  # 8:00 AM\nend_time = datetime(2025, 3, 3, 17, 0, 0)  # 5:00 PM\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n26.556504\n\n\n1\n2025-03-01 08:30:00\n21.411787\n\n\n2\n2025-03-01 09:00:00\n30.617731\n\n\n3\n2025-03-01 09:30:00\n25.257478\n\n\n4\n2025-03-01 10:00:00\n27.351753"
   },
   {
     "objectID": "python_geospatial_basics.html#pandas-dataframe-cont.",
     "href": "python_geospatial_basics.html#pandas-dataframe-cont.",
     "title": "Python Lectures",
     "section": "Pandas DataFrame Cont.",
-    "text": "Pandas DataFrame Cont.\n\n\nfig, ax = plt.subplots()\n\n# create the scatter plot\nplt.scatter(df.date_time, df['T (C)'], marker='x', color = 'k')\n\n# set the x-axis tick labels and rotate them\nplt.xticks(rotation=80, ha='right')\n\n# label axes\nplt.xlabel('Day and Time')\nplt.ylabel('Temperature (C)')\nplt.title('Hourly Temperature (C) in West Crabhammer')\n\n# adjust layout to prevent labels from overlapping\nplt.tight_layout()\n\n# Show the plot\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n# get the mean temperature over the timeseries\ndf['T (C)'].mean()\n\n\nnp.float64(19.750929263600934)\n\n\nWhen there are no spaces in a column name you can access the column as an attribute of the datafame.\n\n\n# get the number of time stamps in the date_time column\ndf.date_time.count()\n\n\nnp.int64(115)\n\n\nThere is a lot more to know about Pandas DataFrames. This is enough for us to move on to GeoPandas. I encourage you to learn more about Pandas as an exercise."
+    "text": "Pandas DataFrame Cont.\n\n\nfig, ax = plt.subplots()\n\n# create the scatter plot\nplt.scatter(df.date_time, df['T (C)'], marker='x', color = 'k')\n\n# set the x-axis tick labels and rotate them\nplt.xticks(rotation=80, ha='right')\n\n# label axes\nplt.xlabel('Day and Time')\nplt.ylabel('Temperature (C)')\nplt.title('Hourly Temperature (C) in West Crabhammer')\n\n# adjust layout to prevent labels from overlapping\nplt.tight_layout()\n\n# Show the plot\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n# get the mean temperature over the timeseries\ndf['T (C)'].mean()\n\n\nnp.float64(19.62291958815732)\n\n\nWhen there are no spaces in a column name you can access the column as an attribute of the datafame.\n\n\n# get the number of time stamps in the date_time column\ndf.date_time.count()\n\n\nnp.int64(115)\n\n\nThere is a lot more to know about Pandas DataFrames. This is enough for us to move on to GeoPandas. I encourage you to learn more about Pandas as an exercise."
   },
   {
     "objectID": "python_geospatial_basics.html#homework",

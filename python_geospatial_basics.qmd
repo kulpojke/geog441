@@ -191,24 +191,22 @@ rms = root_mean_square(l)
 print(rms)
 
 ```
+
 They do nat have to have arguments or return stuff.
 
 ```{python}
 def complain():
-  print('This is boring!\nwhen will we get to the GIS stuff.\n\U0001F620\U0001F620\U0001F620')
+  print('This is boring!\nwhen will we get to the GIS stuff.\n\U0001F620\U0001F620\U0001F620\n\nSoon! Bear with me.')
 
 complain()
 ```
 
-they ca also modify things in place, but it is generally bad form.
-
-
-## Pandas
-
-
 
 ## Pandas DataFrame {.scrollable}
+DataFrames hold tabular data
+
 ```{python}
+#|output-location: fragment
 from datetime import datetime, timedelta
 from random import uniform
 import matplotlib.pyplot as plt
