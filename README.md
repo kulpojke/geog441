@@ -24,9 +24,9 @@ There are two exercises that are required, one introducing GIT, and another intr
 
 I am forcing you to learn a little about GDAL for a couple of reasons.  The first is historical/contextual. Most other geospatial applications rely, at least partially, on GDAL.  It has been in use since 2000.  Secondly, it is extremely useful. It is great for writing scripts for processing files in batch.  If you ever want to process a bunch of files in a container on the cloud it is a good choice because it does not have complicated dependencies.
 
-The rest is up to you as far as exercises go.  You do however need to make substantial gains in you ability to use either R or Python (or both!) to solve geospatial problems.
+The rest is up to you as far as exercises go.  You do however need to make substantial gains in you ability to use either R or Python (or both!) to solve geospatial problems.  Ideally, by the end of the quarter you will be familiar with the content of the suggested tutorials for your chosen language and have completed at least on of the synthesizing exercises.  If you are working primarily with your programming language for your personal project, or group project you can skip the synthesizing exercise if you would like. 
 
-At the end of the quarter you will submit a brief self-evaluation, with a summary of the exercises you have completed and the things you have learned.  You will give yourself a grade for the exercises portion on the class, and explain why you deserve that grade.
+At the end of the quarter you will submit a brief __self-evaluation__, with a summary of the exercises you have completed and a paragraph or two describing the things you have learned.  You will give yourself a grade for the exercises portion on the class, and explain why you deserve that grade.
 
 + GIT exercise (required, complete by 2025-04-09)  
     + Create a github (or [similar](https://www.wearedevelopers.com/en/magazine/298/top-github-alternatives)) account (if you don't have one)
