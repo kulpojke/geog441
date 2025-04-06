@@ -26,7 +26,7 @@ I am forcing you to learn a little about GDAL for a couple of reasons.  The firs
 
 The rest is up to you as far as exercises go.  You do however need to make substantial gains in you ability to use either R or Python (or both!) to solve geospatial problems.
 
-At the end of the quarter you will submit a brief self evaluation, with a summary of the exercises you have completed and the things you have learned.  You will give yourself a grade for the exercises portion on the class, and explain why you deserve that grade.
+At the end of the quarter you will submit a brief self-evaluation, with a summary of the exercises you have completed and the things you have learned.  You will give yourself a grade for the exercises portion on the class, and explain why you deserve that grade.
 
 + GIT exercise (required, complete by 2025-04-09)  
     + Create a github (or [similar](https://www.wearedevelopers.com/en/magazine/298/top-github-alternatives)) account (if you don't have one)
@@ -38,8 +38,15 @@ At the end of the quarter you will submit a brief self evaluation, with a summar
 
 + GDAL tutorials (required)
     + In the Spatial Thoughts [GDAL tutorial](https://courses.spatialthoughts.com/gdal-tools.html#basic-raster-processing) do sections 1.1&ndash;1.4 and 2.1&ndash;2.3
-+ Python tutorials
-    + [Get to know Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
+
++ Suggested Python tutorials
+    + Pandas:
+        + [10 minutes to Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
+        + [Intro to data structures](https://pandas.pydata.org/docs/user_guide/dsintro.html)
+        + [Essential basic functionality](https://pandas.pydata.org/docs/user_guide/basics.html)
+        + [IO tools (text, CSV, HDF5, …)](https://pandas.pydata.org/docs/user_guide/io.html)
+        + [Indexing and selecting data](https://pandas.pydata.org/docs/user_guide/indexing.html)
+    
 + R tutorials
 + QGIS tutorials
 + GRASS tutorials
