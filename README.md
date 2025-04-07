@@ -24,7 +24,7 @@ There are two exercises that are required, one introducing GIT, and another intr
 
 I am forcing you to learn a little about GDAL for a couple of reasons.  The first is historical/contextual. Most other geospatial applications rely, at least partially, on GDAL.  It has been in use since 2000.  Secondly, it is extremely useful. It is great for writing scripts for processing files in batch.  If you ever want to process a bunch of files in a container on the cloud it is a good choice because it does not have complicated dependencies.
 
-The rest is up to you as far as exercises go.  You do however need to make substantial gains in you ability to use either R or Python (or both!) to solve geospatial problems.  Ideally, by the end of the quarter you will be familiar with the content of the suggested tutorials for your chosen language and have completed at least on of the synthesizing exercises.  If you are working primarily with your programming language for your personal project, or group project you can skip the synthesizing exercise if you would like. 
+The rest is up to you as far as exercises go.  You do however need to make substantial gains in you ability to use either R or Python (or both!) to solve geospatial problems.  Ideally, by the end of the quarter you will be familiar with the content of the suggested tutorials for your chosen language and have completed at least on of the synthesizing exercises.  If you are working primarily with your programming language for your personal project, or group project you can skip the synthesizing exercise if you would like.    
 
 At the end of the quarter you will submit a brief __self-evaluation__, with a summary of the exercises you have completed and a paragraph or two describing the things you have learned.  You will give yourself a grade for the exercises portion on the class, and explain why you deserve that grade.
 
@@ -59,7 +59,7 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
 | Week | Date | Lecture | Preparation |
 |----|--------|---------| ------------|
 |  1 | 2025-04-02 | Introduction <ul><li>Wait... It's possible to do GIS without ESRI?</li><li>Why learn Python or R?</li></ul> Introduction to Tools<ul><li> git</li><li>conda</li><li>VScode</li><li>Rstudio</li><li>QGIS</li><li>GDAL</li><li>GRASS | |
-|  2 | 2025-04-07 | Group Project Introductions  <ul><li>9:00 - Devin Best: Land Trust Water Conservation</li><li>9:15 -Tiffany Faulstich: Arbretum Mapping Project</li><li>11:00 - Reed Kenny: Cal Poly UFEI, Mapping post-wildfire tree mortality in LA</li></ul> Individual Project Introductions  <ul><li>BYOP...</li><li>or I can help you come up with one</li></ul>| |  |
+|  2 | 2025-04-07 | Group Project Introductions  <ul><li>9:00 - Devin Best: Land Trust Water Conservation</li><li>9:15 -Tiffany Faulstich: Arbretum Mapping Project</li><li>10:45 - Beaver Damn Analogue Site Suitability</li>11:00 - Reed Kenny: Cal Poly UFEI, Mapping post-wildfire tree mortality in LA</li></ul> Individual Project Introductions  <ul><li>BYOP...</li><li>or I can help you come up with one</li></ul>| |  |
 |  2 | 2025-04-09 | Python and R: <ul><li>Introduction and Comparison</li><li>Jupyter Notebooks</li></ul> | Complete the GIT exercise before class |
 |  3 | 2025-04-14 | Working with Vectors in Python |  |
 |  3 | 2025-04-16 | Working with Vectors in R <ul><li>Rstudio</li><li>R-markdown</li><li></li></ul> | |
@@ -82,3 +82,14 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
 
 # Lectures
 Lecture Slides found [here.](https://kulpojke.github.io/geog441/)
+
+# Individual project ideas
+Difficulty Ratings:  
+Easy <progress value="1" max="100" style="accent-color: red;"></progress>  
+Hard <progress value="100" max="100" style="accent-color: red;"></progress>
+
+Project Ideas:
++ <progress value="25" max="100" style="accent-color: red;"></progress> [Get a part 107 Commercial UAV operators license](https://www.faa.gov/uas/commercial_operators/become_a_drone_pilot).  Study for the test, then take the exam (costs $175).
++ <progress value="30" max="100" style="accent-color: red;"></progress> Here are some ideas in the realm of [urban planning](https://medium.com/@animagun/5-open-source-gis-projects-for-urban-planning-you-can-build-this-weekend-2c820cb10f3c).  You would need to go above and beyond just following the steps presented in this article, but they could be a good starting point. This article is Python focused, but you could redo them using other tolls if desired. 
++ <progress value="50" max="100" style="accent-color: red;"></progress> [Do something cool with Carbon Mapper data](https://carbonmapper.org/data)
++ <progress value="90" max="100" style="accent-color: red;"></progress> Build an application or module/library for accessing the [ESA Climate Data API](https://climate.esa.int/en/data/apis/)
