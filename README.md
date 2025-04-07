@@ -39,15 +39,22 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
 + GDAL tutorials (required)
     + In the Spatial Thoughts [GDAL tutorial](https://courses.spatialthoughts.com/gdal-tools.html#basic-raster-processing) do sections 1.1&ndash;1.4 and 2.1&ndash;2.3
 
-+ Suggested Python tutorials
++ Python tutorials
     + Pandas:
         + [10 minutes to Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
         + [Intro to data structures](https://pandas.pydata.org/docs/user_guide/dsintro.html)
         + [Essential basic functionality](https://pandas.pydata.org/docs/user_guide/basics.html)
         + [IO tools (text, CSV, HDF5, …)](https://pandas.pydata.org/docs/user_guide/io.html)
         + [Indexing and selecting data](https://pandas.pydata.org/docs/user_guide/indexing.html)
+    + GeoPandas:
+        + 
+    + rioXarray:
+        +
+    + Synthesizing exercises:
+        + 
     
 + R tutorials
+
 + QGIS tutorials
 + GRASS tutorials
 + Other stuff you want to learn tutorials
