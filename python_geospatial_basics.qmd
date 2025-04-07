@@ -1,8 +1,6 @@
 ---
 title: 'Python Lectures'
-format:
-  revealjs:
-    incremental: true 
+format: html 
 jupyter: python3
 echo: true
 output-location: column
