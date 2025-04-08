@@ -33,7 +33,7 @@ cp ~/Downloads/environment.yml .
 conda env create -f environment.yml
 ```
 
-<p class="noteBoxes type2">
+
 What is this _environment.yml_ thing?  
 ``` {yml}
 name: geo
@@ -46,7 +46,7 @@ dependencies:
   - tabulate
   - tqdm
 ```
-</p>
+
 
 Using `conda env create` with the environment yaml creates a new conda environment named _geo_ with the dependencies installed.  Next we will activate the _geo_ environment.
 
@@ -230,7 +230,7 @@ print(rms)
 
 ```
 
-They do nat have to have arguments or return stuff.
+They do not have to have arguments or return stuff.
 
 ```{python}
 def complain():
@@ -239,8 +239,68 @@ def complain():
 complain()
 ```
 
+Python is an _object oriented_ programming language.  Everything that you can assign to a variable (which is almost everything) can be though of as an object, for example, built in functions are objects.
 
+```{python}
+zzz = print
+zzz('toenails')
+```
 
+Many objects have built in functions as an attribute, these are called methods.  For instance, strings have a method called split (they have many other methods as well).
+
+```{python}
+s = 'hyphens-are-everywhere-they-haunt-me-in-my-dreams'
+s.split('-')
+```
+
+We will encounter heaps of methods later.
+
+## Exercise - Functions {background="#FF007F"}
+
+Use a function and a list comprehension to reproduce the results of the for loop below:
+```{python}
+l = [(4, 3, 2), (2, 2, 2), (1, 2, 3)]
+
+results = []
+
+for t in l:
+  results.append(
+    t[0] + t[1] - t[2] +
+    (t[0] * t[1] + t[2])**t[1] /
+    (t[1]**2 * 5**t[0])
+  )
+
+results
+```
+
+Take some time to contemplate, what is this?
+
+```{python}
+import numpy as np
+
+nested_list = [[1, 2, 3], [4, 5, 6], [7, 8, 9]]
+
+np.array(nested_list)
+```
+
+BTW, you can import a library as anything you want
+
+```{python}
+import numpy as frogz_on_crack
+
+frogz_on_crack.array([1, 2, 3]) 
+```
+
+Why would one avoid doing this kind of thing?
+
+You can also dump all of the objects from a module into the main namespace
+```{python}
+# from numpy import everything
+from numpy import *
+
+array([1, 2, 3 ])
+
+```
 
 ## Pandas DataFrame {.smaller .scrollable}
 DataFrames hold tabular data
