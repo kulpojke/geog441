@@ -358,5 +358,5 @@ geojson = data_dir / 'upper_santa_rita_creek.geojson'
 # open the geojson
 gdf = gpd.read_file(geojson)
 
-print(gdf.to_markdown())
+gdf
 ```
