@@ -1,6 +1,6 @@
 ---
 title: 'Python Lectures'
-format: html
+format: html 
 jupyter: python3
 echo: true
 output-location: column
