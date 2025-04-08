@@ -104,9 +104,13 @@ print(f'but 5 // 4 is {5 // 4}')
 print(f'and 5 % 4 is {5 % 4}')
 ```
 
-<div class="textbox">
-  This is the text within the box.
-</div>
+## Exercise - Basic Numbers {background="#FF007F"}
+
+```{python}
+print(f'but 5 // 4 is {5 // 4}')
+print(f'and 5 % 4 is {5 % 4}')
+```
+
 
 ## Sequences
 Lists, tuples, and strings ae all sequences
