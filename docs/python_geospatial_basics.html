@@ -227,7 +227,7 @@ dependencies:
 <section id="basic-numbers" class="level2">
 <h2 class="anchored" data-anchor-id="basic-numbers">Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="7ecb869f" class="cell" data-execution_count="1">
+<div id="a55fd863" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>c <span class="op">=</span> a <span class="op">+</span> b</span>
@@ -254,7 +254,7 @@ and 5 % 4 is 1</code></pre>
 <section id="sequences" class="level2">
 <h2 class="anchored" data-anchor-id="sequences">Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="6823380c" class="cell" data-execution_count="2">
+<div id="9ea9ae9d" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># a list</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -296,27 +296,16 @@ neushorn?</code></pre>
 <p><a href="https://www.geeksforgeeks.org/python-list-slicing/#">Slicing</a><br>
 <a href="https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858">Sequences tutorial</a><br>
 <a href="https://www.youtube.com/watch?v=n3KMrwmq_94">Sequence tutorial as video</a></p>
-<p>THe key difference is that tuples are immutable.</p>
-<div id="2fb4d1ac" class="cell" data-execution_count="3">
+<p>The key difference is that tuples are immutable.</p>
+<div id="490dad44" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a>a_list[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">256</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a></span>
-<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>a_tup[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">256</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[3], line 3</span>
-<span class="ansi-green-fg ansi-bold">      1</span> a_list[<span style="color:rgb(98,98,98)">1</span>] <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(98,98,98)">256</span>
-<span class="ansi-green-fg">----&gt; 3</span> <span class="ansi-yellow-bg">a_tup</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">1</span><span class="ansi-yellow-bg">]</span> <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(98,98,98)">256</span>
-
-<span class="ansi-red-fg">TypeError</span>: 'tuple' object does not support item assignment</pre>
-</div>
-</div>
+<span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a><span class="co">#a_tup[1] = 256</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 </section>
 <section id="dictionaries" class="level2">
 <h2 class="anchored" data-anchor-id="dictionaries">Dictionaries</h2>
-<div id="f758cf48" class="cell" data-execution_count="4">
+<div id="042cc318" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a href="#cb10-1" aria-hidden="true" tabindex="-1"></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
 <span id="cb10-2"><a href="#cb10-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb10-3"><a href="#cb10-3" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span> key, val <span class="kw">in</span> pets.items():</span>
@@ -333,7 +322,7 @@ Cell <span class="ansi-green-fg">In[3], line 3</span>
 </section>
 <section id="iterating" class="level2">
 <h2 class="anchored" data-anchor-id="iterating">Iterating</h2>
-<div id="99893390" class="cell" data-execution_count="5">
+<div id="1511b09d" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a href="#cb12-1" aria-hidden="true" tabindex="-1"></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb12-2"><a href="#cb12-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb12-3"><a href="#cb12-3" aria-hidden="true" tabindex="-1"></a><span class="co"># use a loop to append squared values to new lists</span></span>
@@ -362,7 +351,7 @@ is the same as
 <li>can return something</li>
 <li>have there own scope</li>
 </ul>
-<div id="dd7359bc" class="cell" data-execution_count="6">
+<div id="003a3dca" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a href="#cb14-1" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb14-2"><a href="#cb14-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb14-3"><a href="#cb14-3" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> root_mean_square(list_of_numbers):</span>
@@ -382,7 +371,7 @@ is the same as
 </div>
 </div>
 <p>They do nat have to have arguments or return stuff.</p>
-<div id="ae19f839" class="cell" data-execution_count="7">
+<div id="6e94cdf6" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a href="#cb16-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> complain():</span>
 <span id="cb16-2"><a href="#cb16-2" aria-hidden="true" tabindex="-1"></a>  <span class="bu">print</span>(<span class="st">'This is boring!</span><span class="ch">\n</span><span class="st">when will we get to the GIS stuff.</span><span class="ch">\n\U0001F620\U0001F620\U0001F620\n\n</span><span class="st">Soon! Bear with me.'</span>)</span>
 <span id="cb16-3"><a href="#cb16-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -399,7 +388,7 @@ Soon! Bear with me.</code></pre>
 <section id="pandas-dataframe" class="level2 smaller scrollable">
 <h2 class="smaller scrollable anchored" data-anchor-id="pandas-dataframe">Pandas DataFrame</h2>
 <p>DataFrames hold tabular data</p>
-<div id="440df743" class="cell" data-output-location="fragment" data-execution_count="8">
+<div id="d47b75c8" class="cell" data-output-location="fragment" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a href="#cb18-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
 <span id="cb18-2"><a href="#cb18-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
 <span id="cb18-3"><a href="#cb18-3" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -448,27 +437,27 @@ Soon! Bear with me.</code></pre>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
 <td>2025-03-01 08:00:00</td>
-<td>26.132466</td>
+<td>20.133047</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
 <td>2025-03-01 08:30:00</td>
-<td>25.675546</td>
+<td>38.402749</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
 <td>2025-03-01 09:00:00</td>
-<td>30.005265</td>
+<td>36.567154</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
 <td>2025-03-01 09:30:00</td>
-<td>25.077036</td>
+<td>22.641780</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
 <td>2025-03-01 10:00:00</td>
-<td>29.348468</td>
+<td>20.151979</td>
 </tr>
 </tbody>
 </table>
@@ -479,7 +468,7 @@ Soon! Bear with me.</code></pre>
 </section>
 <section id="pandas-dataframe-cont." class="level2 scrollable">
 <h2 class="scrollable anchored" data-anchor-id="pandas-dataframe-cont.">Pandas DataFrame Cont.</h2>
-<div id="955e1368" class="cell" data-execution_count="9">
+<div id="b3df145d" class="cell" data-execution_count="9">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a href="#cb19-1" aria-hidden="true" tabindex="-1"></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb19-2"><a href="#cb19-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb19-3"><a href="#cb19-3" aria-hidden="true" tabindex="-1"></a><span class="co"># create the scatter plot</span></span>
@@ -506,15 +495,15 @@ Soon! Bear with me.</code></pre>
 </div>
 </div>
 </div>
-<div id="ccbe3a37" class="cell" data-execution_count="10">
+<div id="551ad563" class="cell" data-execution_count="10">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a href="#cb20-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the mean temperature over the timeseries</span></span>
 <span id="cb20-2"><a href="#cb20-2" aria-hidden="true" tabindex="-1"></a>df[<span class="st">'T (C)'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>np.float64(20.913994065543847)</code></pre>
+<pre><code>np.float64(20.215260584349874)</code></pre>
 </div>
 </div>
 <p>When there are no spaces in a column name you can access the column as an attribute of the datafame.</p>
-<div id="4badc81f" class="cell" data-execution_count="11">
+<div id="8649ed30" class="cell" data-execution_count="11">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a href="#cb22-1" aria-hidden="true" tabindex="-1"></a><span class="co"># get the number of time stamps in the date_time column</span></span>
 <span id="cb22-2"><a href="#cb22-2" aria-hidden="true" tabindex="-1"></a>df.date_time.count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-display" data-execution_count="11">
@@ -576,7 +565,7 @@ Soon! Bear with me.</code></pre>
 </section>
 <section id="polygon" class="level2">
 <h2 class="anchored" data-anchor-id="polygon">Polygon</h2>
-<div id="4172fbc5" class="cell" data-execution_count="12">
+<div id="7c77d09d" class="cell" data-execution_count="12">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a href="#cb24-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
 <span id="cb24-2"><a href="#cb24-2" aria-hidden="true" tabindex="-1"></a></span>
 <span id="cb24-3"><a href="#cb24-3" aria-hidden="true" tabindex="-1"></a>coords <span class="op">=</span> ((<span class="fl">0.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">2.</span>), (<span class="fl">1.</span>, <span class="fl">1.</span>), (<span class="fl">1.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">0.</span>))</span>
@@ -601,7 +590,7 @@ Soon! Bear with me.</code></pre>
 <section id="reading-files" class="level2">
 <h2 class="anchored" data-anchor-id="reading-files">Reading Files</h2>
 <p>Here we will read a geojson using the <code>read_file</code> method.</p>
-<div id="002b9e63" class="cell" data-execution_count="13">
+<div id="cdea6371" class="cell" data-execution_count="13">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a href="#cb26-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb26-2"><a href="#cb26-2" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
 <span id="cb26-3"><a href="#cb26-3" aria-hidden="true" tabindex="-1"></a></span>

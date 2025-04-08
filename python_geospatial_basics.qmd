@@ -138,12 +138,12 @@ print(a_str[-9:])
 [Sequences tutorial](https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858)  
 [Sequence tutorial as video](https://www.youtube.com/watch?v=n3KMrwmq_94)
 
-THe key difference is that tuples are immutable.
+The key difference is that tuples are immutable.
 ```{python}
-#| error: true
+
 a_list[1] = 256
 
-a_tup[1] = 256
+#a_tup[1] = 256
 ```
 
 ## Dictionaries
