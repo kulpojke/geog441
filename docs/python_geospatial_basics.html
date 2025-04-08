@@ -296,7 +296,7 @@
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="cf77dde8" class="cell columns column-output-location" data-execution_count="1">
+<div id="5106aba7" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb5-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -325,7 +325,7 @@ and 5 % 4 is 1</code></pre>
 <section id="exercise---basic-numbers" class="slide level2" data-background="#FF007F">
 <h2>Exercise - Basic Numbers</h2>
 <p>Try the following, print the results, see what they do.</p>
-<div id="bf941914" class="cell columns column-output-location" data-execution_count="2">
+<div id="efb28424" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a>a <span class="op">=</span> <span class="dv">5</span> <span class="op">//</span> <span class="dv">4</span></span>
 <span id="cb7-2"><a></a>b <span class="op">=</span> <span class="dv">5</span> <span class="op">%</span> <span class="dv">4</span></span>
@@ -337,7 +337,7 @@ and 5 % 4 is 1</code></pre>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="fc58be81" class="cell columns column-output-location" data-execution_count="3">
+<div id="96921221" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a></a><span class="co"># a list</span></span>
 <span id="cb8-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
@@ -381,29 +381,24 @@ neushorn?</code></pre>
 <p><a href="https://www.geeksforgeeks.org/python-list-slicing/#">Slicing</a><br>
 <a href="https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858">Sequences tutorial</a><br>
 <a href="https://www.youtube.com/watch?v=n3KMrwmq_94">Sequence tutorial as video</a></p>
-<p>The key difference is that tuples are immutable.</p>
-<div id="a9f73f19" class="cell columns column-output-location" data-execution_count="4">
+</section>
+<section id="exercise---lists-and-tuples" class="slide level2" data-background="#FF007F">
+<h2>Exercise - Lists and Tuples</h2>
+<p>The key between lists and tuples is that tuples are immutable. Try assigning a value to both of the following.</p>
+<div id="43b0dca1" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
-<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>a_list[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">256</span></span>
-<span id="cb10-2"><a></a></span>
-<span id="cb10-3"><a></a>a_tup[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">256</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a><span class="co"># a list</span></span>
+<span id="cb10-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
+<span id="cb10-3"><a></a></span>
+<span id="cb10-4"><a></a><span class="co"># a tuple</span></span>
+<span id="cb10-5"><a></a>a_tup <span class="op">=</span> (<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
-<div class="cell-output cell-output-error">
-<div class="ansi-escaped-output">
-<pre><span class="ansi-red-fg">---------------------------------------------------------------------------</span>
-<span class="ansi-red-fg">TypeError</span>                                 Traceback (most recent call last)
-Cell <span class="ansi-green-fg">In[4], line 3</span>
-<span class="ansi-green-fg ansi-bold">      1</span> a_list[<span style="color:rgb(98,98,98)">1</span>] <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(98,98,98)">256</span>
-<span class="ansi-green-fg">----&gt; 3</span> <span class="ansi-yellow-bg">a_tup</span><span class="ansi-yellow-bg">[</span><span style="color:rgb(98,98,98)" class="ansi-yellow-bg">1</span><span class="ansi-yellow-bg">]</span> <span style="color:rgb(98,98,98)">=</span> <span style="color:rgb(98,98,98)">256</span>
 
-<span class="ansi-red-fg">TypeError</span>: 'tuple' object does not support item assignment</pre>
-</div>
-</div>
 </div></div>
 </section>
 <section id="dictionaries" class="slide level2">
 <h2>Dictionaries</h2>
-<div id="4ae50059" class="cell columns column-output-location" data-execution_count="5">
+<div id="d1ba2873" class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
 <div class="sourceCode cell-code" id="cb11"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb11-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
 <span id="cb11-2"><a></a></span>
@@ -422,7 +417,7 @@ Cell <span class="ansi-green-fg">In[4], line 3</span>
 </section>
 <section id="iterating" class="slide level2">
 <h2>Iterating</h2>
-<div id="7ca30651" class="cell columns column-output-location" data-execution_count="6">
+<div id="8767cedc" class="cell columns column-output-location" data-execution_count="6">
 <div class="column">
 <div class="sourceCode cell-code" id="cb13"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb13-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb13-2"><a></a></span>
@@ -445,6 +440,28 @@ is the same as
 </div>
 </div></div>
 </section>
+<section id="exercise---iterating" class="slide level2" data-background="#FF007F">
+<h2>Exercise - Iterating</h2>
+<p>You can nest loops.</p>
+<div id="1ced6c33" class="cell columns column-output-location" data-execution_count="7">
+<div class="column">
+<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a>numbers <span class="op">=</span> []</span>
+<span id="cb15-2"><a></a><span class="cf">for</span> i <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb15-3"><a></a>  <span class="cf">for</span> j <span class="kw">in</span> <span class="bu">range</span>(<span class="dv">3</span>):</span>
+<span id="cb15-4"><a></a>    numbers.append((i, j))</span>
+<span id="cb15-5"><a></a></span>
+<span id="cb15-6"><a></a>numbers</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column">
+<div class="cell-output cell-output-display" data-execution_count="7">
+<pre><code>[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]</code></pre>
+</div>
+</div></div>
+<ul>
+<li>Recreate the above with a list comprehension.</li>
+<li>replace the square brackets in this list comprehension, <code>= [n**2 for n in a]</code>, with parenthesis.</li>
+<li>Can you create a dictionary with a comprehension.</li>
+</ul>
+</section>
 <section id="functions" class="slide level2 scrollable smaller non-incremental">
 <h2>Functions</h2>
 <ul>
@@ -453,34 +470,34 @@ is the same as
 <li>can return something</li>
 <li>have there own scope</li>
 </ul>
-<div id="e50a289c" class="cell columns column-output-location" data-execution_count="7">
+<div id="9e9f5824" class="cell columns column-output-location" data-execution_count="8">
 <div class="column">
-<div class="sourceCode cell-code" id="cb15"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb15-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb15-2"><a></a></span>
-<span id="cb15-3"><a></a><span class="kw">def</span> root_mean_square(list_of_numbers):</span>
-<span id="cb15-4"><a></a>  rms <span class="op">=</span> np.sqrt(</span>
-<span id="cb15-5"><a></a>    np.array([n<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> n <span class="kw">in</span> list_of_numbers]).<span class="bu">sum</span>() <span class="op">/</span></span>
-<span id="cb15-6"><a></a>    <span class="bu">len</span>(list_of_numbers)</span>
-<span id="cb15-7"><a></a>    )</span>
-<span id="cb15-8"><a></a></span>
-<span id="cb15-9"><a></a>  <span class="cf">return</span> rms</span>
-<span id="cb15-10"><a></a></span>
-<span id="cb15-11"><a></a>l <span class="op">=</span> [<span class="fl">1.2</span>, <span class="fl">3.3</span>, <span class="fl">1.4</span>, <span class="fl">1.4</span>, <span class="fl">4.2</span>]</span>
-<span id="cb15-12"><a></a>rms <span class="op">=</span> root_mean_square(l)</span>
-<span id="cb15-13"><a></a></span>
-<span id="cb15-14"><a></a><span class="bu">print</span>(rms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb17-2"><a></a></span>
+<span id="cb17-3"><a></a><span class="kw">def</span> root_mean_square(list_of_numbers):</span>
+<span id="cb17-4"><a></a>  rms <span class="op">=</span> np.sqrt(</span>
+<span id="cb17-5"><a></a>    np.array([n<span class="op">**</span><span class="dv">2</span> <span class="cf">for</span> n <span class="kw">in</span> list_of_numbers]).<span class="bu">sum</span>() <span class="op">/</span></span>
+<span id="cb17-6"><a></a>    <span class="bu">len</span>(list_of_numbers)</span>
+<span id="cb17-7"><a></a>    )</span>
+<span id="cb17-8"><a></a></span>
+<span id="cb17-9"><a></a>  <span class="cf">return</span> rms</span>
+<span id="cb17-10"><a></a></span>
+<span id="cb17-11"><a></a>l <span class="op">=</span> [<span class="fl">1.2</span>, <span class="fl">3.3</span>, <span class="fl">1.4</span>, <span class="fl">1.4</span>, <span class="fl">4.2</span>]</span>
+<span id="cb17-12"><a></a>rms <span class="op">=</span> root_mean_square(l)</span>
+<span id="cb17-13"><a></a></span>
+<span id="cb17-14"><a></a><span class="bu">print</span>(rms)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>2.6034592372457075</code></pre>
 </div>
 </div></div>
 <p>They do nat have to have arguments or return stuff.</p>
-<div id="64df8733" class="cell columns column-output-location" data-execution_count="8">
+<div id="c887a158" class="cell columns column-output-location" data-execution_count="9">
 <div class="column">
-<div class="sourceCode cell-code" id="cb17"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb17-1"><a></a><span class="kw">def</span> complain():</span>
-<span id="cb17-2"><a></a>  <span class="bu">print</span>(<span class="st">'This is boring!</span><span class="ch">\n</span><span class="st">when will we get to the GIS stuff.</span><span class="ch">\n\U0001F620\U0001F620\U0001F620\n\n</span><span class="st">Soon! Bear with me.'</span>)</span>
-<span id="cb17-3"><a></a></span>
-<span id="cb17-4"><a></a>complain()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="kw">def</span> complain():</span>
+<span id="cb19-2"><a></a>  <span class="bu">print</span>(<span class="st">'This is boring!</span><span class="ch">\n</span><span class="st">when will we get to the GIS stuff.</span><span class="ch">\n\U0001F620\U0001F620\U0001F620\n\n</span><span class="st">Soon! Bear with me.'</span>)</span>
+<span id="cb19-3"><a></a></span>
+<span id="cb19-4"><a></a>complain()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>This is boring!
@@ -494,42 +511,42 @@ Soon! Bear with me.</code></pre>
 <section id="pandas-dataframe" class="slide level2 smaller scrollable">
 <h2>Pandas DataFrame</h2>
 <p>DataFrames hold tabular data</p>
-<div id="62e526c6" class="cell" data-execution_count="9">
-<div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
-<span id="cb19-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
-<span id="cb19-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
-<span id="cb19-4"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
-<span id="cb19-5"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
-<span id="cb19-6"><a></a></span>
-<span id="cb19-7"><a></a><span class="co"># some arbitrary time range </span></span>
-<span id="cb19-8"><a></a>start_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">0</span>)</span>
-<span id="cb19-9"><a></a>end_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">17</span>, <span class="dv">0</span>, <span class="dv">0</span>)</span>
-<span id="cb19-10"><a></a>interval <span class="op">=</span> timedelta(minutes<span class="op">=</span><span class="dv">30</span>)</span>
-<span id="cb19-11"><a></a>time_stamps <span class="op">=</span> []</span>
-<span id="cb19-12"><a></a>current_time <span class="op">=</span> start_time</span>
-<span id="cb19-13"><a></a><span class="cf">while</span> current_time <span class="op">&lt;=</span> end_time:</span>
-<span id="cb19-14"><a></a>    time_stamps.append(current_time)</span>
-<span id="cb19-15"><a></a>    current_time <span class="op">+=</span> interval</span>
-<span id="cb19-16"><a></a></span>
-<span id="cb19-17"><a></a><span class="co"># some made up temperature data</span></span>
-<span id="cb19-18"><a></a>temp_c <span class="op">=</span> [</span>
-<span id="cb19-19"><a></a>  <span class="dv">20</span> <span class="op">+</span> uniform(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>) <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span></span>
-<span id="cb19-20"><a></a>  np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t.hour <span class="op">/</span> <span class="dv">24</span>)</span>
-<span id="cb19-21"><a></a>  <span class="cf">for</span> t</span>
-<span id="cb19-22"><a></a>  <span class="kw">in</span> time_stamps</span>
-<span id="cb19-23"><a></a>]</span>
-<span id="cb19-24"><a></a></span>
-<span id="cb19-25"><a></a><span class="co"># empty dataframe</span></span>
-<span id="cb19-26"><a></a>df <span class="op">=</span> pd.DataFrame()</span>
-<span id="cb19-27"><a></a></span>
-<span id="cb19-28"><a></a><span class="co"># add data</span></span>
-<span id="cb19-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
-<span id="cb19-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
-<span id="cb19-31"><a></a></span>
-<span id="cb19-32"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div id="17c20edb" class="cell" data-execution_count="10">
+<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
+<span id="cb21-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
+<span id="cb21-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
+<span id="cb21-4"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
+<span id="cb21-5"><a></a><span class="im">import</span> pandas <span class="im">as</span> pd</span>
+<span id="cb21-6"><a></a></span>
+<span id="cb21-7"><a></a><span class="co"># some arbitrary time range </span></span>
+<span id="cb21-8"><a></a>start_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">1</span>, <span class="dv">8</span>, <span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb21-9"><a></a>end_time <span class="op">=</span> datetime(<span class="dv">2025</span>, <span class="dv">3</span>, <span class="dv">3</span>, <span class="dv">17</span>, <span class="dv">0</span>, <span class="dv">0</span>)</span>
+<span id="cb21-10"><a></a>interval <span class="op">=</span> timedelta(minutes<span class="op">=</span><span class="dv">30</span>)</span>
+<span id="cb21-11"><a></a>time_stamps <span class="op">=</span> []</span>
+<span id="cb21-12"><a></a>current_time <span class="op">=</span> start_time</span>
+<span id="cb21-13"><a></a><span class="cf">while</span> current_time <span class="op">&lt;=</span> end_time:</span>
+<span id="cb21-14"><a></a>    time_stamps.append(current_time)</span>
+<span id="cb21-15"><a></a>    current_time <span class="op">+=</span> interval</span>
+<span id="cb21-16"><a></a></span>
+<span id="cb21-17"><a></a><span class="co"># some made up temperature data</span></span>
+<span id="cb21-18"><a></a>temp_c <span class="op">=</span> [</span>
+<span id="cb21-19"><a></a>  <span class="dv">20</span> <span class="op">+</span> uniform(<span class="op">-</span><span class="dv">10</span>, <span class="dv">10</span>) <span class="op">+</span> <span class="dv">10</span> <span class="op">*</span></span>
+<span id="cb21-20"><a></a>  np.sin(<span class="dv">2</span> <span class="op">*</span> np.pi <span class="op">*</span> t.hour <span class="op">/</span> <span class="dv">24</span>)</span>
+<span id="cb21-21"><a></a>  <span class="cf">for</span> t</span>
+<span id="cb21-22"><a></a>  <span class="kw">in</span> time_stamps</span>
+<span id="cb21-23"><a></a>]</span>
+<span id="cb21-24"><a></a></span>
+<span id="cb21-25"><a></a><span class="co"># empty dataframe</span></span>
+<span id="cb21-26"><a></a>df <span class="op">=</span> pd.DataFrame()</span>
+<span id="cb21-27"><a></a></span>
+<span id="cb21-28"><a></a><span class="co"># add data</span></span>
+<span id="cb21-29"><a></a>df[<span class="st">'date_time'</span>] <span class="op">=</span> time_stamps</span>
+<span id="cb21-30"><a></a>df[<span class="st">'T (C)'</span>] <span class="op">=</span> temp_c</span>
+<span id="cb21-31"><a></a></span>
+<span id="cb21-32"><a></a>df.head()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div class="cell fragment" data-execution_count="9">
-<div class="cell-output cell-output-display" data-execution_count="9">
+<div class="cell fragment" data-execution_count="10">
+<div class="cell-output cell-output-display" data-execution_count="10">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {
@@ -557,27 +574,27 @@ Soon! Bear with me.</code></pre>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
 <td>2025-03-01 08:00:00</td>
-<td>34.862872</td>
+<td>25.766605</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
 <td>2025-03-01 08:30:00</td>
-<td>33.318415</td>
+<td>18.985354</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
 <td>2025-03-01 09:00:00</td>
-<td>29.224663</td>
+<td>30.183279</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
 <td>2025-03-01 09:30:00</td>
-<td>34.078991</td>
+<td>30.204379</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
 <td>2025-03-01 10:00:00</td>
-<td>15.989376</td>
+<td>29.372950</td>
 </tr>
 </tbody>
 </table>
@@ -588,51 +605,51 @@ Soon! Bear with me.</code></pre>
 </section>
 <section id="pandas-dataframe-cont." class="slide level2 scrollable">
 <h2>Pandas DataFrame Cont.</h2>
-<div id="71d2dadc" class="cell columns column-output-location" data-execution_count="10">
+<div id="8d8e6db7" class="cell columns column-output-location" data-execution_count="11">
 <div class="column">
-<div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
-<span id="cb20-2"><a></a></span>
-<span id="cb20-3"><a></a><span class="co"># create the scatter plot</span></span>
-<span id="cb20-4"><a></a>plt.scatter(df.date_time, df[<span class="st">'T (C)'</span>], marker<span class="op">=</span><span class="st">'x'</span>, color <span class="op">=</span> <span class="st">'k'</span>)</span>
-<span id="cb20-5"><a></a></span>
-<span id="cb20-6"><a></a><span class="co"># set the x-axis tick labels and rotate them</span></span>
-<span id="cb20-7"><a></a>plt.xticks(rotation<span class="op">=</span><span class="dv">80</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
-<span id="cb20-8"><a></a></span>
-<span id="cb20-9"><a></a><span class="co"># label axes</span></span>
-<span id="cb20-10"><a></a>plt.xlabel(<span class="st">'Day and Time'</span>)</span>
-<span id="cb20-11"><a></a>plt.ylabel(<span class="st">'Temperature (C)'</span>)</span>
-<span id="cb20-12"><a></a>plt.title(<span class="st">'Hourly Temperature (C) in West Crabhammer'</span>)</span>
-<span id="cb20-13"><a></a></span>
-<span id="cb20-14"><a></a><span class="co"># adjust layout to prevent labels from overlapping</span></span>
-<span id="cb20-15"><a></a>plt.tight_layout()</span>
-<span id="cb20-16"><a></a></span>
-<span id="cb20-17"><a></a><span class="co"># Show the plot</span></span>
-<span id="cb20-18"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
+<span id="cb22-2"><a></a></span>
+<span id="cb22-3"><a></a><span class="co"># create the scatter plot</span></span>
+<span id="cb22-4"><a></a>plt.scatter(df.date_time, df[<span class="st">'T (C)'</span>], marker<span class="op">=</span><span class="st">'x'</span>, color <span class="op">=</span> <span class="st">'k'</span>)</span>
+<span id="cb22-5"><a></a></span>
+<span id="cb22-6"><a></a><span class="co"># set the x-axis tick labels and rotate them</span></span>
+<span id="cb22-7"><a></a>plt.xticks(rotation<span class="op">=</span><span class="dv">80</span>, ha<span class="op">=</span><span class="st">'right'</span>)</span>
+<span id="cb22-8"><a></a></span>
+<span id="cb22-9"><a></a><span class="co"># label axes</span></span>
+<span id="cb22-10"><a></a>plt.xlabel(<span class="st">'Day and Time'</span>)</span>
+<span id="cb22-11"><a></a>plt.ylabel(<span class="st">'Temperature (C)'</span>)</span>
+<span id="cb22-12"><a></a>plt.title(<span class="st">'Hourly Temperature (C) in West Crabhammer'</span>)</span>
+<span id="cb22-13"><a></a></span>
+<span id="cb22-14"><a></a><span class="co"># adjust layout to prevent labels from overlapping</span></span>
+<span id="cb22-15"><a></a>plt.tight_layout()</span>
+<span id="cb22-16"><a></a></span>
+<span id="cb22-17"><a></a><span class="co"># Show the plot</span></span>
+<span id="cb22-18"><a></a>plt.show()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display">
 <div>
 <figure>
-<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-11-output-1.png" width="949" height="469"></p>
+<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-12-output-1.png" width="949" height="469"></p>
 </figure>
 </div>
 </div>
 </div></div>
-<div id="06da311a" class="cell columns column-output-location" data-execution_count="11">
+<div id="77188a4b" class="cell columns column-output-location" data-execution_count="12">
 <div class="column">
-<div class="sourceCode cell-code" id="cb21"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb21-1"><a></a><span class="co"># get the mean temperature over the timeseries</span></span>
-<span id="cb21-2"><a></a>df[<span class="st">'T (C)'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="co"># get the mean temperature over the timeseries</span></span>
+<span id="cb23-2"><a></a>df[<span class="st">'T (C)'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
-<div class="cell-output cell-output-display" data-execution_count="11">
-<pre><code>np.float64(19.249938230492493)</code></pre>
+<div class="cell-output cell-output-display" data-execution_count="12">
+<pre><code>np.float64(19.530884459116347)</code></pre>
 </div>
 </div></div>
 <p>When there are no spaces in a column name you can access the column as an attribute of the datafame.</p>
-<div id="54beff67" class="cell columns column-output-location" data-execution_count="12">
+<div id="faf99dab" class="cell columns column-output-location" data-execution_count="13">
 <div class="column">
-<div class="sourceCode cell-code" id="cb23"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb23-1"><a></a><span class="co"># get the number of time stamps in the date_time column</span></span>
-<span id="cb23-2"><a></a>df.date_time.count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="co"># get the number of time stamps in the date_time column</span></span>
+<span id="cb25-2"><a></a>df.date_time.count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
-<div class="cell-output cell-output-display" data-execution_count="12">
+<div class="cell-output cell-output-display" data-execution_count="13">
 <pre><code>np.int64(115)</code></pre>
 </div>
 </div></div>
@@ -693,25 +710,25 @@ Soon! Bear with me.</code></pre>
 </section>
 <section id="polygon" class="slide level2">
 <h2>Polygon</h2>
-<div id="b834b1b1" class="cell columns column-output-location" data-execution_count="13">
+<div id="8132ba4c" class="cell columns column-output-location" data-execution_count="14">
 <div class="column">
-<div class="sourceCode cell-code" id="cb25"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb25-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
-<span id="cb25-2"><a></a></span>
-<span id="cb25-3"><a></a>coords <span class="op">=</span> ((<span class="fl">0.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">2.</span>), (<span class="fl">1.</span>, <span class="fl">1.</span>), (<span class="fl">1.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">0.</span>))</span>
-<span id="cb25-4"><a></a>p <span class="op">=</span> Polygon(coords)</span>
-<span id="cb25-5"><a></a></span>
-<span id="cb25-6"><a></a>c <span class="op">=</span> p.exterior.coords</span>
-<span id="cb25-7"><a></a></span>
-<span id="cb25-8"><a></a><span class="bu">print</span>(c[<span class="dv">0</span>] <span class="op">==</span> c[<span class="op">-</span><span class="dv">1</span>])</span>
-<span id="cb25-9"><a></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
+<span id="cb27-2"><a></a></span>
+<span id="cb27-3"><a></a>coords <span class="op">=</span> ((<span class="fl">0.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">2.</span>), (<span class="fl">1.</span>, <span class="fl">1.</span>), (<span class="fl">1.</span>, <span class="fl">0.</span>), (<span class="fl">0.</span>, <span class="fl">0.</span>))</span>
+<span id="cb27-4"><a></a>p <span class="op">=</span> Polygon(coords)</span>
+<span id="cb27-5"><a></a></span>
+<span id="cb27-6"><a></a>c <span class="op">=</span> p.exterior.coords</span>
+<span id="cb27-7"><a></a></span>
+<span id="cb27-8"><a></a><span class="bu">print</span>(c[<span class="dv">0</span>] <span class="op">==</span> c[<span class="op">-</span><span class="dv">1</span>])</span>
+<span id="cb27-9"><a></a>p</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-stdout">
 <pre><code>True</code></pre>
 </div>
-<div class="cell-output cell-output-display" data-execution_count="13">
+<div class="cell-output cell-output-display" data-execution_count="14">
 <div>
 <figure>
-<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-14-output-2.svg"></p>
+<p><img data-src="python_geospatial_basics_files/figure-revealjs/cell-15-output-2.svg"></p>
 </figure>
 </div>
 </div>
@@ -720,21 +737,21 @@ Soon! Bear with me.</code></pre>
 <section id="reading-files" class="slide level2">
 <h2>Reading Files</h2>
 <p>Here we will read a geojson using the <code>read_file</code> method.</p>
-<div id="7e27da61" class="cell columns column-output-location" data-execution_count="14">
+<div id="f861f74e" class="cell columns column-output-location" data-execution_count="15">
 <div class="column">
-<div class="sourceCode cell-code" id="cb27"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb27-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
-<span id="cb27-2"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
-<span id="cb27-3"><a></a></span>
-<span id="cb27-4"><a></a><span class="co"># path to data</span></span>
-<span id="cb27-5"><a></a>data_dir <span class="op">=</span> Path(<span class="st">'data'</span>)</span>
-<span id="cb27-6"><a></a>geojson <span class="op">=</span> data_dir <span class="op">/</span> <span class="st">'upper_santa_rita_creek.geojson'</span></span>
-<span id="cb27-7"><a></a></span>
-<span id="cb27-8"><a></a><span class="co"># open the geojson</span></span>
-<span id="cb27-9"><a></a>gdf <span class="op">=</span> gpd.read_file(geojson)</span>
-<span id="cb27-10"><a></a></span>
-<span id="cb27-11"><a></a>gdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb29"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb29-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
+<span id="cb29-2"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
+<span id="cb29-3"><a></a></span>
+<span id="cb29-4"><a></a><span class="co"># path to data</span></span>
+<span id="cb29-5"><a></a>data_dir <span class="op">=</span> Path(<span class="st">'data'</span>)</span>
+<span id="cb29-6"><a></a>geojson <span class="op">=</span> data_dir <span class="op">/</span> <span class="st">'upper_santa_rita_creek.geojson'</span></span>
+<span id="cb29-7"><a></a></span>
+<span id="cb29-8"><a></a><span class="co"># open the geojson</span></span>
+<span id="cb29-9"><a></a>gdf <span class="op">=</span> gpd.read_file(geojson)</span>
+<span id="cb29-10"><a></a></span>
+<span id="cb29-11"><a></a>gdf</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
-<div class="cell-output cell-output-display" data-execution_count="14">
+<div class="cell-output cell-output-display" data-execution_count="15">
 <div>
 <style scoped="">
     .dataframe tbody tr th:only-of-type {

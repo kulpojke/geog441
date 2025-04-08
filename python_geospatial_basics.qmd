@@ -147,13 +147,17 @@ print(a_str[-9:])
 [Sequences tutorial](https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858)  
 [Sequence tutorial as video](https://www.youtube.com/watch?v=n3KMrwmq_94)
 
-The key difference is that tuples are immutable.
-```{python}
-#| error: true
-a_list[1] = 256
+## Exercise - Lists and Tuples {background="#FF007F"}
 
-a_tup[1] = 256
+The key between lists and tuples is that tuples are immutable.  Try assigning a value to both of the following.
+```{python}
+# a list
+a_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]
+
+# a tuple
+a_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)
 ```
+
 
 ## Dictionaries
 
@@ -186,6 +190,21 @@ print('is the same as')
 print(c)
 
 ```
+
+## Exercise - Iterating {background="#FF007F"}
+You can nest loops.
+``` {python}
+numbers = []
+for i in range(3):
+  for j in range(3):
+    numbers.append((i, j))
+
+numbers
+```
+
++ Recreate the above with a list comprehension.
++ replace the square brackets in this list comprehension, ` = [n**2 for n in a]`,  with parenthesis.
++ Can you create a dictionary with a comprehension.
 
 ## Functions {.scrollable .smaller .non-incremental}
 

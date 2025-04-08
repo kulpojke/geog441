@@ -53,7 +53,14 @@
     "href": "python_geospatial_basics.html#sequences",
     "title": "Python Lectures",
     "section": "Sequences",
-    "text": "Sequences\nLists, tuples, and strings ae all sequences\n\n\n# a list\na_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# a tuple\na_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)\n\n# a string\na_str = 'Wil je graag een neushorn?'\n\n# access by index\na = a_list[0]\nb = a_list[-1]\nc = a_list[4]\nprint(f'by index:\\n 0 --&gt; {a},\\n-1 --&gt; {b},\\n 4 --&gt; {c}')\n\n# works fro strings to\nprint('string item at 4 --&gt; ', a_str[4])\n\n# you can slice a list or tuple(remember 0 indexed)\nprint('\\nslices:')\nprint(a_list[2:5])\nprint(a_list[8:])\nprint(a_tup[2:5])\nprint(a_str[-9:])\n\n\nby index:\n 0 --&gt; 1,\n-1 --&gt; 9,\n 4 --&gt; 5\nstring item at 4 --&gt;  j\n\nslices:\n[3, 4, 5]\n[9]\n(3, 4, 5)\nneushorn?\n\n\nSlicing\nSequences tutorial\nSequence tutorial as video\nThe key difference is that tuples are immutable.\n\n\na_list[1] = 256\n\na_tup[1] = 256\n\n\n\n---------------------------------------------------------------------------\nTypeError                                 Traceback (most recent call last)\nCell In[4], line 3\n      1 a_list[1] = 256\n----&gt; 3 a_tup[1] = 256\n\nTypeError: 'tuple' object does not support item assignment"
+    "text": "Sequences\nLists, tuples, and strings ae all sequences\n\n\n# a list\na_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# a tuple\na_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)\n\n# a string\na_str = 'Wil je graag een neushorn?'\n\n# access by index\na = a_list[0]\nb = a_list[-1]\nc = a_list[4]\nprint(f'by index:\\n 0 --&gt; {a},\\n-1 --&gt; {b},\\n 4 --&gt; {c}')\n\n# works fro strings to\nprint('string item at 4 --&gt; ', a_str[4])\n\n# you can slice a list or tuple(remember 0 indexed)\nprint('\\nslices:')\nprint(a_list[2:5])\nprint(a_list[8:])\nprint(a_tup[2:5])\nprint(a_str[-9:])\n\n\nby index:\n 0 --&gt; 1,\n-1 --&gt; 9,\n 4 --&gt; 5\nstring item at 4 --&gt;  j\n\nslices:\n[3, 4, 5]\n[9]\n(3, 4, 5)\nneushorn?\n\n\nSlicing\nSequences tutorial\nSequence tutorial as video"
+  },
+  {
+    "objectID": "python_geospatial_basics.html#exercise---lists-and-tuples",
+    "href": "python_geospatial_basics.html#exercise---lists-and-tuples",
+    "title": "Python Lectures",
+    "section": "Exercise - Lists and Tuples",
+    "text": "Exercise - Lists and Tuples\nThe key between lists and tuples is that tuples are immutable. Try assigning a value to both of the following.\n\n\n# a list\na_list = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# a tuple\na_tup = (1, 2, 3, 4, 5, 6, 7, 8, 9)"
   },
   {
     "objectID": "python_geospatial_basics.html#dictionaries",
@@ -70,6 +77,13 @@
     "text": "Iterating\n\n\na = [1, 2, 3, 4, 5, 6, 7, 8, 9]\n\n# use a loop to append squared values to new lists\nb = []\nfor n in a:\n  b.append(n**2)\n\n# or, better, use a comprehension\nc = [n**2 for n in a]\n\nprint(b)\nprint('is the same as')\nprint(c)\n\n\n[1, 4, 9, 16, 25, 36, 49, 64, 81]\nis the same as\n[1, 4, 9, 16, 25, 36, 49, 64, 81]"
   },
   {
+    "objectID": "python_geospatial_basics.html#exercise---iterating",
+    "href": "python_geospatial_basics.html#exercise---iterating",
+    "title": "Python Lectures",
+    "section": "Exercise - Iterating",
+    "text": "Exercise - Iterating\nYou can nest loops.\n\n\nnumbers = []\nfor i in range(3):\n  for j in range(3):\n    numbers.append((i, j))\n\nnumbers\n\n\n[(0, 0), (0, 1), (0, 2), (1, 0), (1, 1), (1, 2), (2, 0), (2, 1), (2, 2)]\n\n\n\nRecreate the above with a list comprehension.\nreplace the square brackets in this list comprehension, = [n**2 for n in a], with parenthesis.\nCan you create a dictionary with a comprehension."
+  },
+  {
     "objectID": "python_geospatial_basics.html#functions",
     "href": "python_geospatial_basics.html#functions",
     "title": "Python Lectures",
@@ -81,14 +95,14 @@
     "href": "python_geospatial_basics.html#pandas-dataframe",
     "title": "Python Lectures",
     "section": "Pandas DataFrame",
-    "text": "Pandas DataFrame\nDataFrames hold tabular data\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)\nend_time = datetime(2025, 3, 3, 17, 0, 0)\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n34.862872\n\n\n1\n2025-03-01 08:30:00\n33.318415\n\n\n2\n2025-03-01 09:00:00\n29.224663\n\n\n3\n2025-03-01 09:30:00\n34.078991\n\n\n4\n2025-03-01 10:00:00\n15.989376"
+    "text": "Pandas DataFrame\nDataFrames hold tabular data\n\nfrom datetime import datetime, timedelta\nfrom random import uniform\nimport matplotlib.pyplot as plt\nimport numpy as np\nimport pandas as pd\n\n# some arbitrary time range \nstart_time = datetime(2025, 3, 1, 8, 0, 0)\nend_time = datetime(2025, 3, 3, 17, 0, 0)\ninterval = timedelta(minutes=30)\ntime_stamps = []\ncurrent_time = start_time\nwhile current_time &lt;= end_time:\n    time_stamps.append(current_time)\n    current_time += interval\n\n# some made up temperature data\ntemp_c = [\n  20 + uniform(-10, 10) + 10 *\n  np.sin(2 * np.pi * t.hour / 24)\n  for t\n  in time_stamps\n]\n\n# empty dataframe\ndf = pd.DataFrame()\n\n# add data\ndf['date_time'] = time_stamps\ndf['T (C)'] = temp_c\n\ndf.head()\n\n\n\n\n\n\n\n\n\n\ndate_time\nT (C)\n\n\n\n\n0\n2025-03-01 08:00:00\n25.766605\n\n\n1\n2025-03-01 08:30:00\n18.985354\n\n\n2\n2025-03-01 09:00:00\n30.183279\n\n\n3\n2025-03-01 09:30:00\n30.204379\n\n\n4\n2025-03-01 10:00:00\n29.372950"
   },
   {
     "objectID": "python_geospatial_basics.html#pandas-dataframe-cont.",
     "href": "python_geospatial_basics.html#pandas-dataframe-cont.",
     "title": "Python Lectures",
     "section": "Pandas DataFrame Cont.",
-    "text": "Pandas DataFrame Cont.\n\n\nfig, ax = plt.subplots()\n\n# create the scatter plot\nplt.scatter(df.date_time, df['T (C)'], marker='x', color = 'k')\n\n# set the x-axis tick labels and rotate them\nplt.xticks(rotation=80, ha='right')\n\n# label axes\nplt.xlabel('Day and Time')\nplt.ylabel('Temperature (C)')\nplt.title('Hourly Temperature (C) in West Crabhammer')\n\n# adjust layout to prevent labels from overlapping\nplt.tight_layout()\n\n# Show the plot\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n# get the mean temperature over the timeseries\ndf['T (C)'].mean()\n\n\nnp.float64(19.249938230492493)\n\n\nWhen there are no spaces in a column name you can access the column as an attribute of the datafame.\n\n\n# get the number of time stamps in the date_time column\ndf.date_time.count()\n\n\nnp.int64(115)\n\n\nThere is a lot more to know about Pandas DataFrames. This is enough for us to move on to GeoPandas. I encourage you to learn more about Pandas as an exercise."
+    "text": "Pandas DataFrame Cont.\n\n\nfig, ax = plt.subplots()\n\n# create the scatter plot\nplt.scatter(df.date_time, df['T (C)'], marker='x', color = 'k')\n\n# set the x-axis tick labels and rotate them\nplt.xticks(rotation=80, ha='right')\n\n# label axes\nplt.xlabel('Day and Time')\nplt.ylabel('Temperature (C)')\nplt.title('Hourly Temperature (C) in West Crabhammer')\n\n# adjust layout to prevent labels from overlapping\nplt.tight_layout()\n\n# Show the plot\nplt.show()\n\n\n\n\n\n\n\n\n\n\n\n# get the mean temperature over the timeseries\ndf['T (C)'].mean()\n\n\nnp.float64(19.530884459116347)\n\n\nWhen there are no spaces in a column name you can access the column as an attribute of the datafame.\n\n\n# get the number of time stamps in the date_time column\ndf.date_time.count()\n\n\nnp.int64(115)\n\n\nThere is a lot more to know about Pandas DataFrames. This is enough for us to move on to GeoPandas. I encourage you to learn more about Pandas as an exercise."
   },
   {
     "objectID": "python_geospatial_basics.html#homework",
