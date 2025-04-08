@@ -34,8 +34,8 @@ cd geog441
 cp ~/Downloads/environment.yml .
 conda env create -f environment.yml
 ```
-<hr>
-__FYI:__
+
+<p class="noteBoxes type2">
 What is this _environment.yml_ thing?  
 ``` {yml}
 name: geo
@@ -48,7 +48,7 @@ dependencies:
   - tabulate
   - tqdm
 ```
-<hr>
+</p>
 
 Using `conda env create` with the environment yaml creates a new conda environment named _geo_ with the dependencies installed.  Next we will activate the _geo_ environment.
 
