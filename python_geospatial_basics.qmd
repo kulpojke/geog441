@@ -23,7 +23,7 @@ Before we get started we need to set up a Python environment in which to work.  
 + Download the environment.yml
 + If you are working on a lab computer In the start menu search for Anaconda. Open an Anaconda Powershell.  (on linux or mac with Anconda or miniconda or Mamba installed just open a terminal)(If you are installing on your own computer I recommend [Mamba](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html))
 
-<p class="noteBoxes type2">A note on Windows terminals</p>
+
 
 ``` {bash}
 cd ~
