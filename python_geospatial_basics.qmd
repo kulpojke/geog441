@@ -104,11 +104,9 @@ print(f'but 5 // 4 is {5 // 4}')
 print(f'and 5 % 4 is {5 % 4}')
 ```
 
-<section>
-  <div class="textbox">
-    This is the text in the box.
-  </div>
-</section>
+<div class="textbox">
+  This is the text within the box.
+</div>
 
 ## Sequences
 Lists, tuples, and strings ae all sequences
