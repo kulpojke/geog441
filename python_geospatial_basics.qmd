@@ -104,6 +104,8 @@ print(f'but 5 // 4 is {5 // 4}')
 print(f'and 5 % 4 is {5 % 4}')
 ```
 
+<p class="noteBoxes type2">Tip information box</p>
+
 ## Sequences
 Lists, tuples, and strings ae all sequences
 ```{python}

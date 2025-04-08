@@ -242,8 +242,10 @@
 <section id="starting-a-jupyter-lab" class="slide level2">
 <h2>Starting a Jupyter Lab</h2>
 <div class="sourceCode" id="cb4"><pre class="sourceCode numberSource {bash} number-lines code-with-copy"><code class="sourceCode"><span id="cb4-1"><a></a>jupyter lab</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<p>This will open a new jupyter lab in your browser.<br>
-## Using VScode</p>
+<p>This will open a new jupyter lab in your browser.</p>
+</section>
+<section id="using-vscode" class="slide level2">
+<h2>Using VScode</h2>
 <p>Running Jupyter in VScode offers some advantages (in my opinion). To do this you need to install the jupyter extension and the Python Extension. Then when you open a file with a .ipynb extension it will be treated as a Jupyter notebook.</p>
 </section>
 <section id="basic-python-data-types" class="slide level2 scrollable">
@@ -294,7 +296,7 @@
 <section id="basic-numbers" class="slide level2">
 <h2>Basic Numbers</h2>
 <p>Floats and Ints don’t do anything all that surprising</p>
-<div id="aca880ee" class="cell columns column-output-location" data-execution_count="1">
+<div id="c6663876" class="cell columns column-output-location" data-execution_count="1">
 <div class="column">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a></a>a <span class="op">=</span> <span class="dv">2</span> <span class="op">+</span> <span class="dv">2</span></span>
 <span id="cb5-2"><a></a>b <span class="op">=</span> <span class="fl">2.0</span> <span class="op">+</span> <span class="fl">2.0</span></span>
@@ -319,11 +321,14 @@ but 5 // 4 is 1
 and 5 % 4 is 1</code></pre>
 </div>
 </div></div>
+<p class="noteBoxes type2">
+Tip information box
+</p>
 </section>
 <section id="sequences" class="slide level2">
 <h2>Sequences</h2>
 <p>Lists, tuples, and strings ae all sequences</p>
-<div id="03ed0c2e" class="cell columns column-output-location" data-execution_count="2">
+<div id="e77e129a" class="cell columns column-output-location" data-execution_count="2">
 <div class="column">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a></a><span class="co"># a list</span></span>
 <span id="cb7-2"><a></a>a_list <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
@@ -368,7 +373,7 @@ neushorn?</code></pre>
 <a href="https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858">Sequences tutorial</a><br>
 <a href="https://www.youtube.com/watch?v=n3KMrwmq_94">Sequence tutorial as video</a></p>
 <p>The key difference is that tuples are immutable.</p>
-<div id="69788743" class="cell columns column-output-location" data-execution_count="3">
+<div id="1293284a" class="cell columns column-output-location" data-execution_count="3">
 <div class="column">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a></a>a_list[<span class="dv">1</span>] <span class="op">=</span> <span class="dv">256</span></span>
 <span id="cb9-2"><a></a></span>
@@ -389,7 +394,7 @@ Cell <span class="ansi-green-fg">In[3], line 3</span>
 </section>
 <section id="dictionaries" class="slide level2">
 <h2>Dictionaries</h2>
-<div id="2bb9b28f" class="cell columns column-output-location" data-execution_count="4">
+<div id="d78537ac" class="cell columns column-output-location" data-execution_count="4">
 <div class="column">
 <div class="sourceCode cell-code" id="cb10"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb10-1"><a></a>pets <span class="op">=</span> {<span class="st">'honden'</span>: <span class="dv">26</span>, <span class="st">'katten'</span>: <span class="dv">100</span>}</span>
 <span id="cb10-2"><a></a></span>
@@ -408,7 +413,7 @@ Cell <span class="ansi-green-fg">In[3], line 3</span>
 </section>
 <section id="iterating" class="slide level2">
 <h2>Iterating</h2>
-<div id="2478c3af" class="cell columns column-output-location" data-execution_count="5">
+<div id="699c71f1" class="cell columns column-output-location" data-execution_count="5">
 <div class="column">
 <div class="sourceCode cell-code" id="cb12"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb12-1"><a></a>a <span class="op">=</span> [<span class="dv">1</span>, <span class="dv">2</span>, <span class="dv">3</span>, <span class="dv">4</span>, <span class="dv">5</span>, <span class="dv">6</span>, <span class="dv">7</span>, <span class="dv">8</span>, <span class="dv">9</span>]</span>
 <span id="cb12-2"><a></a></span>
@@ -439,7 +444,7 @@ is the same as
 <li>can return something</li>
 <li>have there own scope</li>
 </ul>
-<div id="871394a5" class="cell columns column-output-location" data-execution_count="6">
+<div id="9ca26834" class="cell columns column-output-location" data-execution_count="6">
 <div class="column">
 <div class="sourceCode cell-code" id="cb14"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb14-1"><a></a><span class="im">import</span> numpy <span class="im">as</span> np</span>
 <span id="cb14-2"><a></a></span>
@@ -461,7 +466,7 @@ is the same as
 </div>
 </div></div>
 <p>They do nat have to have arguments or return stuff.</p>
-<div id="09420a3b" class="cell columns column-output-location" data-execution_count="7">
+<div id="777ddcfa" class="cell columns column-output-location" data-execution_count="7">
 <div class="column">
 <div class="sourceCode cell-code" id="cb16"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb16-1"><a></a><span class="kw">def</span> complain():</span>
 <span id="cb16-2"><a></a>  <span class="bu">print</span>(<span class="st">'This is boring!</span><span class="ch">\n</span><span class="st">when will we get to the GIS stuff.</span><span class="ch">\n\U0001F620\U0001F620\U0001F620\n\n</span><span class="st">Soon! Bear with me.'</span>)</span>
@@ -480,7 +485,7 @@ Soon! Bear with me.</code></pre>
 <section id="pandas-dataframe" class="slide level2 smaller scrollable">
 <h2>Pandas DataFrame</h2>
 <p>DataFrames hold tabular data</p>
-<div id="af422ff5" class="cell" data-execution_count="8">
+<div id="ee88658a" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb18"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb18-1"><a></a><span class="im">from</span> datetime <span class="im">import</span> datetime, timedelta</span>
 <span id="cb18-2"><a></a><span class="im">from</span> random <span class="im">import</span> uniform</span>
 <span id="cb18-3"><a></a><span class="im">import</span> matplotlib.pyplot <span class="im">as</span> plt</span>
@@ -543,27 +548,27 @@ Soon! Bear with me.</code></pre>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">0</td>
 <td>2025-03-01 08:00:00</td>
-<td>19.745260</td>
+<td>28.005833</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">1</td>
 <td>2025-03-01 08:30:00</td>
-<td>28.432311</td>
+<td>28.893028</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">2</td>
 <td>2025-03-01 09:00:00</td>
-<td>17.976625</td>
+<td>17.355761</td>
 </tr>
 <tr class="even">
 <td data-quarto-table-cell-role="th">3</td>
 <td>2025-03-01 09:30:00</td>
-<td>20.588081</td>
+<td>34.573264</td>
 </tr>
 <tr class="odd">
 <td data-quarto-table-cell-role="th">4</td>
 <td>2025-03-01 10:00:00</td>
-<td>34.254868</td>
+<td>18.750326</td>
 </tr>
 </tbody>
 </table>
@@ -574,7 +579,7 @@ Soon! Bear with me.</code></pre>
 </section>
 <section id="pandas-dataframe-cont." class="slide level2 scrollable">
 <h2>Pandas DataFrame Cont.</h2>
-<div id="8bfaae0f" class="cell columns column-output-location" data-execution_count="9">
+<div id="f1cc7ba4" class="cell columns column-output-location" data-execution_count="9">
 <div class="column">
 <div class="sourceCode cell-code" id="cb19"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb19-1"><a></a>fig, ax <span class="op">=</span> plt.subplots()</span>
 <span id="cb19-2"><a></a></span>
@@ -603,17 +608,17 @@ Soon! Bear with me.</code></pre>
 </div>
 </div>
 </div></div>
-<div id="ebd9dd38" class="cell columns column-output-location" data-execution_count="10">
+<div id="e42b580d" class="cell columns column-output-location" data-execution_count="10">
 <div class="column">
 <div class="sourceCode cell-code" id="cb20"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb20-1"><a></a><span class="co"># get the mean temperature over the timeseries</span></span>
 <span id="cb20-2"><a></a>df[<span class="st">'T (C)'</span>].mean()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column">
 <div class="cell-output cell-output-display" data-execution_count="10">
-<pre><code>np.float64(18.630334781681217)</code></pre>
+<pre><code>np.float64(18.814390419757128)</code></pre>
 </div>
 </div></div>
 <p>When there are no spaces in a column name you can access the column as an attribute of the datafame.</p>
-<div id="5a66e7c9" class="cell columns column-output-location" data-execution_count="11">
+<div id="40ce238f" class="cell columns column-output-location" data-execution_count="11">
 <div class="column">
 <div class="sourceCode cell-code" id="cb22"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb22-1"><a></a><span class="co"># get the number of time stamps in the date_time column</span></span>
 <span id="cb22-2"><a></a>df.date_time.count()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
@@ -679,7 +684,7 @@ Soon! Bear with me.</code></pre>
 </section>
 <section id="polygon" class="slide level2">
 <h2>Polygon</h2>
-<div id="19645700" class="cell columns column-output-location" data-execution_count="12">
+<div id="4c83350b" class="cell columns column-output-location" data-execution_count="12">
 <div class="column">
 <div class="sourceCode cell-code" id="cb24"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb24-1"><a></a><span class="im">from</span> shapely <span class="im">import</span> Polygon</span>
 <span id="cb24-2"><a></a></span>
@@ -706,7 +711,7 @@ Soon! Bear with me.</code></pre>
 <section id="reading-files" class="slide level2">
 <h2>Reading Files</h2>
 <p>Here we will read a geojson using the <code>read_file</code> method.</p>
-<div id="6bb35fd5" class="cell columns column-output-location" data-execution_count="13">
+<div id="53fc347d" class="cell columns column-output-location" data-execution_count="13">
 <div class="column">
 <div class="sourceCode cell-code" id="cb26"><pre class="sourceCode numberSource python number-lines code-with-copy"><code class="sourceCode python"><span id="cb26-1"><a></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
 <span id="cb26-2"><a></a><span class="im">import</span> geopandas <span class="im">as</span> gpd</span>
