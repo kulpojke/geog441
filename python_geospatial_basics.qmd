@@ -106,9 +106,11 @@ print(f'and 5 % 4 is {5 % 4}')
 
 ## Exercise - Basic Numbers {background="#FF007F"}
 
+Try the following, print the results, see what they do.
 ```{python}
-print(f'but 5 // 4 is {5 // 4}')
-print(f'and 5 % 4 is {5 % 4}')
+a = 5 // 4
+b = 5 % 4
+c = a + b
 ```
 
 
