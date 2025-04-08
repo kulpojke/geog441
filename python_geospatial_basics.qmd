@@ -42,7 +42,7 @@ dependencies:
   - geopandas
   - jupyterlab
   - rioxarray
-  - tabulatetqdm
+  - tabulate
   - tqdm
 ```
 <hr>
@@ -67,7 +67,7 @@ jupyter lab
 This will open a new jupyter lab in your browser.
 ## Using VScode
 
-Running Jupyter in VScode offers some advantages (in my opinion).  To do  this you need to install the jupyter extension and the Python Extension. 
+Running Jupyter in VScode offers some advantages (in my opinion).  To do  this you need to install the jupyter extension and the Python Extension. Then when you open a file with a .ipynb extension it will be treated as a Jupyter notebook.
 
 
 ## Basic Python data types {.scrollable}
@@ -90,7 +90,7 @@ Floats and Ints don't do anything all that surprising
 ```{python}
 a = 2 + 2
 b = 2.0 + 2.0
-c = 2 + 2.0
+c = a + b
 
 
 print(f'a is an {type(a)}')
@@ -99,6 +99,7 @@ print(f'c is a {type(c)}')
 print(f'a / b is {a / b}')
 print(f'5 / 4 is {5 / 4}')
 print(f'but 5 // 4 is {5 // 4}')
+print(f'and 5 % 4 is {5 % 4}')
 ```
 
 ## Sequences
@@ -133,6 +134,14 @@ print(a_str[-9:])
 [Slicing](https://www.geeksforgeeks.org/python-list-slicing/#)  
 [Sequences tutorial](https://labex.io/tutorials/python-how-to-manipulate-list-sequences-in-python-419858)  
 [Sequence tutorial as video](https://www.youtube.com/watch?v=n3KMrwmq_94)
+
+THe key difference is that tuples are immutable.
+```{python}
+#| error: true
+a_list[1] = 256
+
+a_tup[1] = 256
+```
 
 ## Dictionaries
 
