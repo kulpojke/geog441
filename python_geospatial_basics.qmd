@@ -19,12 +19,13 @@ df-print: kable
 
 ## Environment {.scrollable .smaller .non-incremental}
 
-Before we get started we need to set up a Python environment in which to work.  We will be using Anaconda for this.
+Before we get started we need to set up a Python environment in which to work.  We will be using Anaconda for this.  It _should_ already be installed on the lab computers.  If you are using your own computer  
 
 
 + Download the environment.yml
-+ In the start menu search for Anaconda. Open an Anaconda Powershell.  
++ If you are working on a lab computer In the start menu search for Anaconda. Open an Anaconda Powershell.  (on linux or mac with Anconda or miniconda or Mamba installed just open a terminal)(If you are installing on your own computer I recommend [Mamba](https://mamba.readthedocs.io/en/latest/installation/mamba-installation.html))
 
+<p class="noteBoxes type2">A note on Windows terminals</p>
 
 ``` {bash}
 cd ~
