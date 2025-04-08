@@ -2,7 +2,7 @@
 title: 'Python Lectures'
 format:
   revealjs:
-    incremental: true
+    incremental: false
 jupyter: python3
 echo: true
 output-location: column
