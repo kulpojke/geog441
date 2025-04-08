@@ -1,8 +1,6 @@
 ---
 title: 'Python Lectures'
-format:
-  html:
-    theme: vapor
+format: html
 jupyter: python3
 echo: true
 output-location: column
