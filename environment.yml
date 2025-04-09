@@ -2,8 +2,11 @@ name: geo
 channels:
   - defaults
 dependencies: 
+  - contextly
+  - geodatasets
   - geopandas
   - jupyterlab
   - rioxarray
   - tabulatetqdm
   - tqdm
+  
