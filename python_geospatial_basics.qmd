@@ -304,7 +304,24 @@ array([1, 2, 3 ])
 
 ```
 
-Why is this a bad practice?
+Why is this a bad practice? What Is a namespace
+
+```{python}
+x = 'I love \U0001F30D'
+
+def print_wrapper():
+    print(x)
+
+def print_poo():
+    x = 'This is the value of x within the function'
+    print(x)
+
+print_wrapper()
+print_poo()
+
+print(x)
+
+```
 
 ## Pandas DataFrame {.smaller}
 DataFrames hold tabular data.  Here we will read a csv file as a DataFrame and mess with it.
@@ -385,7 +402,7 @@ df.index = pd.to_datetime(
 df.head()
 ```
 
-See what gasses are measured by looking at unique vlaues in the Gas column.
+See what gasses are measured by looking at unique values in the Gas column.
 
 ```{python}
 df.Gas.unique()
