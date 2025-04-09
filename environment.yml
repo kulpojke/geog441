@@ -1,12 +1,13 @@
 name: geo
 channels:
   - defaults
+  - conda-forge
 dependencies: 
-  - contextly
+  - contextily
   - geodatasets
   - geopandas
   - jupyterlab
   - rioxarray
-  - tabulatetqdm
+  - tabulate
   - tqdm
   
