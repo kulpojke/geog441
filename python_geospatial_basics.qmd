@@ -485,3 +485,35 @@ gdf = gpd.read_file(geojson)
 
 gdf
 ```
+
+```{python}
+import matplotlib.pyplot as plt
+import contextily as cx
+
+fig, ax = plt.subplots(figsize=(10, 10))
+gdf.to_crs(epsg=3857).plot(
+  edgecolor='r',
+  ax=ax,
+  facecolor='none')
+cx.add_basemap(
+  ax=ax,
+  source=cx.providers.USGS.USImageryTopo
+)
+
+```
+
+
+
+```{python}
+import geodatasets
+chicago = gpd.read_file(geodatasets.get_path('geoda.chicago_commpop'))
+chicago.head()
+```
+
+Plot Cloropleth
+
+```{python}
+chicago.plot(column="POP2010")
+```
+
+The Chicago example is taken from  [GeoPandas Mapping and plotting tools](https://geopandas.org/en/stable/docs/user_guide/mapping.html) tutorial.
