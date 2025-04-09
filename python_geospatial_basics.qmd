@@ -304,80 +304,111 @@ array([1, 2, 3 ])
 
 ```
 
-## Pandas DataFrame {.smaller .scrollable}
-DataFrames hold tabular data
+Why is this a bad practice?
+
+## Pandas DataFrame {.smaller}
+DataFrames hold tabular data.  Here we will read a csv file as a DataFrame and mess with it.
+
+1) This cell just downloads the file from a url.  __Take a few minutes and see if you can change it to be generally useful__ by allowing the url and save location to be specified as arguments. Hint, you need to change very little, and you don't really need to know how the function works in any detail.
 
 ```{python}
-#|output-location: fragment
-from datetime import datetime, timedelta
-from random import uniform
-import matplotlib.pyplot as plt
-import numpy as np
+import requests
+from pathlib import Path
+
+def get_NZ_file():
+  '''
+  A purposefully bad function to download one specific file.
+  '''
+  # url to Dec 2024 NZ GH emissions by industry (long url!)
+  url = 'https://www.stats.govt.nz/assets/Uploads/Greenhouse-gas-emissions-industry-and-household/Greenhouse-gas-emissions-industry-and-household-December-2024-quarter/Download-data/greenhouse-gas-emissions-industry-and-household-december-2024-quarter.csv'
+  # make a dir for data, if does not exist
+  save_dir = Path.cwd() / 'data'
+  save_dir.mkdir(exist_ok=True)
+  # get file name
+  basename = url.split('/')[-1]
+  # and a directory to save to 
+  save_path = save_dir / basename
+
+  try:
+      response = requests.get(url, stream=True)
+      # raise HTTPError for bad responses (4xx or 5xx)
+      response.raise_for_status() 
+      with open(save_path, 'wb') as file:
+        for chunk in response.iter_content(chunk_size=8192):
+          file.write(chunk)
+      print(f"File downloaded successfully to {save_path}")
+
+  except requests.exceptions.RequestException as e:
+    print(f'An error occurred: {e}')
+  except Exception as e:
+    print(f'An unexpected error occurred: {e}')
+
+  return save_path
+
+file_path = get_NZ_file()
+```
+
+2) Read the csv, and look at the head (first few rows).  Notice that there are column names, and on the left side there is a numerical index.
+
+```{python}
 import pandas as pd
 
-# some arbitrary time range 
-start_time = datetime(2025, 3, 1, 8, 0, 0)
-end_time = datetime(2025, 3, 3, 17, 0, 0)
-interval = timedelta(minutes=30)
-time_stamps = []
-current_time = start_time
-while current_time <= end_time:
-    time_stamps.append(current_time)
-    current_time += interval
+df = pd.read_csv(file_path)
+df.head()
+```
 
-# some made up temperature data
-temp_c = [
-  20 + uniform(-10, 10) + 10 *
-  np.sin(2 * np.pi * t.hour / 24)
-  for t
-  in time_stamps
-]
+We can also see the last few rows if we want.
 
-# empty dataframe
-df = pd.DataFrame()
+```{python}
+df.tail()
+```
 
-# add data
-df['date_time'] = time_stamps
-df['T (C)'] = temp_c
+Or we can slice from the middle using index slicing, just like with a list.
+
+```{python}
+df[100:105]
+```
+
+There are many other [ways to select from Pandas DataFrames](https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html).   
+
+The `Period` column gives dates, but they are in a format that will be interpreted as floats (e.g. 20007.08).  Here we change them to datetimes and use them to set the index, giving us a DateTime index.  
+
+Earlier we mentioned methods, and we saw that strings have method `split()` which splits the string.  Columns in Pandas that are of the type `str`, that is to say string, have all of the same methods under an attribute called `str`.
+
+This cell uses many methods strung together to change the Period column to DateTime format and set the index.
+
+```{python}
+df.index = pd.to_datetime(
+  df.Period.astype('str').str.split('.').str.join('-')
+)
 
 df.head()
 ```
 
+
+
+```{python}
+df.Gas.unique()
+```
+
+```{python}
+import matplotlib.pyplot as plt
+
+fig, ax = plt.subplots(1)
+
+df[(df.index.month == 6) &
+  (df.Gas == 'Nitrous oxide') &
+  (df.Anzsic == 'ZZZ')
+].plot.scatter('Period', 'Data_value', ax=ax)
+ax.set_title('NZ June Nitrous Oxide Emissions')
+ax.set_ylabel('Kilotonnes')
+ax.set_xlabel('Year')
+```
+
+
+
 ## Pandas DataFrame Cont. {.scrollable}
 
-```{python}
-
-fig, ax = plt.subplots()
-
-# create the scatter plot
-plt.scatter(df.date_time, df['T (C)'], marker='x', color = 'k')
-
-# set the x-axis tick labels and rotate them
-plt.xticks(rotation=80, ha='right')
-
-# label axes
-plt.xlabel('Day and Time')
-plt.ylabel('Temperature (C)')
-plt.title('Hourly Temperature (C) in West Crabhammer')
-
-# adjust layout to prevent labels from overlapping
-plt.tight_layout()
-
-# Show the plot
-plt.show()
-```
-
-```{python}
-# get the mean temperature over the timeseries
-df['T (C)'].mean()
-```
-
-When there are no spaces in a column name you can access the column as an attribute of the datafame.
-
-```{python}
-# get the number of time stamps in the date_time column
-df.date_time.count()
-```
 
 There is a lot more to know about Pandas DataFrames.  This is enough for us to move on to GeoPandas.  I encourage you to [learn more about Pandas](https://pandas.pydata.org/docs/user_guide/10min.html) as an exercise.
 
