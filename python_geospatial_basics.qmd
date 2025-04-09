@@ -3,6 +3,8 @@ title: 'Python Lectures'
 format:
   revealjs:
     incremental: false
+    scrollable: true
+    smaller: true
 jupyter: python3
 echo: true
 output-location: column
