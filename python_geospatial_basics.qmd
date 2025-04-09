@@ -432,12 +432,7 @@ If you are only going the R route, do the above, but in R. (Hints Below.)
 
 # Exploring Vector Data with  Geopandas {background-image="images/pandas.png"}
 
-## {background-image="images/pandas.png"}
-
-
 ## Geopandas {background-image="images/pandas.png"}
-<--img width="560" height="315" src="images/pandas.png"><--/img>
-g e o p a n d a s
 
 ## Vector Data {.smaller}
 
