@@ -46,6 +46,7 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
         + [Essential basic functionality](https://pandas.pydata.org/docs/user_guide/basics.html)
         + [IO tools (text, CSV, HDF5, …)](https://pandas.pydata.org/docs/user_guide/io.html)
         + [Indexing and selecting data](https://pandas.pydata.org/docs/user_guide/indexing.html)
+        + [Ways to select from Pandas DataFrames](https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html)
     + GeoPandas:
         + 
     + rioXarray:
