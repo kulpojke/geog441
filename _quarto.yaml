@@ -6,6 +6,7 @@ project:
   - intro.qmd
   - python_geospatial_basics.qmd
   - R_geospatial_basics.qmd
+  - Xarray.qmd
 
 self_contained: true
 theme: blood
