@@ -44,3 +44,29 @@ Boom Kelvins!
 ::: { .callout-note }
 Do you notice all of those NaNs?  This is sea surface temperature, so where there is land, there is no data.
 :::
+
+## Aggregations
+
+A common thing to do in performing various types of analysis is to apply aggregations such as `.sum()`, `.mean()`, `.median()`, `.min()`, or `.max()`.  These methods can be used to reduce data to provide insights into the nature of a large dataset. For example, one might want to calculate the  minimum temperature for each cell (temporal minimum).
+
+```{python}
+global_min = ds.tos.min(dim="time")
+global_min
+```
+
+Pay attention to the dimensions of the above output.  We have collapsed the time dimension using the `.min()` method, so we are left with a 2D grid of lat and lon.
+
+```{python}
+
+fig, ax  = plt.subplots();
+title = f'Global Min SST {ds.time.min().item().year} - {ds.time.max().item().year}'
+global_min.plot(cmap='inferno', ax=ax,cbar_kwargs={'label': 'degrees C'});
+ax.set_title(title );
+
+```
+
+We could also aggregate spatially, for instance we could find the mean the sea surface temperature across the entire grid at eac time step, leaving us with a 1D timeseries of mean temperatures.
+ 
+```{python}
+ds.tos.mean(dim=["lat", "lon"])
+```
