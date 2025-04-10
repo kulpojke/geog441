@@ -4,7 +4,7 @@ format:
   html:
     toc: true
     toc-location: left
-    theme: slate
+    theme: simpelex
 jupyter: python3
 echo: true
 ---
@@ -42,5 +42,5 @@ ds.tos + 273.15
 Boom Kelvins! 
 
 ::: { .callout-note }
-Yo does this work?
+Do you notice all of those NaNs?  This is sea surface temperature, so where there is land, there is no data.
 :::
