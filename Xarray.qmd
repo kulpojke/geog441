@@ -39,3 +39,8 @@ Check out the attributes (you can click the drop down arrows).  Notice the units
 ```{python}
 ds.tos + 273.15
 ```
+Boom Kelvins! 
+
+::: { .callout-note }
+Yo does this work?
+:::
