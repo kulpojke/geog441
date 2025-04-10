@@ -4,12 +4,9 @@ format:
   html:
     toc: true
     toc-location: left
-    theme: quartz
-code-block-bg: "#f0f0f0"
+    theme: slate
 jupyter: python3
 echo: true
-
-df-print: kable
 ---
 
 
@@ -37,4 +34,8 @@ ds = xr.open_dataset(filepath)
 ds
 ```
 
-Check out the attributes ( you can click the drop down arrows).
+Check out the attributes (you can click the drop down arrows).  Notice the units are degrees C.  If you wanted the temperature in Kelvins you can change them very much as you would change a column in Pandas.
+
+```{python}
+ds.tos + 273.15
+```
