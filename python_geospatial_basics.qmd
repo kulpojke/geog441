@@ -521,7 +521,7 @@ The Chicago example is taken from  [GeoPandas Mapping and plotting tools](https:
 # Working with Rasters in Python
 
 ## rioXarray
-
+rx
 
 ## Working with Climate data with rioXarray
 
@@ -540,11 +540,14 @@ import matplotlib.pyplot as plt
 filepath = DATASETS.fetch('CESM2_sst_data.nc')
 ```
 
-Open the dataset and inspect.
+Open the dataset and inspect.  It is an Xarray Dataset.  It has coordinates lat/lon coordinates, and it has
 
 ```{python}
 ds = xr.open_dataset(filepath)
 ds
 ```
 
+
+
+Look at the temperature variable `tos`.
 
