@@ -7,6 +7,7 @@ dependencies:
   - geodatasets
   - geopandas
   - jupyterlab
+  - pythia_datasets
   - rioxarray
   - tabulate
   - tqdm

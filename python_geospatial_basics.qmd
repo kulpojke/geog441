@@ -517,3 +517,8 @@ chicago.plot(column="POP2010")
 ```
 
 The Chicago example is taken from  [GeoPandas Mapping and plotting tools](https://geopandas.org/en/stable/docs/user_guide/mapping.html) tutorial, which you should take a look at.  
+
+# Working with Rasters in Python
+
+## rioXarray
+
