@@ -12,8 +12,6 @@ navigation-mode: vertical
 df-print: kable
 ---
 
-## rioXarray
-rx
 
 ## Working with Spatio-temporal Climate data with Xarray
 

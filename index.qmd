@@ -16,3 +16,5 @@ Links to lecture slides
 [Python Lecures](python_geospatial_basics.html)
 
 [R Lectures](R_geospatial_basics.html)
+
+[Xarray](Xarray.html)
