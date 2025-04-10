@@ -4,11 +4,10 @@ format:
   html:
     toc: true
     toc-location: left
-    theme: darkly
+    theme: vapor
 jupyter: python3
 echo: true
-output-location: column
-navigation-mode: vertical
+
 df-print: kable
 ---
 
