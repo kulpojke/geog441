@@ -59,14 +59,26 @@ Pay attention to the dimensions of the above output.  We have collapsed the time
 ```{python}
 
 fig, ax  = plt.subplots();
-title = f'Global Min SST {ds.time.min().item().year} - {ds.time.max().item().year}'
-global_min.plot(cmap='inferno', ax=ax,cbar_kwargs={'label': 'degrees C'});
+title = f'Minimum annual SST {ds.time.min().item().year} - {ds.time.max().item().year}'
+global_min.plot(cmap='inferno', ax=ax, cbar_kwargs={'label': 'degrees C'});
 ax.set_title(title );
-
 ```
 
 We could also aggregate spatially, for instance we could find the mean the sea surface temperature across the entire grid at eac time step, leaving us with a 1D timeseries of mean temperatures.
  
 ```{python}
-ds.tos.mean(dim=["lat", "lon"])
+t_mean = ds.tos.mean(dim=["lat", "lon"])
+t_mean
+```
+
+```{python}
+
+
+fig, ax  = plt.subplots();
+t_mean.plot()
+
+title = f'Global Mean SST {ds.time.min().item().year} - {ds.time.max().item().year}'
+ax.set_title(title);
+ax.set_ylabel('degrees C');
+ax.set_xlabel('Year');
 ```
