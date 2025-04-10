@@ -30,10 +30,11 @@ import matplotlib.pyplot as plt
 filepath = DATASETS.fetch('CESM2_sst_data.nc')
 ```
 
-Open the dataset and inspect.  It is an Xarray Dataset.  It has coordinates lat, lon, and time.  It has spatial and time coordinates, hence we call it a spatio-temporal dataset.
+Open the dataset and inspect.  It is an Xarray Dataset.  It has coordinates lat, lon, and time.  It has corresponding indices  It has spatial and time coordinates, hence we call it a spatio-temporal dataset.
 
 ```{python}
 ds = xr.open_dataset(filepath)
 ds
 ```
 
+N
