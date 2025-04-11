@@ -94,10 +94,16 @@ ax.set_xlabel('Year');
 Now that you know how to slice and aggregate, find and plot a map of maximum SST for the year 2005.
 :::
 
+
+
 ```{python}
 
 
 
 ```
 
-Ok
+## GroupBy: Split, Apply, Combine
+
+Often it is useful to aggregate conditionally on some coordinate labels or groups.
+
+<img src="https://comptools.climatematch.io/_images/t5_split_apply_combine.png">
