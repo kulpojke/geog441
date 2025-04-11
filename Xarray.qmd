@@ -133,3 +133,10 @@ ax.set_xlabel('Month');
 ::: { .callout-note title=Question??? }
 What are these trailing semicolons all about? Python does not typically end lines with a semicolon.  Experiment with the above code block with and without the semicolons.
 :::
+
+```{python}
+fig, ax  = plt.subplots();
+(grouped_mean.sel(month=1) - grouped_mean.sel(month=7)).plot(size=6, robust=True)
+ax.set_title('Mean January / July Temperature Difference');
+
+```
