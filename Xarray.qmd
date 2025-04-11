@@ -1,5 +1,5 @@
 ---
-title: 'Python Lectures'
+title: 'Xarray'
 format:
   html:
     toc: true
@@ -10,9 +10,11 @@ echo: true
 ---
 
 
-## Working with Spatio-temporal Climate data with Xarray
+## Working with Spatio-temporal Data
 
-In this tutorial we  will be looking at sea surface temaperatures using Community Earth System Model 2 (CESM2) data.  This tutorial borrows heavily from [this tutorial](https://comptools.climatematch.io/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html) by Computational Tools in Climate Science.  That tutorial has much more information about climatology, the focus here is using Xarray for data cubes.  
+In this tutorial we  will be looking at sea surface temperatures using Community Earth System Model 2 (CESM2) data.  This tutorial borrows heavily from [this tutorial](https://comptools.climatematch.io/tutorials/W1D1_ClimateSystemOverview/student/W1D1_Tutorial5.html) by Computational Tools in Climate Science.  That tutorial has much more information about climatology, the focus here is using Xarray for data cubes.
+
+This is [gridded](https://nsidc.org/data/user-resources/help-center/guide-ease-grids#:~:text=The%20EASE%20Grids%20utilize%20an,the%20temperate%20and%20global%20projections.) climate data given in lat, lon coordinates.  In the rioXarray tutorials we will learn to deal with projections etc...
 
 First import libraries and download dataset.
 
@@ -34,6 +36,14 @@ ds = xr.open_dataset(filepath)
 ds
 ```
 
+You can subset the data along an axis with slicing (here we explicitly create a slice object)
+
+```{python}
+ds.sel(
+    time=slice('2004-01-01', '2004-12-31')
+)
+```
+
 Check out the attributes (you can click the drop down arrows).  Notice the units are degrees C.  If you wanted the temperature in Kelvins you can change them very much as you would change a column in Pandas.
 
 ```{python}
@@ -50,7 +60,7 @@ Do you notice all of those NaNs?  This is sea surface temperature, so where ther
 A common thing to do in performing various types of analysis is to apply aggregations such as `.sum()`, `.mean()`, `.median()`, `.min()`, or `.max()`.  These methods can be used to reduce data to provide insights into the nature of a large dataset. For example, one might want to calculate the  minimum temperature for each cell (temporal minimum).
 
 ```{python}
-global_min = ds.tos.min(dim="time")
+global_min = ds.tos.min(dim='time')
 global_min
 ```
 
@@ -69,10 +79,6 @@ We could also aggregate spatially, for instance we could find the mean the sea s
 ```{python}
 t_mean = ds.tos.mean(dim=["lat", "lon"])
 t_mean
-```
-
-```{python}
-
 
 fig, ax  = plt.subplots();
 t_mean.plot()
@@ -81,4 +87,19 @@ title = f'Global Mean SST {ds.time.min().item().year} - {ds.time.max().item().ye
 ax.set_title(title);
 ax.set_ylabel('degrees C');
 ax.set_xlabel('Year');
+
 ```
+
+::: { .callout-note title="Exercise"}
+Now that you know how to slice and aggregate, find and plot a map of maximum SST for the year 2005
+:::
+
+```{python}
+ds.sel(
+    time=slice('2004-01-01', '2004-12-31')
+).tos.min(dim="time").plot(cmap='inferno', ax=ax, cbar_kwargs={'label': 'degrees C'})
+
+
+```
+
+Ok
