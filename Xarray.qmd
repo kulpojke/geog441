@@ -91,13 +91,11 @@ ax.set_xlabel('Year');
 ```
 
 ::: { .callout-note title="Exercise"}
-Now that you know how to slice and aggregate, find and plot a map of maximum SST for the year 2005
+Now that you know how to slice and aggregate, find and plot a map of maximum SST for the year 2005.
 :::
 
 ```{python}
-ds.sel(
-    time=slice('2004-01-01', '2004-12-31')
-).tos.min(dim="time").plot(cmap='inferno', ax=ax, cbar_kwargs={'label': 'degrees C'})
+
 
 
 ```
