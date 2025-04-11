@@ -107,3 +107,17 @@ Now that you know how to slice and aggregate, find and plot a map of maximum SST
 Often it is useful to aggregate conditionally on some coordinate labels or groups.
 
 <img src="https://comptools.climatematch.io/_images/t5_split_apply_combine.png">
+
+Here we will use a split-apply-combine workflow to remove seasonal cycles from the data.
+
+Here is the splitting alone using `.groupby`
+```{python}
+ds.tos.groupby(ds.time.dt.month)
+```
+
+```{python}
+grouped_mean = ds.tos.groupby(ds.time.dt.month).mean()
+grouped_mean
+```
+
+For every spatial coordinate (gridded cell center), we now have a monthly mean SST for the time period
