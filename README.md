@@ -41,7 +41,6 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
 
 + Python tutorials
     + [Numpy](https://foundations.projectpythia.org/core/numpy.html)
-
     + Pandas:
         + [10 minutes to Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
         + [Intro to data structures](https://pandas.pydata.org/docs/user_guide/dsintro.html)
@@ -52,6 +51,7 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
     + GeoPandas:
         + 
     + rioXarray:
+        + [Xarray](https://foundations.projectpythia.org/core/xarray.html)
         +
     + Synthesizing exercises:
         + 
@@ -104,3 +104,87 @@ Project Ideas:
 + <progress value="50" max="100" style="accent-color: red;"></progress> [Do something cool with Carbon Mapper data](https://carbonmapper.org/data)
 + <progress value="75" max="100" style="accent-color: red;"></progress> Train an ML model to identify abandoned cannabis grow operations in the Klamath Mountains.
 + <progress value="85" max="100" style="accent-color: red;"></progress> Build an application or module/library for accessing the [ESA Climate Data API](https://climate.esa.int/en/data/apis/)
+
+
+# Group Project
+
+ 
+ # Final Project
+ Below are detials of the final outline.
+ 
+ ## Final Project Outline - April 21st
+
+Submit a one page outline with the following sections: 
+	+ Introduction - Describe the setting and problem. Why is it important?
+	+ Background - What is the necessary context to understand the problem being addressed and what work has been done by others related to the problem.
+	+ Study Goals - What is the goal of the analysis.  What will be delivered.
+	+ Methods - What methods will be used to accomplish the goals.
+	+ Data - What data will be used to accomplish the goals
+	+ Expected Results - If applicable, what do you expect to find in the study? 
+
+## Final Project Draft - May 12th
+
+Submit a draft of your report with 
+	+ Introduction
+	+ Background
+	+ Study Goals
+	+ Methods and Data
+	
+If you have any results you can include those too
+
+## Final Project Presentation and Webpage - June 4th
+
+    + Give a 15-30 minute presentation on the project.
+    + Have a complete project webpage (We will talk about how to do this usign github pages soon.  Don't be intimidated, its not that hard.)
+    + An efficient way to handle both tasks is to make your presentation slides on GitHhub pages.
+    
+## Final Project Report - June 4th
+
+Submit a ~10-20 page report (As a PDF) describing the problem, your analysis, and your findings. 
+Use the following structure: 
+
+1. Introduction and Background
+	+ Description and Importance of the problem
+   	+ Previous work done on the problem
+   	+ Goals of analysis, and (if aplicable) what you expect to find
+	+ Map of your study area
+
+2. Data and Methods
+	+ What data will you use to investigate this question? Include:
+		- Table summarizing the data you used with brief description
+        	- Maps depicting data, if needed
+	+ Describe your anlaysis methods including:
+        	- Text describing your procedure
+        	-Processing diagrams / flowchart of data processing steps
+        	- Figures and maps, as necessary
+
+3. Results
+
+	+ What did you find from the analysis? Include:
+        	- Maps showing results
+        	- Tables and  figures (with captions) as necessary.
+    	
+4. Discussion
+
+	+ Were the results what were expected?
+	+ Did the analysis answer your question?
+    	+ How do these results recontextualize the original question?
+    	+ What assumptions were made in the analysis?
+    	+ What are sources of error or shortcomings of the study?
+    	+ What further analysis would you perform? 
+
+5. Conclusions 
+
+    	+ What would you have done differently?
+    	+ What further work should be done? 
+
+6. References
+	
+	+ You can choose the citation format, so long as it is consistent.
+	+ Run it by me to make sure it is a reasonable format.
+	+ Include an in-text citation for claims made like this (Author, year)
+        	- For example: “In riparian habitats,  aardvarks show a preference for nesting in oak trees (Horkenborkenstiein et al., 2025).”
+        	- OR: "Horkenborkenstiein et al. (2025) found that in riparian habitats,  aardvarks show a preference for nesting in oak trees."
+    	+ Each cited source should be listed in the References section in alphabetical order.
+
+7. Contributions - describe 'who did what' on this report. 
