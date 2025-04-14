@@ -6,7 +6,6 @@ This course is designed to allow students with varying degrees of GIS and remote
 
 That said there are a few skills and tools that students need to grasp by the end of the class.
 + Use of GIT for project management and code sharing
-+ Basic Understanding of GDAL
 + Ability to use either Python or R to perform geospatial tasks
 
 
@@ -20,9 +19,7 @@ That said there are a few skills and tools that students need to grasp by the en
 | Participation (coming to class, being engaged)       | 0.1 |
 
 ### Exercises
-There are two exercises that are required, one introducing GIT, and another introducing GDAL. Students may choose other exercises based on their interests or project needs. We will be using GIT to manage projects in this class, and GIT is a skill that many employers are interested in.  GIT is also a great way to manage and share your own projects if you are a researcher.
-
-I am forcing you to learn a little about GDAL for a couple of reasons.  The first is historical/contextual. Most other geospatial applications rely, at least partially, on GDAL.  It has been in use since 2000.  Secondly, it is extremely useful. It is great for writing scripts for processing files in batch.  If you ever want to process a bunch of files in a container on the cloud it is a good choice because it does not have complicated dependencies.
+There is one exercises that is required, an introduction to GIT. Students may choose other exercises based on their interests or project needs. We will be using GIT to manage projects in this class, and GIT is a skill that many employers are interested in.  GIT is also a great way to manage and share your own projects if you are a researcher, or to build a portfolio.
 
 The rest is up to you as far as exercises go.  You do however need to make substantial gains in you ability to use either R or Python (or both!) to solve geospatial problems.  Ideally, by the end of the quarter you will be familiar with the content of the suggested tutorials for your chosen language and have completed at least on of the synthesizing exercises.  If you are working primarily with your programming language for your personal project, or group project you can skip the synthesizing exercise if you would like.    
 
@@ -36,10 +33,11 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
     + With your group, create a repo for your group project
     + Before you start working on group project, mess around with commits, branching and merging to get some practice.
 
-+ GDAL tutorials (required)
++ GDAL tutorials 
     + In the Spatial Thoughts [GDAL tutorial](https://courses.spatialthoughts.com/gdal-tools.html#basic-raster-processing) do sections 1.1&ndash;1.4 and 2.1&ndash;2.3
 
 + Python tutorials
+    + The exercises in the slides for this class
     + [Numpy](https://foundations.projectpythia.org/core/numpy.html)
     + Pandas:
         + [10 minutes to Pandas](https://pandas.pydata.org/docs/user_guide/10min.html)
@@ -175,8 +173,8 @@ Use the following structure for the report:
 
 5. Conclusions 
 
-    	+ What would you have done differently?
-    	+ What further work should be done? 
+    + What would you have done differently?
+    + What further work should be done? 
 
 6. References
 	
