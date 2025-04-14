@@ -113,28 +113,29 @@ Below are details of the group project.
 
 Submit a one-page outline with the following sections:  
 
-	+ Introduction - Describe the setting and problem. Why is it important?  
-	+ Background - What is the necessary context to understand the problem being addressed and what work has been done by others related to the problem.  
-	+ Study Goals - What is the goal of the analysis.  What will be delivered.   
-	+ Methods - What methods will be used to accomplish the goals.  
-	+ Data - What data will be used to accomplish the goals  
-	+ Expected Results - If applicable, what do you expect to find in the study?   
++ Introduction - Describe the setting and problem. Why is it important?  
++ Background - What is the necessary context to understand the problem being addressed and what work has been done by others related to the problem.  
++ Study Goals - What is the goal of the analysis.  What will be delivered.   
++ Methods - What methods will be used to accomplish the goals.  
++ Data - What data will be used to accomplish the goals  
++ Expected Results - If applicable, what do you expect to find in the study?   
 
 ## Final Project Draft - May 12th
 
-Submit a draft of your report with 
-	+ Introduction
-	+ Background
-	+ Study Goals
-	+ Methods and Data
+Submit a draft of your report with   
+
++ Introduction
++ Background
++ Study Goals
++ Methods and Data
 	
 If you have any results you can include those too
 
-## Final Project Presentation and Webpage - June 4th
+## Final Project Presentation and Webpage - June 4th  
 
-    + Give a 15-30 minute presentation on the project.
-    + Have a complete project webpage (We will talk about how to do this using github pages soon.  Don't be intimidated, its not that hard.)
-    + An efficient way to handle both tasks is to make your presentation slides on GitHub pages.
++ Give a 15-30 minute presentation on the project.
++ Have a complete project webpage (We will talk about how to do this using github pages soon.  Don't be intimidated, its not that hard.)
++ An efficient way to handle both tasks is to make your presentation slides on GitHub pages.
     
 ## Final Project Report - June 4th
 
