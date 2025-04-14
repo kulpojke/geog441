@@ -52,7 +52,7 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
         + [Xarray](https://foundations.projectpythia.org/core/xarray.html)
         +
     + _Complicated Tasks_:
-        + 
+        + See if you can build a conda environment and run [PyCrouwn](https://github.com/manaakiwhenua/pycrown).  Download some data from the [USGS lidar explorer](https://apps.nationalmap.gov/lidar-explorer/#/) for an area that interest you (and has trees) and perform crown segmentation.
     
 + R tutorials
     + [Intro to R geospatial](https://datacarpentry.github.io/r-intro-geospatial/)
@@ -60,7 +60,7 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
     + [Working with NEON hyperspectral data](https://www.neonscience.org/resources/learning-hub/tutorials/introduction-hyperspectral-remote-sensing-data-r)
     + _Complicated Tasks_:
         + [Image Classification](https://urbanspatial.github.io/classifying_satellite_imagery_in_R/) (This is an old tutorial using the raster package.  See if you can recreate it using newer packages such as Stars and Terra)
-        + Tree segmentation from lidar point clouds using the [lidR package](https://r-lidar.github.io/lidRbook/).  Download some data from the [USGS lidar explorer](https://apps.nationalmap.gov/lidar-explorer/#/) for an aarea tht interest you (and has trees) and go to town.  Try to dowload multiple tiles and use the lascatalogue function (start off with a single tile and work up to that). 
+        + Tree segmentation from lidar point clouds using the [lidR package](https://r-lidar.github.io/lidRbook/).  Download some data from the [USGS lidar explorer](https://apps.nationalmap.gov/lidar-explorer/#/) for an area that interest you (and has trees) and go to town.  Try to dowload multiple tiles and use the lascatalogue function (start off with a single tile and work up to that). 
 
 + QGIS tutorials
 + GRASS tutorials
