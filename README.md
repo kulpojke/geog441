@@ -137,8 +137,9 @@ If you have any results you can include those too
     
 ## Final Project Report - June 4th
 
-Submit a ~10-20 page report (As a PDF) describing the problem, your analysis, and your findings. 
-Use the following structure: 
+Submit a report (As a PDF) describing the problem, your analysis, and your findings.  The data you produced should also be made available for use by stakeholders or ohter parties.
+
+Use the following structure for the report: 
 
 1. Introduction and Background
 	+ Description and Importance of the problem
@@ -182,6 +183,6 @@ Use the following structure:
 	+ Include an in-text citation for claims made like this (Author, year)
         	- For example: “In riparian habitats,  aardvarks show a preference for nesting in oak trees (Horkenborkenstiein et al., 2025).”
         	- OR: "Horkenborkenstiein et al. (2025) found that in riparian habitats,  aardvarks show a preference for nesting in oak trees."
-    	+ Each cited source should be listed in the References section in alphabetical order.
+    	+ Each cited source should be listed in the references section in alphabetical order.
 
-7. Contributions - describe 'who did what' on this report. 
+7. Contributions - describe who did what. 
