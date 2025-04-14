@@ -21,7 +21,7 @@ That said there are a few skills and tools that students need to grasp by the en
 ### Exercises
 There is one exercises that is required, an introduction to GIT. Students may choose other exercises based on their interests or project needs. We will be using GIT to manage projects in this class, and GIT is a skill that many employers are interested in.  GIT is also a great way to manage and share your own projects if you are a researcher, or to build a portfolio.
 
-The rest is up to you as far as exercises go.  You do however need to make substantial gains in you ability to use either R or Python (or both!) to solve geospatial problems.  Ideally, by the end of the quarter you will be familiar with the content of the suggested tutorials for your chosen language and have completed at least on of the synthesizing exercises.  If you are working primarily with your programming language for your personal project, or group project you can skip the synthesizing exercise if you would like.    
+The rest is up to you as far as exercises go.  You do however need to make substantial gains in you ability to use either R or Python (or both!) to solve geospatial problems.  Ideally, by the end of the quarter you will be familiar with the content of the suggested tutorials for your chosen language and have completed at least on of the _Complicated Tasks_ listed under the tutorials for that language (If you are a total beginner to the langage, you may not make it that far, but try your best).  If you are working primarily with your programming language for your personal project, or group project you can skip the synthesizing exercise if you would like.    
 
 At the end of the quarter you will submit a brief __self-evaluation__, with a summary of the exercises you have completed and a paragraph or two describing the things you have learned.  You will give yourself a grade for the exercises portion on the class, and explain why you deserve that grade.
 
@@ -51,10 +51,16 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
     + rioXarray:
         + [Xarray](https://foundations.projectpythia.org/core/xarray.html)
         +
-    + Synthesizing exercises:
+    + _Complicated Tasks_:
         + 
     
 + R tutorials
+    + [Intro to R geospatial](https://datacarpentry.github.io/r-intro-geospatial/)
+    + [Intro to R Raster and Vector](https://datacarpentry.github.io/r-raster-vector-geospatial/)
+    + [Working with NEON hyperspectral data](https://www.neonscience.org/resources/learning-hub/tutorials/introduction-hyperspectral-remote-sensing-data-r)
+    + _Complicated Tasks_:
+        + [Image Classification](https://urbanspatial.github.io/classifying_satellite_imagery_in_R/) (This is an old tutorial using the raster package.  See if you can recreate it using newer packages such as Stars and Terra)
+        + Tree segmentation from lidar point clouds using the [lidR package](https://r-lidar.github.io/lidRbook/).  Download some data from the [USGS lidar explorer](https://apps.nationalmap.gov/lidar-explorer/#/) for an aarea tht interest you (and has trees) and go to town.  Try to dowload multiple tiles and use the lascatalogue function (start off with a single tile and work up to that). 
 
 + QGIS tutorials
 + GRASS tutorials
