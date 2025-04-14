@@ -50,7 +50,14 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
         + 
     + rioXarray:
         + [Xarray](https://foundations.projectpythia.org/core/xarray.html)
-        +
+        + [rioXarray basics](https://geog-312.gishub.org/book/geospatial/rioxarray.html)
+        + [Clipping Rasters](https://corteva.github.io/rioxarray/stable/examples/clip_geom.html)
+        + [reproject](https://corteva.github.io/rioxarray/stable/examples/reproject.html)
+        + :star: [reporoject match](https://corteva.github.io/rioxarray/stable/examples/reproject_match.html) :star: This one is quite useful.
+        + [Interpolate missing data](https://corteva.github.io/rioxarray/stable/examples/interpolate_na.html)
+        + :fire: [Reading and writing large files with Dask](https://corteva.github.io/rioxarray/stable/examples/dask_read_write.html). More difficult than the other tutorials up to this point. :fire:
+        + [Generating animated time series](https://docs.digitalearthafrica.org/en/latest/sandbox/notebooks/Frequently_used_code/Animated_timeseries.html)
+
     + _Complicated Tasks_:
         + See if you can build a conda environment and run [PyCrouwn](https://github.com/manaakiwhenua/pycrown).  Download some data from the [USGS lidar explorer](https://apps.nationalmap.gov/lidar-explorer/#/) for an area that interest you (and has trees) and perform crown segmentation.
         + Learn a little about [synthetic aperture radar](https://www.iceye.com/blog/beginners-guide-to-synthetic-aperture-radar-sar-technology) remote sensing by [working through the first basic example of sarpy](https://sarpy.readthedocs.io/en/latest/) :boom: This will not be easy! :fire: This could even be a personal project.
