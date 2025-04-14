@@ -111,13 +111,14 @@ Below are details of the group project.
  
  ## Final Project Outline - April 21st
 
-Submit a one-page outline with the following sections: 
-	+ Introduction - Describe the setting and problem. Why is it important?
-	+ Background - What is the necessary context to understand the problem being addressed and what work has been done by others related to the problem.
-	+ Study Goals - What is the goal of the analysis.  What will be delivered.
-	+ Methods - What methods will be used to accomplish the goals.
-	+ Data - What data will be used to accomplish the goals
-	+ Expected Results - If applicable, what do you expect to find in the study? 
+Submit a one-page outline with the following sections:  
+
+	+ Introduction - Describe the setting and problem. Why is it important?  
+	+ Background - What is the necessary context to understand the problem being addressed and what work has been done by others related to the problem.  
+	+ Study Goals - What is the goal of the analysis.  What will be delivered.   
+	+ Methods - What methods will be used to accomplish the goals.  
+	+ Data - What data will be used to accomplish the goals  
+	+ Expected Results - If applicable, what do you expect to find in the study?   
 
 ## Final Project Draft - May 12th
 
