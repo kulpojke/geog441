@@ -106,15 +106,12 @@ Project Ideas:
 + <progress value="85" max="100" style="accent-color: red;"></progress> Build an application or module/library for accessing the [ESA Climate Data API](https://climate.esa.int/en/data/apis/)
 
 
-# Group Project
-
- 
- # Final Project
- Below are detials of the final outline.
+# Group Project  
+Below are details of the group project.
  
  ## Final Project Outline - April 21st
 
-Submit a one page outline with the following sections: 
+Submit a one-page outline with the following sections: 
 	+ Introduction - Describe the setting and problem. Why is it important?
 	+ Background - What is the necessary context to understand the problem being addressed and what work has been done by others related to the problem.
 	+ Study Goals - What is the goal of the analysis.  What will be delivered.
@@ -135,8 +132,8 @@ If you have any results you can include those too
 ## Final Project Presentation and Webpage - June 4th
 
     + Give a 15-30 minute presentation on the project.
-    + Have a complete project webpage (We will talk about how to do this usign github pages soon.  Don't be intimidated, its not that hard.)
-    + An efficient way to handle both tasks is to make your presentation slides on GitHhub pages.
+    + Have a complete project webpage (We will talk about how to do this using github pages soon.  Don't be intimidated, its not that hard.)
+    + An efficient way to handle both tasks is to make your presentation slides on GitHub pages.
     
 ## Final Project Report - June 4th
 
@@ -146,14 +143,14 @@ Use the following structure:
 1. Introduction and Background
 	+ Description and Importance of the problem
    	+ Previous work done on the problem
-   	+ Goals of analysis, and (if aplicable) what you expect to find
+   	+ Goals of analysis, and (if applicable) what you expect to find
 	+ Map of your study area
 
 2. Data and Methods
 	+ What data will you use to investigate this question? Include:
 		- Table summarizing the data you used with brief description
-        	- Maps depicting data, if needed
-	+ Describe your anlaysis methods including:
+        - Maps depicting data, if needed.
+	+ Describe your analysis methods including:
         	- Text describing your procedure
         	-Processing diagrams / flowchart of data processing steps
         	- Figures and maps, as necessary
@@ -162,7 +159,7 @@ Use the following structure:
 
 	+ What did you find from the analysis? Include:
         	- Maps showing results
-        	- Tables and  figures (with captions) as necessary.
+        	- Tables and figures (with captions) as necessary.
     	
 4. Discussion
 
