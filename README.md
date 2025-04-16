@@ -48,6 +48,9 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
         + [Ways to select from Pandas DataFrames](https://pandas.pydata.org/docs/getting_started/intro_tutorials/03_subset_data.html)
     + GeoPandas:
         + [Intro to GeoPandas](https://geopandas.org/en/stable/getting_started/introduction.html)
+        + [Clipping](https://geopandas.org/en/stable/gallery/plot_clip.html)
+        + [Spatial Joins](https://geopandas.org/en/stable/gallery/spatial_joins.html)
+        +[Working with projections](https://geopandas.org/en/stable/docs/user_guide/projections.html)
     + rioXarray:
         + [Xarray](https://foundations.projectpythia.org/core/xarray.html)
         + [rioXarray basics](https://geog-312.gishub.org/book/geospatial/rioxarray.html)
