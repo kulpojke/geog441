@@ -57,6 +57,7 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
         + [Interpolate missing data](https://corteva.github.io/rioxarray/stable/examples/interpolate_na.html)
         + :fire: [Reading and writing large files with Dask](https://corteva.github.io/rioxarray/stable/examples/dask_read_write.html). More difficult than the other tutorials up to this point. :fire:
         + [Generating animated time series](https://docs.digitalearthafrica.org/en/latest/sandbox/notebooks/Frequently_used_code/Animated_timeseries.html)
+        + [PAn Sharpening](https://knowledge.dea.ga.gov.au/notebooks/How_to_guides/Pansharpening/)
 
     + _Complicated Tasks_:
         + See if you can build a conda environment and run [PyCrouwn](https://github.com/manaakiwhenua/pycrown).  Download some data from the [USGS lidar explorer](https://apps.nationalmap.gov/lidar-explorer/#/) for an area that interest you (and has trees) and perform crown segmentation.
