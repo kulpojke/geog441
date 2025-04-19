@@ -63,7 +63,7 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
         + [PAn Sharpening](https://knowledge.dea.ga.gov.au/notebooks/How_to_guides/Pansharpening/)
 
     + _Complicated Tasks_:
-        + See if you can build a conda environment and run [PyCrouwn](https://github.com/manaakiwhenua/pycrown).  Download some data from the [USGS lidar explorer](https://apps.nationalmap.gov/lidar-explorer/#/) for an area that interest you (and has trees) and perform crown segmentation.
+        + See if you can build a conda environment and run [PyCrown](https://github.com/manaakiwhenua/pycrown).  Download some data from the [USGS lidar explorer](https://apps.nationalmap.gov/lidar-explorer/#/) for an area that interest you (and has trees) and perform crown segmentation.
         + Learn a little about [synthetic aperture radar](https://www.iceye.com/blog/beginners-guide-to-synthetic-aperture-radar-sar-technology) remote sensing by [working through the first basic example of sarpy](https://sarpy.readthedocs.io/en/latest/) :boom: This will not be easy! :fire: This could even be a personal project.
     
 + R tutorials
