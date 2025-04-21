@@ -85,6 +85,8 @@ plot(bp)
 plot(tr)
 ```
 
+It is also fairly easy to plot transect profiles.
+
 ```{r}
 library(ggplot2)
 
