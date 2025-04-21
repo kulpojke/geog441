@@ -2,11 +2,11 @@ project:
   type: website
   output-dir: docs
   render:
-  - index.qmd
-  - intro.qmd
-  - python_geospatial_basics.qmd
-  - R_geospatial_basics.qmd
-  - Xarray.qmd
-
+  #- index.qmd
+  #- intro.qmd
+  #- python_geospatial_basics.qmd
+  #- R_geospatial_basics.qmd
+  #- Xarray.qmd
+  - lidR.qmd
 self_contained: true
 theme: blood

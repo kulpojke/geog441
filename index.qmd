@@ -18,3 +18,5 @@ Links to lecture slides
 [R Lectures](R_geospatial_basics.html)
 
 [Xarray](Xarray.html)
+
+[lidR](lidR.html)
