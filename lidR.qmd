@@ -1,5 +1,5 @@
 ---
-title: 'Xarray'
+title: 'lidR'
 format:
   html:
     toc: true
@@ -120,6 +120,8 @@ ggplot(payload(tr_tr), aes(X,Z, color = Z)) +
 
 ```
 
+Find Height Above Ground.  In lidR we assign it to Z, as the package does not handle extra dimensions.  In other applications we would probably add a `HeightAboveGround` dimension tot he point cloud.
+
 ```{r}
 bp_normed <- normalize_height(bp, tin())
 bp_normed <- filter_poi(bp_normed, Z >= 3 & Z <= 50)
@@ -135,7 +137,7 @@ ggplot(payload(bp_nrm_tr), aes(X,Z, color = Z)) +
 ```
 
 ```{r}
-tr_normed <- normalize_height(bp, tin())
+tr_normed <- normalize_height(tr, tin())
 tr_normed <- filter_poi(tr_normed, Z >= 3 & Z <= 80)
 
 # plot
@@ -148,6 +150,7 @@ ggplot(payload(tr_nrm_tr), aes(X,Z, color = Z)) +
   scale_color_gradientn(colours = height.colors (50))
 ```
 
+Create CHMs
 
 ```{r}
 bp_chm <- rasterize_canopy(
@@ -175,3 +178,77 @@ tr_chm <- rasterize_canopy(
 plot(tr_chm)
 ```
 
+Smoothing the CHM tends to help the delineation and is standard practice.
+
+```{r}
+w <- matrix(1, 3, 3)
+
+bp_smoothed <- terra::focal(bp_chm, w, fun=mean, na.rm=TRUE)
+
+tr_smoothed <- terra::focal(tr_chm, w, fun=mean, na.rm=TRUE)
+```
+
+This height dependent window was designed for Klamath mountains, and will probably not work well on Bishops Peak.
+
+```{r}
+# find ttops with height dependent window size
+wf <- function(x) {
+  y <- abs(x/8)
+  y[x <= 32] <- 4
+  y[x > 80] <- 10
+  return(y)
+}
+        
+bp_ttops <- locate_trees(bp_smoothed, lmf(wf))
+tr_ttops <- locate_trees(tr_smoothed, lmf(wf))
+```
+
+Lets see how this worked out.  Since the parameters used in the process were chosen for the Klamath Mountains, one would expect the Trinity County tile to have better results.
+
+```{r}
+# extent to clip raster for plotting
+bp_sub <- sf::st_bbox(sf::st_buffer(sf::st_point(p2), 40))
+plot(terra::crop(bp_chm, bp_sub), col=height.colors(50))
+plot(sf::st_geometry(bp_ttops), add = TRUE, pch = 3)
+```
+
+```{r}
+tr_sub <- sf::st_bbox(sf::st_buffer(sf::st_point(p4), 30))
+plot(terra::crop(tr_chm, tr_sub), col=height.colors(50))
+plot(sf::st_geometry(tr_ttops), add = TRUE, pch = 3)
+```
+
+Lets try a 3D plot
+
+```{r}
+x <- plot(tr_normed, bg = "white", size = 4)
+add_treetops3d(x, tr_ttops)
+```
+
+Next segment trees and add [standard metrics(https://rdrr.io/cran/lidR/man/stdmetrics.html)].
+
+```{r}
+bp_segs = segment_trees(
+  bp_normed,
+  dalponte2016(bp_smoothed, bp_ttops)
+)
+
+tr_segs = segment_trees(
+  tr_normed,
+  dalponte2016(tr_smoothed, tr_ttops)
+)
+
+bp_crowns <- crown_metrics(
+  bp_segs,
+  func=.stdmetrics,
+  geom='concave'
+)
+
+tr_crowns <- crown_metrics(
+  tr_segs,
+  func=.stdmetrics,
+  geom='concave'
+)
+
+head(tr_crowns)
+```
