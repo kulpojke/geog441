@@ -1,20 +1,31 @@
+---
+title: 'Xarray'
+format:
+  html:
+    toc: true
+    toc-location: left
+    theme: simpelex
+
+echo: true
+---
+
 ```{r}
 # install.packages('lidR')
 library(lidR) 
 
 file_name <- 'laz/bishops_peak.laz'
-las <- readLAS(file_name)
-las
+bp <- readLAS(file_name)
+bp
 
 ```
 
 Invalid data is not uncommon when it comes to aerial lidar.  It is a good idea to check the file integrity before starting.
 
 ```{r}
-las_check(las)
+las_check(bp)
 ```
 
-Notice that there are points marked as withheld.  Withheld points are typically points that are suspicious or have something wrong with them.  There ae not many in the point cloud, so we can safely drop them.  We will do this by adding the `filter="-drop_withheld"` parameter to `read_las()`.
+Notice that there are points marked as withheld.  Withheld points are typically points that are suspicious or have something wrong with them.  There ae not many in the point cloud, so we can safely drop them.  We will do this by adding the `filter="-drop_withheld"` parameter to `readLAS()`.
 
 ## Point Records
 In a lidar file, the following attribute will always be included for points.
@@ -38,43 +49,88 @@ In a lidar file, the following attribute will always be included for points.
 
 Sometimes there are other records associated with points, e.g. `HeightAboveGround`.
 
+
+## Comparing workflows on two different types of forest
+We will look at the Bishops Peak tile (coastal liv oak woodland), and a tile in Trinity County (Douglas-fir, ponderosa pine, canyon live oak, and knobcone pine woodland) in parallel.  
+
 Here we do not need all of the attributes for the points. For many applications things like ScanAngleRank, are not useful.
 
 Below we load only the x, y, z, intensity, number of returns, return number and classification.
 
 We will also filter duplicates, as they can cause problems.
 
-
+Finally we will run las_check on the trinity county tile.
 
 ```{r}
-las <- readLAS(
+# bishops peak tile
+bp <- readLAS(
   file_name, select="xyzinrc",filter="-drop_withheld"
 )
-las <- filter_duplicates(las)
+bp <- filter_duplicates(bp)
 
+# trinity county tile
+tr <- readLAS(
+  file_name, select="xyzinrc",filter="-drop_withheld"
+)
+tr <- filter_duplicates(tr)
+
+las_check(tr)
 ```
 
 
-The below will plot the point cloud in a 3D interactive window (if you are suing Rstudio, it would be possible in other IDEs as well, but things involving R usually require painstaking configuration).
+The below will plot the point clouds in a 3D interactive window (if you are suing Rstudio, it would be possible in other IDEs as well, but things involving R usually require painstaking configuration).
 
 ```{r}
-plot(las)
+plot(bp)
+plot(tr)
 ```
 
 ```{r}
 library(ggplot2)
 
-# some points (found in QGIS)
+# bp points (found in QGIS)
 p1 <- c(165002.6378679913, 3911266.6643020255)
 p2 <- c(165067.0078679913, 3910900.6643020255)
 
-# transect
-las_tr <- clip_transect(las, p1, p2, width = 5, xz = TRUE)
+# bp transect
+bp_tr <- clip_transect(bp, p1, p2, width = 5, xz = TRUE)
 
 # plot
-ggplot(payload(las_tr), aes(X,Z, color = Z)) + 
+ggplot(payload(bp_tr), aes(X,Z, color = Z)) + 
   geom_point(size = 0.5) + 
   coord_equal() + 
   theme_minimal() +
   scale_color_gradientn(colours = height.colors (50))
+```
+
+```{r}
+# tr points (found in QGIS)
+p1 <- c(517025.3000042647, 4553216.613794332)
+p2 <- c(517069.9200042647, 4552737.033794332)
+
+```
+
+```{r}
+bp_normed <- normalize_height(bp, tin())
+bp_normed <- filter_poi(bp_normed, Z >= 3 & Z <= 120)
+
+# plot
+bp_nrm_tr <- clip_transect(bp_normed, p1, p2, width = 5, xz = TRUE)
+
+ggplot(payload(bp_nrm_tr), aes(X,Z, color = Z)) + 
+  geom_point(size = 0.5) + 
+  coord_equal() + 
+  theme_minimal() +
+  scale_color_gradientn(colours = height.colors (50))
+```
+
+```{r}
+ bp_chm <- rasterize_canopy(
+  bp_normed,
+  res=0.5,
+  pitfree(
+    thresholds=c(0, 10, 20),
+    max_edge=c(0, 1.5)
+  )
+)
 ```
