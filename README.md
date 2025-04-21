@@ -157,7 +157,7 @@ If you have any results you can include those too
     
 ## Final Project Report - June 4th
 
-Submit a report (As a PDF) describing the problem, your analysis, and your findings.  The data you produced should also be made available for use by stakeholders or ohter parties.
+Submit a report (As a PDF) describing the problem, your analysis, and your findings.  The data you produced should also be made available for use by stakeholders or other parties.
 
 Use the following structure for the report: 
 
@@ -203,6 +203,14 @@ Use the following structure for the report:
 	+ Include an in-text citation for claims made like this (Author, year)
         	- For example: “In riparian habitats,  aardvarks show a preference for nesting in oak trees (Horkenborkenstiein et al., 2025).”
         	- OR: "Horkenborkenstiein et al. (2025) found that in riparian habitats,  aardvarks show a preference for nesting in oak trees."
-    	+ Each cited source should be listed in the references section in alphabetical order.
+    	+ Each cited source should be listed in the references' section in alphabetical order.
 
 7. Contributions - describe who did what. 
+
+# Individual Project
+
+For the individual project you can either do a study, i.e. make a hypothesis and test it, or implement some sort of geospatial solution and document what you have done.  The goal of the assignment is to challenge yourself and learn. 
+
+If you choose a study you should have a clear research question with a testable hypothesis, methods, results and discussion.  Also include a section on what new skills you learned.
+
+If you choose to implement some challenging geospatial solution, document the problem you ae tying to solve, your methods. Were you successful? Why or why not? What cold be done better?  What did you learn?
