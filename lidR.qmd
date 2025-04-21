@@ -1,0 +1,80 @@
+```{r}
+# install.packages('lidR')
+library(lidR) 
+
+file_name <- 'laz/bishops_peak.laz'
+las <- readLAS(file_name)
+las
+
+```
+
+Invalid data is not uncommon when it comes to aerial lidar.  It is a good idea to check the file integrity before starting.
+
+```{r}
+las_check(las)
+```
+
+Notice that there are points marked as withheld.  Withheld points are typically points that are suspicious or have something wrong with them.  There ae not many in the point cloud, so we can safely drop them.  We will do this by adding the `filter="-drop_withheld"` parameter to `read_las()`.
+
+## Point Records
+In a lidar file, the following attribute will always be included for points.
+
+
+| Item                             | Format             | Size     | Required |
+|----------------------------------|--------------------|----------|----------|
+| X                                | long               | 4 bytes  | yes      |
+| Y                                | long               | 4 bytes  | yes      |
+| Z                                | long               | 4 bytes  | yes      |
+| Intensity                        | unsigned short     | 2 bytes  | no       |
+| ReturnNumber                    | 3 bits (bits 0–2)  | 3 bits   | yes      |
+| Number of Returns (Given Pulse) | 3 bits (bits 3–5)  | 3 bits   | yes      |
+| ScanDirectionFlag              | 1 bit (bit 6)      | 1 bit    | yes      |
+| EdgeofFlightLine              | 1 bit (bit 7)      | 1 bit    | yes      |
+| Classification                   | unsigned char      | 1 byte   | yes      |
+| ScanAngleRank (-90 to +90)    | signed char        | 1 byte   | yes      |
+| UserData                        | unsigned char      | 1 byte   | no       |
+| PointSourceID                  | unsigned short     | 2 bytes  | yes      |
+
+
+Sometimes there are other records associated with points, e.g. `HeightAboveGround`.
+
+Here we do not need all of the attributes for the points. For many applications things like ScanAngleRank, are not useful.
+
+Below we load only the x, y, z, intensity, number of returns, return number and classification.
+
+We will also filter duplicates, as they can cause problems.
+
+
+
+```{r}
+las <- readLAS(
+  file_name, select="xyzinrc",filter="-drop_withheld"
+)
+las <- filter_duplicates(las)
+
+```
+
+
+The below will plot the point cloud in a 3D interactive window (if you are suing Rstudio, it would be possible in other IDEs as well, but things involving R usually require painstaking configuration).
+
+```{r}
+plot(las)
+```
+
+```{r}
+library(ggplot2)
+
+# some points (found in QGIS)
+p1 <- c(165002.6378679913, 3911266.6643020255)
+p2 <- c(165067.0078679913, 3910900.6643020255)
+
+# transect
+las_tr <- clip_transect(las, p1, p2, width = 5, xz = TRUE)
+
+# plot
+ggplot(payload(las_tr), aes(X,Z, color = Z)) + 
+  geom_point(size = 0.5) + 
+  coord_equal() + 
+  theme_minimal() +
+  scale_color_gradientn(colours = height.colors (50))
+```
