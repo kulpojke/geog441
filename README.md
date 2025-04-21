@@ -111,7 +111,14 @@ At the end of the quarter you will submit a brief __self-evaluation__, with a su
 # Lectures
 Lecture Slides found [here.](https://kulpojke.github.io/geog441/)
 
-# Individual project ideas
+# Individual Project
+For the individual project you can either do a study, i.e. make a hypothesis and test it, or implement some sort of geospatial solution and document what you have done.  The goal of the assignment is to challenge yourself and learn. 
+
+If you choose a study you should have a clear research question with a testable hypothesis, methods, results and discussion.  Also include a section on what new skills you learned.
+
+If you choose to implement some challenging geospatial solution, document the problem you ae tying to solve, your methods. Were you successful? Why or why not? What cold be done better?  What did you learn?
+
+## Individual project ideas (for those who do not have there own)
 Difficulty Ratings:  
 Easy <progress value="1" max="100" style="accent-color: red;"></progress>  
 Hard <progress value="100" max="100" style="accent-color: red;"></progress>
@@ -207,10 +214,4 @@ Use the following structure for the report:
 
 7. Contributions - describe who did what. 
 
-# Individual Project
 
-For the individual project you can either do a study, i.e. make a hypothesis and test it, or implement some sort of geospatial solution and document what you have done.  The goal of the assignment is to challenge yourself and learn. 
-
-If you choose a study you should have a clear research question with a testable hypothesis, methods, results and discussion.  Also include a section on what new skills you learned.
-
-If you choose to implement some challenging geospatial solution, document the problem you ae tying to solve, your methods. Were you successful? Why or why not? What cold be done better?  What did you learn?
