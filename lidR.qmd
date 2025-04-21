@@ -70,7 +70,7 @@ bp <- filter_duplicates(bp)
 
 # trinity county tile
 tr <- readLAS(
-  file_name, select="xyzinrc",filter="-drop_withheld"
+  'laz/trinity_26910.laz', select="xyzinrc",filter="-drop_withheld"
 )
 tr <- filter_duplicates(tr)
 
@@ -105,14 +105,24 @@ ggplot(payload(bp_tr), aes(X,Z, color = Z)) +
 
 ```{r}
 # tr points (found in QGIS)
-p1 <- c(517025.3000042647, 4553216.613794332)
-p2 <- c(517069.9200042647, 4552737.033794332)
+p3 <- c(517025.3000042647, 4553216.613794332)
+p4 <- c(517069.9200042647, 4552737.033794332)
+
+# bp transect
+tr_tr <- clip_transect(tr, p3, p4, width = 5, xz = TRUE)
+
+# plot
+ggplot(payload(tr_tr), aes(X,Z, color = Z)) + 
+  geom_point(size = 0.5) + 
+  coord_equal() + 
+  theme_minimal() +
+  scale_color_gradientn(colours = height.colors (50))
 
 ```
 
 ```{r}
 bp_normed <- normalize_height(bp, tin())
-bp_normed <- filter_poi(bp_normed, Z >= 3 & Z <= 120)
+bp_normed <- filter_poi(bp_normed, Z >= 3 & Z <= 50)
 
 # plot
 bp_nrm_tr <- clip_transect(bp_normed, p1, p2, width = 5, xz = TRUE)
@@ -125,7 +135,22 @@ ggplot(payload(bp_nrm_tr), aes(X,Z, color = Z)) +
 ```
 
 ```{r}
- bp_chm <- rasterize_canopy(
+tr_normed <- normalize_height(bp, tin())
+tr_normed <- filter_poi(tr_normed, Z >= 3 & Z <= 80)
+
+# plot
+tr_nrm_tr <- clip_transect(bp_normed, p3, p4, width = 5, xz = TRUE)
+
+ggplot(payload(tr_nrm_tr), aes(X,Z, color = Z)) + 
+  geom_point(size = 0.5) + 
+  coord_equal() + 
+  theme_minimal() +
+  scale_color_gradientn(colours = height.colors (50))
+```
+
+
+```{r}
+bp_chm <- rasterize_canopy(
   bp_normed,
   res=0.5,
   pitfree(
@@ -133,4 +158,20 @@ ggplot(payload(bp_nrm_tr), aes(X,Z, color = Z)) +
     max_edge=c(0, 1.5)
   )
 )
+
+plot(bp_chm)
 ```
+
+````{r}
+tr_chm <- rasterize_canopy(
+  tr_normed,
+  res=0.5,
+  pitfree(
+    thresholds=c(0, 10, 20),
+    max_edge=c(0, 1.5)
+  )
+)
+
+plot(tr_chm)
+```
+
