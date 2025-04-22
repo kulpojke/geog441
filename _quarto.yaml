@@ -8,6 +8,6 @@ project:
   - R_geospatial_basics.qmd
   - Xarray.qmd
   - lidR.qmd
-  - PDAL.qmd
+  - pdal.qmd
 self_contained: true
 theme: blood

@@ -21,4 +21,4 @@ Links to lecture slides
 
 [lidR](lidR.html)
 
-[PDAL](PDAL.html)
+[PDAL](pdal.html)
