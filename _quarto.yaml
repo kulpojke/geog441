@@ -7,7 +7,7 @@ project:
   - python_geospatial_basics.qmd
   - R_geospatial_basics.qmd
   - Xarray.qmd
-  - lidR.qmd
   - pdal.qmd
+  - lidR.qmd
 self_contained: true
 theme: blood
