@@ -1,0 +1,74 @@
+---
+format:
+  revealjs:
+    incremental: true 
+jupyter: python3
+echo: true
+output-location: column
+navigation-mode: vertical
+---
+
+
+
+
+
+# What is PDAL?
+
+- **PDAL** = *Point Data Abstraction Library*
+- Open-source toolkit for working with point cloud data
+- Like GDAL, but for point clouds
+- Focused on flexibility and scalability
+
+---
+
+## Challenges Working with LiDAR
+
+- Large file sizes
+- Complex formats (LAS, LAZ)
+- Need for efficient and reproducible workflows
+
+---
+
+
+## What Can PDAL Do?
+
+- Read and write point cloud formats (LAS, LAZ,COCPC, E57, etc.)
+- Filter, transform, and analyze data
+- Pipeline-based workflows
+- Integrate with GIS and other tools
+
+---
+
+## How PDAL Fits into a Workflow
+
+- Data acquisition --> **PDAL processing** --> Analysis
+- Emphasis on batch processing and automation
+- For example: reprojecting, filtering out noise and classifying ground points in 500 tiles of USGE 3DEP Lidar.
+
+---
+
+## Basic Anatomy of PDAL
+
+- Command-line interface (`pdal translate`, `pdal pipeline`, `pdal info`)
+- Pipelines (JSON files that define processing steps)
+- Plugins (filters, readers, writers)
+- python-pdal
+
+---
+
+## Example: Viewing Data
+
+- `pdal info`
+- Inspect a LAS/LAZ file
+- Example output: bounds, points count, metadata
+
+---
+
+## Example: Simple Processing
+
+- `pdal translate`
+- Reproject a file (`filters.reprojection`)
+- Example command:
+
+```bash
+pdal translate input.laz output.laz filters.reprojection --filters.reprojection.out_srs="EPSG:26910"
