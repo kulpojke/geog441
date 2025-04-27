@@ -1,0 +1,192 @@
+---
+format:
+  html:
+    toc: true
+    toc-location: left
+    theme: simpelex`
+jupyter: python3
+echo: true
+---
+
+Import the needed libraries.
+
+``` 
+from io import BytesIO
+from joblib import Parallel, delayed
+from pathlib import Path
+from shapely import Polygon, Point
+
+
+import geopandas as gpd
+import numpy as np
+import pdal
+import requests
+import zipfile
+```
+
+If you do not have the MS building footprint layer, run the following cell to download it.  Change the save path as needed.
+
+``` 
+# directory where you want the building GeoJSON extracted
+change_this = '/home/michael/Work/lidar_toolz/vectors'
+buildings_path = Path(change_this)
+buildings_path.mkdir(parents=True, exist_ok=True)
+
+# download
+url = 'https://minedbuildings.z5.web.core.windows.net/legacy/usbuildings-v2/California.geojson.zip'
+response = requests.get(url, stream=True)
+response.raise_for_status()
+
+# unzip
+with zipfile.ZipFile(BytesIO(response.content)) as z:
+    z.extractall(buildings_path)
+
+# add filename to path
+buildings_path = buildings_path / 'California.geojson'
+```
+
+Open the vector files.
+
+``` 
+aoi_path = '/home/michael/Work/lidar_toolz/vectors/Eaton_Perimeter_20250121.geojson'
+
+# read buildings
+buildings = gpd.read_file(buildings_path)
+aoi = gpd.read_file(aoi_path)
+
+```
+
+Change the crs of both to UTM Z10. Then clip the buildings down tot he eaton footprint (with a 20 m buffer).
+
+``` 
+
+# set crs to epsg:26910 (UTM 10) for vectors 
+buildings = buildings.to_crs(epsg=26910)
+aoi = aoi.to_crs(epsg=26910)
+
+# clip building to AOI
+buildings = gpd.clip(buildings, aoi.buffer(20))
+
+# make a column filled with 6
+buildings['class'] = 6
+
+```
+
+We will use PDAL to read the points and reproject them. We will then grab the extent by finding the min and max points along each axis using numpy.
+Adjust you path.
+
+``` 
+
+def get_pc_and_extent(laz, srs):
+    '''
+    Reads and reprojects point cloud.
+    Returns points as np structured array and
+    extent as shapely Polygon.
+    '''
+
+    pipe = pdal.Reader.las(filename=laz).pipeline()
+    pipe |= pdal.Filter.reprojection(out_srs=f'EPSG:{srs}')
+    n = pipe.execute()
+    arr = pipe.arrays[0]
+
+    minx = np.min(arr[0]['X'])
+    maxx = np.max(arr[0]['X'])
+    miny = np.min(arr[0]['Y'])
+    maxy = np.max(arr[0]['Y'])
+
+    return arr, Polygon((
+        (minx, miny),
+        (minx, maxy),
+        (maxx, maxy),
+        (maxx, miny),
+        (minx, miny)
+    )) 
+
+
+def in_building(x, y, b_geoms):
+    '''returns a Bool mask, True if point is in building footprint'''
+    return b_geoms.contains(Point(x, y)).any()
+
+```
+
+
+``` 
+# find a file in dir
+in_dir = Path('/home/michael/Work/lidar_toolz/laz')
+files = in_dir.glob('*.laz')
+laz = next(files)
+
+# get points and extent
+points, extent = get_pc_and_extent(laz, buildings.crs.to_epsg())
+
+# clip the building to the extent
+tile_buildings = gpd.clip(buildings, extent)
+
+# build a list of delayed calls
+mask = Parallel(n_jobs=-1)(
+    delayed(in_building)(row['X'], row['Y'], tile_buildings.geometry)
+    for row in points
+)
+
+new_points = points[mask]
+```
+
+
+
+# %%
+# create stages and stage creator functions
+def overlay_filter(vectors):
+    return pdal.Filter.overlay(
+        column='class',
+        datasource=vectors,
+        dimension='Classification'
+        )
+
+
+expression = pdal.Filter.expression(expression='Classification == 6')
+
+def writer(dst):
+    return pdal.Writer.las(
+        forward='all',
+        filename=dst
+        )
+
+def pipeline(points, vectors, dst):
+    pipe = overlay_filter(vectors).pipeline(points)
+    #pipe | expression
+    #pipe | writer(dst)
+
+    return pipe
+    
+
+
+
+def filter_points(arr, tile_buildings):
+    ''''''
+
+
+#%%
+
+if ARGS.in_dir is not None:
+    files = ARGS.in_dir.glob('*.laz')
+elif ARGS.uri_list is not None:
+    files = (Path(uri) for uri in ARGS.uri_list)
+else:
+    print(
+        '''Yo fool! you either need to provide a directory containing
+        las/las files, or a URI list!'''
+        )
+    sys.exit()
+
+for src in files:
+    # get points and extent
+    points, extent = get_pc_and_extent(src)
+    # save extent as geojson
+    extent_path = Path(src.stem + '.geojson')
+    _ = gpd.clip(buildings, extent).to_file(extent_path)
+
+    # run pipeline on points
+    dst = ARGS.out_dir / (src.stem + f'_clipped_{ARGS.out_srs}.laz')
+    pipe = pipeline(points, extent_path, dst)
+    n = pipe.execute()
+# %%

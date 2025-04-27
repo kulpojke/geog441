@@ -136,7 +136,7 @@ What are these trailing semicolons all about? Python does not typically end line
 
 ```{python}
 fig, ax  = plt.subplots();
-(grouped_mean.sel(month=1) - grouped_mean.sel(month=7)).plot(size=6, robust=True)
+(grouped_mean.sel(month=1) - grouped_mean.sel(month=7)).plot(ax=ax, robust=True)
 ax.set_title('Mean January / July Temperature Difference');
 
 ```

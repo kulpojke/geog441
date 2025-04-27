@@ -22,3 +22,5 @@ Links to lecture slides
 [lidR](lidR.html)
 
 [PDAL](pdal.html)
+
+[python-pdal](python-pdal.html)

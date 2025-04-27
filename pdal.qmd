@@ -9,9 +9,6 @@ navigation-mode: vertical
 ---
 
 
-
-
-
 # What is PDAL?
 
 - **PDAL** = *Point Data Abstraction Library*
@@ -19,7 +16,7 @@ navigation-mode: vertical
 - Like GDAL, but for point clouds
 - Focused on flexibility and scalability
 
----
+
 
 ## Challenges Working with LiDAR
 
@@ -27,7 +24,6 @@ navigation-mode: vertical
 - Complex formats (LAS, LAZ)
 - Need for efficient and reproducible workflows
 
----
 
 
 ## What Can PDAL Do?
@@ -37,15 +33,15 @@ navigation-mode: vertical
 - Pipeline-based workflows
 - Integrate with GIS and other tools
 
----
+
 
 ## How PDAL Fits into a Workflow
 
 - Data acquisition --> **PDAL processing** --> Analysis
 - Emphasis on batch processing and automation
-- For example: reprojecting, filtering out noise and classifying ground points in 500 tiles of USGE 3DEP Lidar.
+- For example: reprojecting, filtering out noise and classifying ground points in 500 tiles of USGG 3DEP Lidar.
 
----
+
 
 ## Basic Anatomy of PDAL
 
@@ -54,21 +50,47 @@ navigation-mode: vertical
 - Plugins (filters, readers, writers)
 - python-pdal
 
----
 
-## Example: Viewing Data
 
-- `pdal info`
-- Inspect a LAS/LAZ file
-- Example output: bounds, points count, metadata
+# PDAL Command-line interface
 
----
+## Examples
 
-## Example: Simple Processing
+Try some of the following
 
-- `pdal translate`
-- Reproject a file (`filters.reprojection`)
-- Example command:
+```{bash}
+pdal info -h
+```
 
-```bash
-pdal translate input.laz output.laz filters.reprojection --filters.reprojection.out_srs="EPSG:26910"
+```{bash}
+pdal info --summary your.laz
+```
+
+To parse that mess you can use jq in bash (on linux or mac).  If you want to find the bounds for instance.
+
+```{bash}
+pdal info --summary your.laz | jq .summary.bounds
+```
+
+I think in Powershell that would be
+
+```{bash}
+pdal info --summary bird.laz | ConvertFrom-Json | Select-Object -ExpandProperty summary | Select-Object -ExpandProperty bounds
+```
+
+Reproject something ...
+
+```{bash}
+pdal translate your.laz your_26911.laz filters.reprojection --filters.reprojection.out_srs="EPSG:26911"
+```
+
+Translate an entire directory of laz files in parallel using the amazing and nearly infallible GNU Parallel (Linux and Mac only, also possible using Windows Subsystem for Linux (WSL)),  
+
+```{bash}
+ls your_lidar_directory | parallel 'pdal translate your_lidar_directory/{} your_output_directory/{.}_26911.laz filters.reprojection --filters.reprojection.out_srs="EPSG:26911"'
+```
+
+I am not going to discuss [pipelines](https://pdal.io/en/stable/pipeline.html) at the moment.  We will use them shortly in python-pdal though.  Its worth noting that using the `pdal pipeline` utility is often desirable for simplicity (or to us GNU Parallel with it).  
+
+
+
