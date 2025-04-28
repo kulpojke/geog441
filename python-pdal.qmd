@@ -10,7 +10,7 @@ echo: true
 
 Import the needed libraries.
 
-``` 
+```{python} 
 from io import BytesIO
 from joblib import Parallel, delayed
 from pathlib import Path
@@ -26,12 +26,14 @@ import zipfile
 
 If you do not have the MS building footprint layer, run the following cell to download it.  Change the save path as needed.
 
-``` 
+``` {python}
 # directory where you want the building GeoJSON extracted
-change_this = '/home/michael/Work/lidar_toolz/vectors'
+change_this = '/home/michael/CP/UEFI/vectors'
 buildings_path = Path(change_this)
 buildings_path.mkdir(parents=True, exist_ok=True)
+```
 
+```{python}
 # download
 url = 'https://minedbuildings.z5.web.core.windows.net/legacy/usbuildings-v2/California.geojson.zip'
 response = requests.get(url, stream=True)
@@ -41,14 +43,17 @@ response.raise_for_status()
 with zipfile.ZipFile(BytesIO(response.content)) as z:
     z.extractall(buildings_path)
 
-# add filename to path
-buildings_path = buildings_path / 'California.geojson'
 ```
 
 Open the vector files.
 
-``` 
-aoi_path = '/home/michael/Work/lidar_toolz/vectors/Eaton_Perimeter_20250121.geojson'
+```{python}
+# paths
+buildings_path = buildings_path / 'eaton_buildings.geojson'
+
+aoi_path = '/home/michael/CP/UEFI/vectors/Eaton_Perimeter_20250121.geojson'
+
+laz_dir = Path('/home/michael/CP/UEFI/small_laz')
 
 # read buildings
 buildings = gpd.read_file(buildings_path)
@@ -58,7 +63,7 @@ aoi = gpd.read_file(aoi_path)
 
 Change the crs of both to UTM Z10. Then clip the buildings down tot he eaton footprint (with a 20 m buffer).
 
-``` 
+``` {python}
 
 # set crs to epsg:26910 (UTM 10) for vectors 
 buildings = buildings.to_crs(epsg=26910)
@@ -75,7 +80,7 @@ buildings['class'] = 6
 We will use PDAL to read the points and reproject them. We will then grab the extent by finding the min and max points along each axis using numpy.
 Adjust you path.
 
-``` 
+```{python} 
 
 def get_pc_and_extent(laz, srs):
     '''
@@ -110,17 +115,82 @@ def in_building(x, y, b_geoms):
 ```
 
 
-``` 
+```{python} 
 # find a file in dir
-in_dir = Path('/home/michael/Work/lidar_toolz/laz')
-files = in_dir.glob('*.laz')
+files = laz_dir.glob('*.laz')
 laz = next(files)
+basename = laz.stem
 
 # get points and extent
 points, extent = get_pc_and_extent(laz, buildings.crs.to_epsg())
+```
 
+```{python}
 # clip the building to the extent
 tile_buildings = gpd.clip(buildings, extent)
+tile_path = laz_dir / f'{basename}.geojson'
+tile_buildings.to_file(tile_path, layer='data')
+```
+
+
+```{python}
+# create stages and stage creator functions
+def overlay_filter(buildings):
+    return pdal.Filter.overlay(
+        column='class',
+        datasource=buildings,
+        layer='data',
+        dimension='Classification'
+        )
+
+
+expression = pdal.Filter.expression(expression='Classification != 6')
+
+
+def writer(dst):
+    return pdal.Writer.las(
+        forward='all',
+        filename=dst
+        )
+
+
+def pipeline(points, buildings, dst):
+    pipe = overlay_filter(buildings).pipeline(points)
+    pipe | expression
+    pipe | writer(dst)
+
+    return pipe
+    
+```
+
+
+```
+dst = laz_dir /f'{basename}_no_buildings.laz'
+pipe = pipeline(points, tile_path, dst)
+n = pipe.execute()
+
+```
+
+
+
+## Ignore what is below here
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 # build a list of delayed calls
 mask = Parallel(n_jobs=-1)(
@@ -129,7 +199,6 @@ mask = Parallel(n_jobs=-1)(
 )
 
 new_points = points[mask]
-```
 
 
 

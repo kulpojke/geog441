@@ -1,0 +1,19 @@
+[
+    "USGS_LPC_CA_LosAngeles_2016_L4_6514_1889c_LAS_2018_26910.laz",
+    {
+        "type": "filters.assign",
+        "value": "Tmp = 0"
+    },
+    {
+      "type":"filters.overlay",
+      "dimension":"Tmp",
+      "datasource":"little_box.geojson",
+      "layer":"data",
+      "column":"CLS"
+    },
+    {
+      "type":"filters.range",
+      "limits":"Tmp[18:18]"
+    },
+    "small.laz"
+]
