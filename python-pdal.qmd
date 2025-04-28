@@ -8,6 +8,7 @@ jupyter: python3
 echo: true
 ---
 
+
 Import the needed libraries.
 
 ```{python} 
@@ -173,89 +174,3 @@ n = pipe.execute()
 
 
 
-## Ignore what is below here
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-# build a list of delayed calls
-mask = Parallel(n_jobs=-1)(
-    delayed(in_building)(row['X'], row['Y'], tile_buildings.geometry)
-    for row in points
-)
-
-new_points = points[mask]
-
-
-
-# %%
-# create stages and stage creator functions
-def overlay_filter(vectors):
-    return pdal.Filter.overlay(
-        column='class',
-        datasource=vectors,
-        dimension='Classification'
-        )
-
-
-expression = pdal.Filter.expression(expression='Classification == 6')
-
-def writer(dst):
-    return pdal.Writer.las(
-        forward='all',
-        filename=dst
-        )
-
-def pipeline(points, vectors, dst):
-    pipe = overlay_filter(vectors).pipeline(points)
-    #pipe | expression
-    #pipe | writer(dst)
-
-    return pipe
-    
-
-
-
-def filter_points(arr, tile_buildings):
-    ''''''
-
-
-#%%
-
-if ARGS.in_dir is not None:
-    files = ARGS.in_dir.glob('*.laz')
-elif ARGS.uri_list is not None:
-    files = (Path(uri) for uri in ARGS.uri_list)
-else:
-    print(
-        '''Yo fool! you either need to provide a directory containing
-        las/las files, or a URI list!'''
-        )
-    sys.exit()
-
-for src in files:
-    # get points and extent
-    points, extent = get_pc_and_extent(src)
-    # save extent as geojson
-    extent_path = Path(src.stem + '.geojson')
-    _ = gpd.clip(buildings, extent).to_file(extent_path)
-
-    # run pipeline on points
-    dst = ARGS.out_dir / (src.stem + f'_clipped_{ARGS.out_srs}.laz')
-    pipe = pipeline(points, extent_path, dst)
-    n = pipe.execute()
-# %%
