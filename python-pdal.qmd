@@ -34,7 +34,7 @@ buildings_path = Path(change_this)
 buildings_path.mkdir(parents=True, exist_ok=True)
 ```
 
-```{python}
+```{}
 # download
 url = 'https://minedbuildings.z5.web.core.windows.net/legacy/usbuildings-v2/California.geojson.zip'
 response = requests.get(url, stream=True)

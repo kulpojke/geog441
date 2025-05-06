@@ -1,0 +1,44 @@
+---
+format:
+  html:
+    toc: true
+    toc-location: left
+    theme: simpelex`
+jupyter: python3
+echo: true
+---
+
+# Ways to show maps
+
+## Load Data
+```{python}
+import geopandas as gpd
+from pathlib import Path
+
+# If you are following along change path 
+change_this = Path('/home/michael/CP/UEFI/vectors')
+buildings_path = change_this / 'eaton_buildings.geojson'
+aoi_path = change_this / 'Eaton_Perimeter_20250121.geojson'
+
+# read buildings and aoi
+buildings = gpd.read_file(buildings_path)
+aoi = gpd.read_file(aoi_path)
+```
+
+## Simple
+
+```{python}
+
+import contextily as cx
+import matplotlib.pyplot as plt
+
+buildings.plot(color='red', figsize=(9, 9))
+```
+Not overwhelming.  Some buildings, but it would be nice to have a base map.
+
+```{python}
+ax = buildings.plot(color='red', figsize=(9, 9))
+cx.add_basemap(ax, crs=buildings.crs)
+
+plt.show()
+```

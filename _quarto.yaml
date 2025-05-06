@@ -9,5 +9,6 @@ project:
   - Xarray.qmd
   - pdal.qmd
   - python-pdal.qmd
+  - web.qmd
 self_contained: true
 theme: blood
