@@ -70,8 +70,17 @@ c = buildings.to_crs(epsg=4326).dissolve().centroid.item()
 map = folium.Map(
   location=[c.y, c.x],
   tiles='OpenStreetMap',
-  zoom_start=9
+  zoom_start=12
 )
+
+geo_j = folium.GeoJson(data=aoi.__geo_interface__,
+  style_function=lambda feature: {
+    'color': 'red',
+    'weight': 2,
+    'fill': False
+    }
+  ).add_to(map)
+
 
 map
 ```
@@ -86,7 +95,10 @@ for _, row in buildings.iterrows():
     folium.Popup(row['capture_dates_range']).add_to(geo_j)
     geo_j.add_to(map)
 
-map
+map.save('docs/big-ol-map.html')
 
 ```
 
+::: {format="html"}
+<iframe src="big-ol-map.html" width="100%" height="600px" frameborder="0"></iframe>
+:::
