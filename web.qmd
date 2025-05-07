@@ -85,5 +85,8 @@ for _, row in buildings.iterrows():
     geo_j = folium.GeoJson(data=geo_j, )
     folium.Popup(row['capture_dates_range']).add_to(geo_j)
     geo_j.add_to(map)
-  
+
+map
+
 ```
+
