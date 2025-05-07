@@ -23,8 +23,10 @@ aoi_path = change_this / 'Eaton_Perimeter_20250121.geojson'
 # read buildings and aoi
 buildings = gpd.read_file(buildings_path)
 aoi = gpd.read_file(aoi_path)
-```
 
+print(f'buildings crs:{buildings.crs}')
+print(f'aoi crs:{aoi.crs}')
+```
 ## Simple
 
 ```{python}
@@ -34,11 +36,54 @@ import matplotlib.pyplot as plt
 
 buildings.plot(color='red', figsize=(9, 9))
 ```
-Not overwhelming.  Some buildings, but it would be nice to have a base map.
+
+Not overwhelming.  Some buildings, but it would be nice to have a base map, and a scalebar.
 
 ```{python}
-ax = buildings.plot(color='red', figsize=(9, 9))
-cx.add_basemap(ax, crs=buildings.crs)
+from matplotlib_scalebar.scalebar import ScaleBar
 
-plt.show()
+# plot buildings in black
+ax = buildings.plot(color='k', figsize=(9, 9))
+# plot fire perimeter in red
+aoi.plot(edgecolor='red', facecolor='none', ax=ax)
+# add basemap
+cx.add_basemap(ax, crs=buildings.crs)
+# add scalebar
+scalebar = ScaleBar(
+  dx=1,
+  units='m',
+  location='upper right',
+  color='black',
+  box_alpha=0.0
+);
+ax.add_artist(scalebar);
+```
+
+So this gives us a basemap, and a scalebar.  If we want an interactive map we can use Folium.
+
+```{python}
+import folium
+
+# get cetroid of aoi
+c = buildings.to_crs(epsg=4326).dissolve().centroid.item()
+
+map = folium.Map(
+  location=[c.y, c.x],
+  tiles='OpenStreetMap',
+  zoom_start=9
+)
+
+map
+```
+
+Vectors are represented as geoJSONs in Folium, so we cant just use the GeoPandas plot function.  We have to iterate through, create geoJSON representations of each polygon and add them to the map.
+
+```{python}
+
+for _, row in buildings.iterrows():
+    geo_j = gpd.GeoSeries(row.geometry).to_json()
+    geo_j = folium.GeoJson(data=geo_j, )
+    folium.Popup(row['capture_dates_range']).add_to(geo_j)
+    geo_j.add_to(map)
+  
 ```
