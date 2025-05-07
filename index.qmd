@@ -24,3 +24,5 @@ Links to lecture slides
 [PDAL](pdal.html)
 
 [python-pdal](python-pdal.html)
+
+[Maps with Quarto](web.html)
