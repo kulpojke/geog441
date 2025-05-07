@@ -71,7 +71,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-2f5df379a58b258e96c21c0638c20c03.css" rel="stylesheet" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap-ed87c35a4f870ff9a926fb4784463425.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-fdf903738bb741fab4d0a4277064cb5a.min.css" rel="stylesheet" append-hash="true" id="quarto-bootstrap" data-mode="light">
 <script id="quarto-search-options" type="application/json">{
   "location": "sidebar",
   "copy-button": false,
@@ -123,7 +123,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 
 <p>Import the needed libraries.</p>
-<div id="775a4c29" class="cell" data-execution_count="1">
+<div id="9a1c7923" class="cell" data-execution_count="1">
 <div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> io <span class="im">import</span> BytesIO</span>
 <span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> joblib <span class="im">import</span> Parallel, delayed</span>
 <span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="im">from</span> pathlib <span class="im">import</span> Path</span>
@@ -137,7 +137,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 <span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="im">import</span> zipfile</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>If you do not have the MS building footprint layer, run the following cell to download it. Change the save path as needed.</p>
-<div id="27029817" class="cell" data-execution_count="2">
+<div id="285a3218" class="cell" data-execution_count="2">
 <div class="sourceCode cell-code" id="cb2"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="co"># directory where you want the building GeoJSON extracted</span></span>
 <span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>change_this <span class="op">=</span> <span class="st">'/home/michael/CP/UEFI/vectors'</span></span>
 <span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>buildings_path <span class="op">=</span> Path(change_this)</span>
@@ -153,7 +153,7 @@ with zipfile.ZipFile(BytesIO(response.content)) as z:
     z.extractall(buildings_path)
 </code></pre>
 <p>Open the vector files.</p>
-<div id="c5a59a15" class="cell" data-execution_count="3">
+<div id="f3626e0a" class="cell" data-execution_count="3">
 <div class="sourceCode cell-code" id="cb4"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="co"># paths</span></span>
 <span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>buildings_path <span class="op">=</span> buildings_path <span class="op">/</span> <span class="st">'eaton_buildings.geojson'</span></span>
 <span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a></span>
@@ -166,7 +166,7 @@ with zipfile.ZipFile(BytesIO(response.content)) as z:
 <span id="cb4-10"><a href="#cb4-10" aria-hidden="true" tabindex="-1"></a>aoi <span class="op">=</span> gpd.read_file(aoi_path)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>Change the crs of both to UTM Z10. Then clip the buildings down tot he eaton footprint (with a 20 m buffer).</p>
-<div id="9485443c" class="cell" data-execution_count="4">
+<div id="78b9cc35" class="cell" data-execution_count="4">
 <div class="sourceCode cell-code" id="cb5"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="co"># set crs to epsg:26910 (UTM 10) for vectors </span></span>
 <span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>buildings <span class="op">=</span> buildings.to_crs(epsg<span class="op">=</span><span class="dv">26910</span>)</span>
 <span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>aoi <span class="op">=</span> aoi.to_crs(epsg<span class="op">=</span><span class="dv">26910</span>)</span>
@@ -178,7 +178,7 @@ with zipfile.ZipFile(BytesIO(response.content)) as z:
 <span id="cb5-9"><a href="#cb5-9" aria-hidden="true" tabindex="-1"></a>buildings[<span class="st">'class'</span>] <span class="op">=</span> <span class="dv">6</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 <p>We will use PDAL to read the points and reproject them. We will then grab the extent by finding the min and max points along each axis using numpy. Adjust you path.</p>
-<div id="9d730d0d" class="cell" data-execution_count="5">
+<div id="fab85d28" class="cell" data-execution_count="5">
 <div class="sourceCode cell-code" id="cb6"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> get_pc_and_extent(laz, srs):</span>
 <span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''</span></span>
 <span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="co">    Reads and reprojects point cloud.</span></span>
@@ -209,7 +209,7 @@ with zipfile.ZipFile(BytesIO(response.content)) as z:
 <span id="cb6-28"><a href="#cb6-28" aria-hidden="true" tabindex="-1"></a>    <span class="co">'''returns a Bool mask, True if point is in building footprint'''</span></span>
 <span id="cb6-29"><a href="#cb6-29" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> b_geoms.contains(Point(x, y)).<span class="bu">any</span>()</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="c7007a93" class="cell" data-execution_count="6">
+<div id="ed3da3ea" class="cell" data-execution_count="6">
 <div class="sourceCode cell-code" id="cb7"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb7-1"><a href="#cb7-1" aria-hidden="true" tabindex="-1"></a><span class="co"># find a file in dir</span></span>
 <span id="cb7-2"><a href="#cb7-2" aria-hidden="true" tabindex="-1"></a>files <span class="op">=</span> laz_dir.glob(<span class="st">'*.laz'</span>)</span>
 <span id="cb7-3"><a href="#cb7-3" aria-hidden="true" tabindex="-1"></a>laz <span class="op">=</span> <span class="bu">next</span>(files)</span>
@@ -218,13 +218,13 @@ with zipfile.ZipFile(BytesIO(response.content)) as z:
 <span id="cb7-6"><a href="#cb7-6" aria-hidden="true" tabindex="-1"></a><span class="co"># get points and extent</span></span>
 <span id="cb7-7"><a href="#cb7-7" aria-hidden="true" tabindex="-1"></a>points, extent <span class="op">=</span> get_pc_and_extent(laz, buildings.crs.to_epsg())</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="559d204d" class="cell" data-execution_count="7">
+<div id="61d34854" class="cell" data-execution_count="7">
 <div class="sourceCode cell-code" id="cb8"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb8-1"><a href="#cb8-1" aria-hidden="true" tabindex="-1"></a><span class="co"># clip the building to the extent</span></span>
 <span id="cb8-2"><a href="#cb8-2" aria-hidden="true" tabindex="-1"></a>tile_buildings <span class="op">=</span> gpd.clip(buildings, extent)</span>
 <span id="cb8-3"><a href="#cb8-3" aria-hidden="true" tabindex="-1"></a>tile_path <span class="op">=</span> laz_dir <span class="op">/</span> <span class="ss">f'</span><span class="sc">{</span>basename<span class="sc">}</span><span class="ss">.geojson'</span></span>
 <span id="cb8-4"><a href="#cb8-4" aria-hidden="true" tabindex="-1"></a>tile_buildings.to_file(tile_path, layer<span class="op">=</span><span class="st">'data'</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
-<div id="54316dae" class="cell" data-execution_count="8">
+<div id="3b057964" class="cell" data-execution_count="8">
 <div class="sourceCode cell-code" id="cb9"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb9-1"><a href="#cb9-1" aria-hidden="true" tabindex="-1"></a><span class="co"># create stages and stage creator functions</span></span>
 <span id="cb9-2"><a href="#cb9-2" aria-hidden="true" tabindex="-1"></a><span class="kw">def</span> overlay_filter(buildings):</span>
 <span id="cb9-3"><a href="#cb9-3" aria-hidden="true" tabindex="-1"></a>    <span class="cf">return</span> pdal.Filter.overlay(</span>

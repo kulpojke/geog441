@@ -1,0 +1,2 @@
+# _environment
+QUARTO_DENO_EXTRA_OPTIONS="--v8-flags=--stack-size=2048"
