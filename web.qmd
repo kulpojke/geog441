@@ -13,19 +13,64 @@ echo: true
 ## Load Data
 ```{python}
 import geopandas as gpd
+import numpy as np
 from pathlib import Path
 
 # If you are following along change path 
 change_this = Path('/home/michael/CP/UEFI/vectors')
 buildings_path = change_this / 'eaton_buildings.geojson'
 aoi_path = change_this / 'Eaton_Perimeter_20250121.geojson'
+DINS_path = change_this / 'DINS_2025_Eaton_Public_View.geojson'
 
 # read buildings and aoi
 buildings = gpd.read_file(buildings_path)
+dins = gpd.read_file(DINS_path)
 aoi = gpd.read_file(aoi_path)
 
 print(f'buildings crs:{buildings.crs}')
 print(f'aoi crs:{aoi.crs}')
+print(f'dins crs:{dins.crs}')
+
+# join the dins attributes to buildings
+joined = gpd.sjoin(
+    buildings, 
+    dins[['GLOBALID','DAMAGE','STRUCTURETYPE', 'geometry']], 
+    how='left', 
+    predicate='contains'
+)
+
+joined.DAMAGE.value_counts()
+```
+
+OK, so now we see waht the categories are, and how many buildings were damaged.  We need to check for null values as well.
+
+```{python}
+null_count = joined.DAMAGE.isnull().sum()
+print(f'Oh snap! there are {null_count} null values!')
+```
+
+```{python}
+damage_code_dict = {
+        'No Damage': 0 ,
+        'Affected (1-9%)': 1, 
+        'Major (26-50%)': 3,
+        'Minor (10-25%)': 2,
+        'Destroyed (>50%)': 4,
+        'Inaccessible': -99
+        }
+
+@np.vectorize
+def num_code_damage(x):
+    if not isinstance(x, str):
+        if np.isnan(x):
+            return -99
+    return damage_code_dict[x]
+
+joined['damage_code'] = num_code_damage(joined.DAMAGE)
+
+joined = joined.fillna('No Data')
+
+
 ```
 ## Simple
 
@@ -77,8 +122,9 @@ geo_j = folium.GeoJson(data=aoi.__geo_interface__,
   style_function=lambda feature: {
     'color': 'red',
     'weight': 2,
-    'fill': False
-    }
+    'fill': False,
+    },
+    name='Fire Perimeter'
   ).add_to(map)
 
 
@@ -88,17 +134,52 @@ map
 Vectors are represented as geoJSONs in Folium, so we cant just use the GeoPandas plot function.  We have to iterate through, create geoJSON representations of each polygon and add them to the map.
 
 ```{python}
+from folium.plugins import TagFilterButton
 
-for _, row in buildings.iterrows():
-    geo_j = gpd.GeoSeries(row.geometry).to_json()
-    geo_j = folium.GeoJson(data=geo_j, )
-    folium.Popup(row['capture_dates_range']).add_to(geo_j)
-    geo_j.add_to(map)
+color_map = {
+    -99: 'black',
+     0: 'blue',
+     1: 'lightpink',
+     2: '#ff9a9a',
+     3: '#ff5555',
+     4: 'red'
+}
 
+def style_fn(feature):
+    code = feature['properties']['damage_code']
+    return {
+        'fillColor':   color_map.get(code, 'gray'),
+        'color':       'black',
+        'weight':      1,
+        'fillOpacity': 0.7,
+    }
+
+for dmg in joined.DAMAGE.unique():
+  folium.GeoJson(
+      joined[joined.DAMAGE == dmg].__geo_interface__,
+      style_function=style_fn,
+      tooltip=folium.GeoJsonTooltip(fields=['DAMAGE'], aliases=['Damage:']),
+      tags=joined[joined.DAMAGE == dmg]['DAMAGE'].to_list(),
+      name=f'Buildings: {dmg}'
+  ).add_to(map)
+
+# make popup
+popup = folium.GeoJsonPopup(
+    fields=['DAMAGE'],
+    localize=True,
+    labels=True,
+    style="background-color: white;")
+
+
+folium.LayerControl().add_to(map)
+
+# comment / uncomment to run in local notebook
 map.save('docs/big-ol-map.html')
+#map
 
 ```
 
 ::: {format="html"}
 <iframe src="big-ol-map.html" width="100%" height="600px" frameborder="0"></iframe>
 :::
+
