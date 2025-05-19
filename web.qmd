@@ -42,7 +42,7 @@ joined = gpd.sjoin(
 joined.DAMAGE.value_counts()
 ```
 
-OK, so now we see waht the categories are, and how many buildings were damaged.  We need to check for null values as well.
+OK, so now we see what the categories are, and how many buildings were damaged.  We need to check for null values as well.
 
 ```{python}
 null_count = joined.DAMAGE.isnull().sum()
@@ -99,12 +99,13 @@ scalebar = ScaleBar(
   units='m',
   location='upper right',
   color='black',
-  box_alpha=0.0
+  box_alpha=0.0,
+  rotation='horizontal-only'
 );
 ax.add_artist(scalebar);
 ```
 
-So this gives us a basemap, and a scalebar.  If we want an interactive map we can use Folium.
+Note that because this is in 4326 the scalebar is really only aurate in the x direction.  So this gives us a basemap, and a scalebar.  If we want an interactive map we can use Folium.
 
 ```{python}
 import folium
