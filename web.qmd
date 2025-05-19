@@ -110,8 +110,8 @@ Note that because this is in 4326 the scalebar is really only aurate in the x di
 ```{python}
 import folium
 
-# get cetroid of aoi
-c = buildings.to_crs(epsg=4326).dissolve().centroid.item()
+# get centroid of aoi
+c = buildings.to_crs(epsg=26910).dissolve().centroid.to_crs(epsg=4326).item()
 
 map = folium.Map(
   location=[c.y, c.x],
@@ -137,6 +137,7 @@ Vectors are represented as geoJSONs in Folium, so we cant just use the GeoPandas
 ```{python}
 from folium.plugins import TagFilterButton
 
+# make a color mapping dictionary
 color_map = {
     -99: 'black',
      0: 'blue',
@@ -147,14 +148,15 @@ color_map = {
 }
 
 def style_fn(feature):
-    code = feature['properties']['damage_code']
-    return {
-        'fillColor':   color_map.get(code, 'gray'),
-        'color':       'black',
-        'weight':      1,
-        'fillOpacity': 0.7,
-    }
+  code = feature['properties']['damage_code']
+  return {
+      'fillColor':   color_map.get(code, 'gray'),
+      'color':       'black',
+      'weight':      1,
+      'fillOpacity': 0.7,
+  }
 
+# create a layer for buildings in each damage category
 for dmg in joined.DAMAGE.unique():
   folium.GeoJson(
       joined[joined.DAMAGE == dmg].__geo_interface__,
@@ -164,14 +166,14 @@ for dmg in joined.DAMAGE.unique():
       name=f'Buildings: {dmg}'
   ).add_to(map)
 
-# make popup
+# make popup to display structure type
 popup = folium.GeoJsonPopup(
-    fields=['DAMAGE'],
+    fields=['STRUCTURETYPE'],
     localize=True,
     labels=True,
     style="background-color: white;")
 
-
+# add a layer view control
 folium.LayerControl().add_to(map)
 
 # comment / uncomment to run in local notebook
@@ -184,3 +186,12 @@ map.save('docs/big-ol-map.html')
 <iframe src="big-ol-map.html" width="100%" height="600px" frameborder="0"></iframe>
 :::
 
+Not that we did not directly render the map, but saved it to an image.  If you look at the qmd file you will see that the saved image was then inserted using
+```{html}
+::: {format="html"}
+<iframe src="big-ol-map.html" width="100%" height="600px" frameborder="0"></iframe>
+:::
+```
+This is done because Quarto cannot directly insert more than 5000 polygons in a Folium map when rendering html documents.  So instead we save the folium map and add it in an iframe.
+
+Also note the use of the `GeoDataFrame.__geo_interface__` This returns a GeoInterface standard representation (which is a json).
